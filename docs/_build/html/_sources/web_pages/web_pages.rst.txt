@@ -1,0 +1,24 @@
+General site page programming
+=============================
+
+This is to be updated
+
+Defining Updates
+----------------
+
+TODO: add content
+
+Example source code:
+
+.. code-block:: python
+
+    from pyrogram import Client, MessageHandler
+
+
+    def my_function(client, message):
+        print(message)
+
+Add content later
+---------------------
+
+Content to be added

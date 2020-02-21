@@ -10,7 +10,17 @@ Welcome to Hippocampome.org's Developer Documentation!
    :maxdepth: 2
    :caption: Contents:
 
+.. toctree::
+    :hidden:
+    :caption: Database
 
+    database/database
+
+.. toctree::
+    :hidden:
+    :caption: Web Pages
+
+    web_pages/web_pages
 
 Indices and tables
 ==================
