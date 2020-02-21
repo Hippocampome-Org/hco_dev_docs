@@ -24,6 +24,12 @@ Welcome to Hippocampome.org's Developer Documentation!
     
 .. toctree::
     :hidden:
+    :caption: Csv2db
+
+    csv2db/tables_overview    
+    
+.. toctree::
+    :hidden:
     :caption: Editing Dev Docs
 
     editing/stack_edit
