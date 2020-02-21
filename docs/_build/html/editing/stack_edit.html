@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>StackEdit Example &mdash; HCO Dev Docs  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="General site page programming" href="../web_pages/web_pages.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> HCO Dev Docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Database</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../database/database.html">Handling Updates</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Web Pages</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../web_pages/web_pages.html">General site page programming</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Editing Dev Docs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">StackEdit Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#welcome-to-stackedit">Welcome to StackEdit!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#files">Files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#create-files-and-folders">Create files and folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#switch-to-another-file">Switch to another file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rename-a-file">Rename a file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete-a-file">Delete a file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#export-a-file">Export a file</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#synchronization">Synchronization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#open-a-file">Open a file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#save-a-file">Save a file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#synchronize-a-file">Synchronize a file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#manage-file-synchronization">Manage file synchronization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#publication">Publication</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#publish-a-file">Publish a File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update-a-publication">Update a publication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#manage-file-publication">Manage file publication</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#markdown-extensions">Markdown extensions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HCO Dev Docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>StackEdit Example</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/editing/stack_edit.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="stackedit-example">
+<h1>StackEdit Example<a class="headerlink" href="#stackedit-example" title="Permalink to this headline">¶</a></h1>
+<p>This is an example file created with <a class="reference external" href="https://stackedit.io/app#">StackEdit</a>. StackEdit allows interactive document creation with markdown and preview of the results.</p>
+</div>
+<div class="section" id="welcome-to-stackedit">
+<h1>Welcome to StackEdit!<a class="headerlink" href="#welcome-to-stackedit" title="Permalink to this headline">¶</a></h1>
+<p>Hi! I’m your first Markdown file in <strong>StackEdit</strong>. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the <strong>file explorer</strong> on the left corner of the navigation bar.</p>
+</div>
+<div class="section" id="files">
+<h1>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h1>
+<p>StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible <strong>offline!</strong></p>
+<div class="section" id="create-files-and-folders">
+<h2>Create files and folders<a class="headerlink" href="#create-files-and-folders" title="Permalink to this headline">¶</a></h2>
+<p>The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the <strong>New file</strong> button in the file explorer. You can also create folders by clicking the <strong>New folder</strong> button.</p>
+</div>
+<div class="section" id="switch-to-another-file">
+<h2>Switch to another file<a class="headerlink" href="#switch-to-another-file" title="Permalink to this headline">¶</a></h2>
+<p>All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.</p>
+</div>
+<div class="section" id="rename-a-file">
+<h2>Rename a file<a class="headerlink" href="#rename-a-file" title="Permalink to this headline">¶</a></h2>
+<p>You can rename the current file by clicking the file name in the navigation bar or by clicking the <strong>Rename</strong> button in the file explorer.</p>
+</div>
+<div class="section" id="delete-a-file">
+<h2>Delete a file<a class="headerlink" href="#delete-a-file" title="Permalink to this headline">¶</a></h2>
+<p>You can delete the current file by clicking the <strong>Remove</strong> button in the file explorer. The file will be moved into the <strong>Trash</strong> folder and automatically deleted after 7 days of inactivity.</p>
+</div>
+<div class="section" id="export-a-file">
+<h2>Export a file<a class="headerlink" href="#export-a-file" title="Permalink to this headline">¶</a></h2>
+<p>You can export the current file by clicking <strong>Export to disk</strong> in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.</p>
+</div>
+</div>
+<div class="section" id="synchronization">
+<h1>Synchronization<a class="headerlink" href="#synchronization" title="Permalink to this headline">¶</a></h1>
+<p>Synchronization is one of the biggest features of StackEdit. It enables you to synchronize any file in your workspace with other files stored in your <strong>Google Drive</strong>, your <strong>Dropbox</strong> and your <strong>GitHub</strong> accounts. This allows you to keep writing on other devices, collaborate with people you share the file with, integrate easily into your workflow… The synchronization mechanism takes place every minute in the background, downloading, merging, and uploading file modifications.</p>
+<p>There are two types of synchronization and they can complement each other:</p>
+<ul>
+<li><p class="first">The workspace synchronization will sync all your files, folders and settings automatically. This will allow you to fetch your workspace on any other device.</p>
+<blockquote>
+<div><p>To start syncing your workspace, just sign in with Google in the menu.</p>
+</div></blockquote>
+</li>
+<li><p class="first">The file synchronization will keep one file of the workspace synced with one or multiple files in <strong>Google Drive</strong>, <strong>Dropbox</strong> or <strong>GitHub</strong>.</p>
+<blockquote>
+<div><p>Before starting to sync files, you must link an account in the <strong>Synchronize</strong> sub-menu.</p>
+</div></blockquote>
+</li>
+</ul>
+<div class="section" id="open-a-file">
+<h2>Open a file<a class="headerlink" href="#open-a-file" title="Permalink to this headline">¶</a></h2>
+<p>You can open a file from <strong>Google Drive</strong>, <strong>Dropbox</strong> or <strong>GitHub</strong> by opening the <strong>Synchronize</strong> sub-menu and clicking <strong>Open from</strong>. Once opened in the workspace, any modification in the file will be automatically synced.</p>
+</div>
+<div class="section" id="save-a-file">
+<h2>Save a file<a class="headerlink" href="#save-a-file" title="Permalink to this headline">¶</a></h2>
+<p>You can save any file of the workspace to <strong>Google Drive</strong>, <strong>Dropbox</strong> or <strong>GitHub</strong> by opening the <strong>Synchronize</strong> sub-menu and clicking <strong>Save on</strong>. Even if a file in the workspace is already synced, you can save it to another location. StackEdit can sync one file with multiple locations and accounts.</p>
+</div>
+<div class="section" id="synchronize-a-file">
+<h2>Synchronize a file<a class="headerlink" href="#synchronize-a-file" title="Permalink to this headline">¶</a></h2>
+<p>Once your file is linked to a synchronized location, StackEdit will periodically synchronize it by downloading/uploading any modification. A merge will be performed if necessary and conflicts will be resolved.</p>
+<p>If you just have modified your file and you want to force syncing, click the <strong>Synchronize now</strong> button in the navigation bar.</p>
+<blockquote>
+<div><strong>Note:</strong> The <strong>Synchronize now</strong> button is disabled if you have no file to synchronize.</div></blockquote>
+</div>
+<div class="section" id="manage-file-synchronization">
+<h2>Manage file synchronization<a class="headerlink" href="#manage-file-synchronization" title="Permalink to this headline">¶</a></h2>
+<p>Since one file can be synced with multiple locations, you can list and manage synchronized locations by clicking <strong>File synchronization</strong> in the <strong>Synchronize</strong> sub-menu. This allows you to list and remove synchronized locations that are linked to your file.</p>
+</div>
+</div>
+<div class="section" id="publication">
+<h1>Publication<a class="headerlink" href="#publication" title="Permalink to this headline">¶</a></h1>
+<p>Publishing in StackEdit makes it simple for you to publish online your files. Once you’re happy with a file, you can publish it to different hosting platforms like <strong>Blogger</strong>, <strong>Dropbox</strong>, <strong>Gist</strong>, <strong>GitHub</strong>, <strong>Google Drive</strong>, <strong>WordPress</strong> and <strong>Zendesk</strong>. With <a class="reference external" href="http://handlebarsjs.com/">Handlebars templates</a>, you have full control over what you export.</p>
+<blockquote>
+<div>Before starting to publish, you must link an account in the <strong>Publish</strong> sub-menu.</div></blockquote>
+<div class="section" id="publish-a-file">
+<h2>Publish a File<a class="headerlink" href="#publish-a-file" title="Permalink to this headline">¶</a></h2>
+<p>You can publish your file by opening the <strong>Publish</strong> sub-menu and by clicking <strong>Publish to</strong>. For some locations, you can choose between the following formats:</p>
+<ul class="simple">
+<li>Markdown: publish the Markdown text on a website that can interpret it (<strong>GitHub</strong> for instance),</li>
+<li>HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).</li>
+</ul>
+</div>
+<div class="section" id="update-a-publication">
+<h2>Update a publication<a class="headerlink" href="#update-a-publication" title="Permalink to this headline">¶</a></h2>
+<p>After publishing, StackEdit keeps your file linked to that publication which makes it easy for you to re-publish it. Once you have modified your file and you want to update your publication, click on the <strong>Publish now</strong> button in the navigation bar.</p>
+<blockquote>
+<div><strong>Note:</strong> The <strong>Publish now</strong> button is disabled if your file has not been published yet.</div></blockquote>
+</div>
+<div class="section" id="manage-file-publication">
+<h2>Manage file publication<a class="headerlink" href="#manage-file-publication" title="Permalink to this headline">¶</a></h2>
+<p>Since one file can be published to multiple locations, you can list and manage publish locations by clicking <strong>File publication</strong> in the <strong>Publish</strong> sub-menu. This allows you to list and remove publication locations that are linked to your file.</p>
+</div>
+</div>
+<div class="section" id="markdown-extensions">
+<h1>Markdown extensions<a class="headerlink" href="#markdown-extensions" title="Permalink to this headline">¶</a></h1>
+<p>StackEdit extends the standard Markdown syntax by adding extra <strong>Markdown extensions</strong>, providing you with some nice features.</p>
+<blockquote>
+<div><strong>ProTip:</strong> You can disable any <strong>Markdown extension</strong> in the <strong>File properties</strong> dialog.</div></blockquote>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../web_pages/web_pages.html" class="btn btn-neutral float-left" title="General site page programming" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Nate Sutton
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

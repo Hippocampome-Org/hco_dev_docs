@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Welcome to Hippocampome.org's Developer Documentation!
-========================================
+======================================================
 
 .. toctree::
    :maxdepth: 2
@@ -24,9 +24,9 @@ Welcome to Hippocampome.org's Developer Documentation!
     
 .. toctree::
     :hidden:
-    :caption: Test
+    :caption: Editing Dev Docs
 
-    test/test
+    editing/stack_edit
 
 Documentation Availible
 =======================

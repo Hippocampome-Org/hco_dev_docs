@@ -1,6 +1,9 @@
 # HCO Dev Docs
 Developer Documentation
 
+## Editing pages
+[StackEdit](https://stackedit.io/app#) allows interactive document creation with markdown and preview of the results. Documents for this site can be build using that and the code can be copied and pasted directly into Github online or pushed to Github from a local computer.
+
 ## Supported markdown
 The documentation can be written in CommonMark:
 https://commonmark.org/help/
