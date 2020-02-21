@@ -22,6 +22,10 @@ Welcome to Hippocampome.org's Developer Documentation!
 
     web_pages/web_pages
 
+Documentation Availible
+=======================
+This site will be used for recording methods for working on development on the site. This is only at a early stage and content is planned to be added for the future.
+
 Indices and tables
 ==================
 
