@@ -2,7 +2,7 @@
 Developer Documentation
 
 ## Editing pages
-[StackEdit](https://stackedit.io/app#) allows interactive document creation with markdown and preview of the results. Documents for this site can be built using that and the code can be copied and pasted directly into Github online or pushed to Github from a local computer. Supported markdown reference is [here](https://commonmark.org/help/).
+[StackEdit](https://stackedit.io/app#) allows interactive document creation with markdown and preview of the results. Documents for this site can be built using that and the code can be copied and pasted directly into Github online or pushed to Github from a local computer. Supported markdown reference is [here](https://commonmark.org/help/). One should also update index.rst to include any new pages created. In the future an extension that auto-generates index.rst can be included so that step won't be needed.
 
 ## Supported markdown
 The documentation can be written in CommonMark:
