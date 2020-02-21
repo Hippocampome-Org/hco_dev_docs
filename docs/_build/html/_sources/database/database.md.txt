@@ -1,4 +1,4 @@
-Handling Updates
+Handling updates
 ================
 
 Content is planned to added here about updating the database
