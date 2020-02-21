@@ -2,6 +2,7 @@ StackEdit Example
 =================
 
 This is an example file created with [StackEdit](https://stackedit.io/app#). StackEdit allows interactive document creation with markdown and preview of the results.
+Supported markdown reference is [here](https://commonmark.org/help/).
 
 # Welcome to StackEdit!
 
