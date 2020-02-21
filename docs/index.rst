@@ -26,7 +26,8 @@ Welcome to Hippocampome.org's Developer Documentation!
     :hidden:
     :caption: Csv2db
 
-    csv2db/tables_overview    
+    csv2db/tables_overview
+    csv3db/add_table
     
 .. toctree::
     :hidden:
