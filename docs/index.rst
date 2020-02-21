@@ -9,6 +9,9 @@ Welcome to Hippocampome.org's Developer Documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   
+   database
+   web pages
 
 
 
