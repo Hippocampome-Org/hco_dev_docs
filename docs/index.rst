@@ -21,6 +21,12 @@ Welcome to Hippocampome.org's Developer Documentation!
     :caption: Web Pages
 
     web_pages/web_pages
+    
+.. toctree::
+    :hidden:
+    :caption: Test
+
+    test/test
 
 Documentation Availible
 =======================
