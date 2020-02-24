@@ -28,6 +28,7 @@ Welcome to Hippocampome.org's Developer Documentation!
 
     csv2db/tables_overview
     csv2db/add_table
+    csv2db/string_field
     
 .. toctree::
     :hidden:
