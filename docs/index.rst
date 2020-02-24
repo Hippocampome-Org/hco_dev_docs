@@ -31,6 +31,12 @@ Welcome to Hippocampome.org's Developer Documentation!
     
 .. toctree::
     :hidden:
+    :caption: Synaptic Probabilities
+
+    synaptic_probabilities/fragment.md
+    
+.. toctree::
+    :hidden:
     :caption: Editing Dev Docs
 
     editing/stack_edit
