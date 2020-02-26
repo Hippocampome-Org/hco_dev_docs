@@ -13,7 +13,7 @@ Example:
 
     Page content
     
-- Currently the new page must be manually to /docs/index.rst under the appropriate folder
+- Currently the new page must be manually added to /docs/index.rst including the appropriate folder name. If a page already exists no table of contents changes are needed.
 
 Example:
 
