@@ -1,4 +1,4 @@
-color and keyword codes
+Color and keyword codes
 =======================
 
 ### The following are color and keyword codes that represent different neural objects
