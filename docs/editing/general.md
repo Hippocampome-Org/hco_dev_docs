@@ -7,7 +7,7 @@ Some basic methods are:
 This will be used as the table of contents entry for the page.
 
 Example:
-    code-block:: python
+
     My new page
     ===========
 
@@ -16,10 +16,10 @@ Example:
 - Currently the new page must be manually to /docs/index.rst under the appropriate folder
 
 Example:
-code-block:: 
-.. toctree::
+
+	.. toctree::
     :hidden:
     :caption: folder
 
-    folder/page1
-    folder/page2
+	    folder/page1
+	    folder/page2
