@@ -41,6 +41,7 @@ Welcome to Hippocampome.org's Developer Documentation!
     :hidden:
     :caption: Editing Dev Docs
 
+    editing/general
     editing/stack_edit
 
 Documentation Availible
