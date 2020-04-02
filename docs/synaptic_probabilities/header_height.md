@@ -9,6 +9,7 @@ $("#nGrid_Granule").css("height","235"); in synapse_probabilities_noc.php
 ```
 
 [2] 
+
 main_nbyn.css
 replace main.css reference with:
 ```
@@ -53,6 +54,7 @@ new code:
 }
 ```
 [3]
+
 main_nbyn.css
 ```
 .rotate 
@@ -61,6 +63,7 @@ main_nbyn.css
 }
 ```
 [4]
+
 jqgh_nGrid_Granule
 ```
 $('#jqgh_nGrid_Granule').attr('style', 'width: 235px; left:-70px; top: 76px !important;position:relative;');
@@ -68,6 +71,7 @@ $('#jqgh_nGrid_Granule').attr('style', 'width: 235px; left:-70px; top: 76px !imp
 Reference: https://stackoverflow.com/questions/2655925/how-to-apply-important-using-css
 
 [5]
+
 nGrid_frozen
 ```
 $('#nGrid_frozen').attr('style', 'width: 1px;top:222px !important;position:relative !important;');
@@ -79,6 +83,7 @@ width: 1px;top:222px !important;position:relative !important;
 $("#ui-jqgrid-labels").css("height","235");
 ```
 [7]
+
 main_nbyn.css
 ```
 .frozen-div {
@@ -92,6 +97,7 @@ main_nbyn.css
 position: absolute; height: 257px; top: 0px; left: 0px;z-index:5;
 ```
 [8]
+
 jqgh_nGrid_Neuron_Type_2
 ```
 $('#jqgh_nGrid_Neuron_Type_2').attr('style', 'top:120px;');
@@ -99,6 +105,7 @@ $('#jqgh_nGrid_Neuron_Type_2').attr('style', 'top:120px;');
 insert style="top:120px;"
 ```
 [9]
+
 main_nbyn.css
 ```
 .frozen-bdiv {
