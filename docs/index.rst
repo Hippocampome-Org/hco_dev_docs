@@ -36,6 +36,7 @@ Welcome to Hippocampome.org's Developer Documentation!
     :caption: Synaptic Probabilities
 
     synaptic_probabilities/fragment.md
+    synaptic_probabilities/header_height.md
     
 .. toctree::
     :hidden:
