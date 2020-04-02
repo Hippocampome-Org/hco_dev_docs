@@ -3,12 +3,12 @@ NbyN Matrices Header Height Increase
 
 Steps to add or modify header height increase:
 
-1. 
+[1] 
 ```
 $("#nGrid_Granule").css("height","235"); in synapse_probabilities_noc.php
 ```
 
-2. 
+[2] 
 main_nbyn.css
 replace main.css reference with:
 ```
@@ -52,7 +52,7 @@ new code:
   /*height:57px;*//* !important;*/
 }
 ```
-3.
+[3]
 main_nbyn.css
 ```
 .rotate 
@@ -60,25 +60,25 @@ main_nbyn.css
    top: 100px !important;
 }
 ```
-4.
+[4]
 jqgh_nGrid_Granule
 ```
 $('#jqgh_nGrid_Granule').attr('style', 'width: 235px; left:-70px; top: 76px !important;position:relative;');
 ```
 Reference: https://stackoverflow.com/questions/2655925/how-to-apply-important-using-css
 
-5.
+[5]
 nGrid_frozen
 ```
 $('#nGrid_frozen').attr('style', 'width: 1px;top:222px !important;position:relative !important;');
 
 width: 1px;top:222px !important;position:relative !important;
 ```
-6.
+[6]
 ```
 $("#ui-jqgrid-labels").css("height","235");
 ```
-7.
+[7]
 main_nbyn.css
 ```
 .frozen-div {
@@ -91,21 +91,21 @@ main_nbyn.css
 
 position: absolute; height: 257px; top: 0px; left: 0px;z-index:5;
 ```
-8:
+[8]
 jqgh_nGrid_Neuron_Type_2
 ```
 $('#jqgh_nGrid_Neuron_Type_2').attr('style', 'top:120px;');
 
 insert style="top:120px;"
 ```
-9.
+[9]
 main_nbyn.css
 ```
 .frozen-bdiv {
   height:644px !important;
 }
 ```
-10.
+[10]
 ```
 .ui-jqgrid-hdiv {
   overflow-y:hidden;
