@@ -6,6 +6,7 @@ Steps to add or modify header height increase:
 [1] 
 
 nbyn_css_mods.php
+
 Adjust neuron class' header size (top right of matrix)
 ```
 $("#nGrid_Granule").css("height","235");
@@ -14,6 +15,7 @@ $("#nGrid_Granule").css("height","235");
 [2]
 
 Adjust frozen hover over section on left side with neuron classes.
+
 main_nbyn.css
 ```
 .frozen-bdiv {
@@ -24,7 +26,9 @@ main_nbyn.css
 [3]
 
 Adjust frozen hover over section on left side with neuron classes.
+
 nbyn_css_mods.php
+
 nGrid_frozen
 ```
 $('#nGrid_frozen').attr('style', 'width: 1px;top:222px !important;position:relative !important;');
@@ -35,7 +39,9 @@ width: 1px;top:222px !important;position:relative !important;
 [4]
 
 Adjust frozen hover over section on left side with neuron classes.
+
 nbyn_css_mods.php
+
 jqgh_nGrid_Neuron_Type_2
 ```
 $('#jqgh_nGrid_Neuron_Type_2').attr('style', 'top:120px;');
@@ -46,6 +52,7 @@ insert style="top:120px;"
 [5] 
 
 main_nbyn.css
+
 replace main.css reference with:
 ```
 <link rel="stylesheet" type="text/css" media="screen" href="synap_prob/css/main_nbyn.css" />
@@ -57,8 +64,7 @@ Adjust horzontal divider:
   height:57px;
 }
 ```
-remove any preexisting lines that interefere with the following
-new code:
+remove any preexisting lines that interefere with the following new code:
 ```
 .ui-jqgrid .ui-jqgrid-htable th div {
   overflow: hidden !important; 
