@@ -81,7 +81,7 @@ Adjust horzontal divider:
   height:57px;
 }
 ```
-remove any preexisting lines that interefere with the following new code:
+remove any preexisting lines that interefere with the following new code (make sure the code below is present and not interfered with by any similar lines):
 ```
 .ui-jqgrid .ui-jqgrid-htable th div {
   overflow: hidden !important; 
