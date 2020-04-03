@@ -5,9 +5,10 @@ Steps to add or modify header height increase:
 
 [1] 
 
+nbyn_css_mods.php
 Adjust neuron class' header size (top right of matrix)
 ```
-$("#nGrid_Granule").css("height","235"); in synapse_probabilities_noc.php
+$("#nGrid_Granule").css("height","235");
 ```
 
 [2]
@@ -23,6 +24,7 @@ main_nbyn.css
 [3]
 
 Adjust frozen hover over section on left side with neuron classes.
+nbyn_css_mods.php
 nGrid_frozen
 ```
 $('#nGrid_frozen').attr('style', 'width: 1px;top:222px !important;position:relative !important;');
@@ -33,6 +35,7 @@ width: 1px;top:222px !important;position:relative !important;
 [4]
 
 Adjust frozen hover over section on left side with neuron classes.
+nbyn_css_mods.php
 jqgh_nGrid_Neuron_Type_2
 ```
 $('#jqgh_nGrid_Neuron_Type_2').attr('style', 'top:120px;');
