@@ -49,7 +49,24 @@ $('#jqgh_nGrid_Neuron_Type_2').attr('style', 'top:120px;');
 insert style="top:120px;"
 ```
 
-[5] 
+[5]
+
+Adjust frozen hover over section on left side with neuron classes.
+
+main_nbyn.css
+```
+.frozen-div {
+  position: absolute !important; 
+  height: 257px !important; 
+  top: 0px !important; 
+  left: 0px !important;
+  z-index:5 !important;
+}
+
+position: absolute; height: 257px; top: 0px; left: 0px;z-index:5;
+```
+
+[6] 
 
 main_nbyn.css
 
@@ -97,7 +114,7 @@ remove any preexisting lines that interefere with the following new code:
   /*height:57px;*//* !important;*/
 }
 ```
-[6]
+[7]
 
 main_nbyn.css
 ```
@@ -106,7 +123,7 @@ main_nbyn.css
    top: 100px !important;
 }
 ```
-[7]
+[8]
 
 jqgh_nGrid_Granule
 ```
@@ -114,23 +131,9 @@ $('#jqgh_nGrid_Granule').attr('style', 'width: 235px; left:-70px; top: 76px !imp
 ```
 Reference: https://stackoverflow.com/questions/2655925/how-to-apply-important-using-css
 
-[8]
+[9]
 ```
 $("#ui-jqgrid-labels").css("height","235");
-```
-[9]
-
-main_nbyn.css
-```
-.frozen-div {
-  position: absolute !important; 
-  height: 257px !important; 
-  top: 0px !important; 
-  left: 0px !important;
-  z-index:5 !important;
-}
-
-position: absolute; height: 257px; top: 0px; left: 0px;z-index:5;
 ```
 
 [10]
