@@ -1,4 +1,4 @@
-Propigate Errors Calculations
+Propagate Errors Calculations
 =============================
 
 Strategy: the calculations create several temporary SQL tables (views) that are
