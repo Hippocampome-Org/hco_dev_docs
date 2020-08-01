@@ -5,10 +5,11 @@ Strategy: the calculations create several temporary SQL tables (views) that are
 used to store intermediary values. The only perminant table added is
 SynproParcelVolumes. The temporary tables will be removed upon starting a new
 MySQL session, and can be automatically added again with the build_error_prop.sh
-script as described below. This help avoid taking up database space with intermediary
-tables when that is not needed.
+script as described below. This helps avoid taking up database space with intermediary
+tables when that is not needed. Possibly the total_nps, total_noc, and total_sp
+tables may become perminant but that can be decided in the future.
 
-While each implementation step is listed below, it is recommended to run 
+Usage note: While each implementation step is listed below, it is recommended to run 
 build_error_prop.sh to run all steps unless there is interest in inspecting an 
 individual intermediate table.
 
