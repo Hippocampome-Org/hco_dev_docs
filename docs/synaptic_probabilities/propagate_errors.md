@@ -41,15 +41,32 @@ Implementation:
 
 <br>b. Read in needed values from stored data/ files
 <br>&nbsp;&nbsp;i. You need to read the parcel volume (volume_[parcel]) from the first line of either data/[parcel]-Table-1.csv or data/[parcel]-Table-2.csv.
+
+Implementation:
+<br>Run create_synpro_parcel_volumes.sql to create SynproParcelVolumes table.
+<br>Import SynproParcelVolumes.csv to add data to table. 
+
 <br>c. Calculate the mean potential volume of overlap and its standard deviation.
 <br>&nbsp;&nbsp;i. Calculate the overlap volume mean: overlap_volume_mean_[parcel] = (axonal_volume_mean_[parcel] + dendritic_volume_mean_[parcel]) / 4.
 <br>&nbsp;&nbsp;ii. Calculate the overlap volume standard deviation: overlap_volume_stdev_[parcel] = sqrt(axonal_volume_mean_[parcel]^2 + dendritic_volume_mean_[parcel]^2) / 4.
+
+Implementation:
+<br>Run volume_of_overlap.sql
+
 <br>d. Calculate the mean number of potential synapses (NPS) and its standard deviation.
 <br>&nbsp;&nbsp;i. Calculate the NPS mean: NPS_mean_[parcel] = c * axonal_length_mean_[parcel] * dendritic_length_mean_[parcel] / volume_[parcel].
 <br>&nbsp;&nbsp;ii. Calculate the NPS standard deviation: NPS_stdev_[parcel] = NPS_mean_[parcel] * sqrt((axonal_length_stdev_[parcel] / axonal_length_mean_[parcel])^2 + (dendritic_length_stdev_[parcel] / dendritic_length_mean_[parcel])^2) / volume_[parcel].
+
+Implementation:
+<br>Run nps.sql
+
 <br>e. Calculate the mean number of contacts (NC) and its standard deviation.
 <br>&nbsp;&nbsp;i. Calculate the NC mean: NC_mean_[parcel] = (1/n_parcels) + (c * axonal_length_mean_[parcel] * dendritic_length_mean_[parcel]) / overlap_volume_mean_[parcel].
 <br>&nbsp;&nbsp;ii. Calculate the NC standard deviation: NC_stdev_[parcel] = NC_mean_[parcel] * sqrt((axonal_length_stdev_[parcel] / axonal_length_mean_[parcel])^2 + (dendritic_length_stdev_[parcel] / dendritic_length_mean_[parcel])^2 + (overlap_volume_stdev_[parcel] / overlap_volume_mean_[parcel])^2).
+
+Implementation:
+
+
 <br>f. Calculate the mean connection probability (CP) and its standard deviation.
 <br>&nbsp;&nbsp;i. Calculate the CP mean: CP_mean_[parcel] = NPS_mean_[parcel] / NC_mean_[parcel].
 <br>&nbsp;&nbsp;ii. Calculate the CP standard deviation: CP_stdev_[parcel] = CP_mean_[parcel] * sqrt((NPS_stdev_[parcel] / NPS_mean_[parcel])^2 + (NC_stdev_[parcel] / NC_mean_[parcel])^2).
