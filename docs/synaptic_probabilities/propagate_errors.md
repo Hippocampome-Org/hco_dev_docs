@@ -79,7 +79,7 @@ Implementation:
 Implementation:
 Run connection_probability.sql
 
-## Step 5
+## Step 4
 Sum values across all n_parcels parcels.
 <br>a. Calculate the total mean number of potential synapses and its standard deviation.
 <br>&nbsp;&nbsp;i. NPS_mean_total = NPS_mean_[parcel1] + NPS_mean_[parcel2] + ...
