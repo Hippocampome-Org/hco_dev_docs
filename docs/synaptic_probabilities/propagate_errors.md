@@ -8,6 +8,10 @@ MySQL session, and can be automatically added again with the build_error_prop.sh
 script as described below. This help avoid taking up database space with intermediary
 tables when that is not needed.
 
+While each implementation step is listed below, it is recommended to run 
+build_error_prop.sh to run all steps unless there is interest in inspecting an 
+individual intermediate table.
+
 ## Step 1
 
 Define the parcel-independent constants to be used throughout the NxN calculations.
@@ -65,8 +69,34 @@ Implementation:
 <br>&nbsp;&nbsp;ii. Calculate the NC standard deviation: NC_stdev_[parcel] = NC_mean_[parcel] * sqrt((axonal_length_stdev_[parcel] / axonal_length_mean_[parcel])^2 + (dendritic_length_stdev_[parcel] / dendritic_length_mean_[parcel])^2 + (overlap_volume_stdev_[parcel] / overlap_volume_mean_[parcel])^2).
 
 Implementation:
-
+<br>Run number_of_contacts.sql
 
 <br>f. Calculate the mean connection probability (CP) and its standard deviation.
 <br>&nbsp;&nbsp;i. Calculate the CP mean: CP_mean_[parcel] = NPS_mean_[parcel] / NC_mean_[parcel].
 <br>&nbsp;&nbsp;ii. Calculate the CP standard deviation: CP_stdev_[parcel] = CP_mean_[parcel] * sqrt((NPS_stdev_[parcel] / NPS_mean_[parcel])^2 + (NC_stdev_[parcel] / NC_mean_[parcel])^2).
+
+Implementation:
+Run connection_probability.sql
+
+## Step 5
+Sum values across all n_parcels parcels.
+<br>a. Calculate the total mean number of potential synapses and its standard deviation.
+<br>&nbsp;&nbsp;i. NPS_mean_total = NPS_mean_[parcel1] + NPS_mean_[parcel2] + ...
+<br>&nbsp;&nbsp;ii. NPS_stdev_total = sqrt(NPS_stdev_[parcel1]^2 + NPS_stdev_[parcel2]^2 + ...).
+
+Implementation:
+Run total_nps.sql
+
+<br>b. Calculate the total mean number of contacts and its standard deviation.
+<br>&nbsp;&nbsp;i. NC_mean_total = NC_mean_[parcel1] + NC_mean_[parcel2] + ...
+<br>&nbsp;&nbsp;ii. NC_stdev_total = sqrt(NC_stdev_[parcel1]^2 + NC_stdev_[parcel2]^2 + ...).
+
+Implementation:
+Run total_noc.sql
+
+<br>c. Calculate the total mean connection probability and its standard deviation.
+<br>&nbsp;&nbsp;i. CP_mean_total = CP_mean_[parcel1] + CP_mean_[parcel2] + ...
+<br>&nbsp;&nbsp;ii. CP_stdev_total = sqrt(CP_stdev_[parcel1]^2 + CP_stdev_[parcel2]^2 + ...).
+
+Implementation:
+Run total_cp.sql
