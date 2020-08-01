@@ -9,7 +9,7 @@ script as described below. This helps avoid taking up database space with interm
 tables when that is not needed. Possibly the total_nps, total_noc, and total_sp
 tables may become perminant but that can be decided in the future.
 
-Usage note: While each implementation step is listed below, it is recommended to run 
+Usage note: while each implementation step is listed below, it is recommended to run 
 build_error_prop.sh to run all steps unless there is interest in inspecting an 
 individual intermediate table.
 
