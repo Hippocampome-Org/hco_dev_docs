@@ -18,7 +18,7 @@ MySQL note:
 adding:
 <br>[mysqld]
 <br>local_infile = 1
-<br>under the [mysqld] section in /etc/mysql/my.cnf, then restarting MySQL, e.g., sudo service mysql restart.
+<br>in /etc/mysql/my.cnf (or your different MySQL configuration file location), then restarting MySQL, e.g., sudo service mysql restart.
 <br>Reference: [1] https://www.reddit.com/r/mysql/comments/f8fmk5/loading_local_data_error/
 
 ## Step 1
