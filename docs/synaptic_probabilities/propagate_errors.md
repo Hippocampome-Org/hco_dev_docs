@@ -19,9 +19,14 @@ in a MySQL session [1]. Then copy the result to /etc/mysql/my.cnf such as
 <br>[mysqld]
 <br>sql_mode = STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
 <br>or whatever the copy_me result produced [2]. Then restart mysql, e.g., sudo service mysql restart.
-References: [1] https://stackoverflow.com/questions/23921117/disable-only-full-group-by
+<br>
+<br>Importing data locally needs to be enabled also [3]. This has been observed to work by
+setting:
+<br>local_infile = 1
+<br>under the [mysqld] section in my.cnf, then restarting MySQL.
+<br>References: [1] https://stackoverflow.com/questions/23921117/disable-only-full-group-by
 [2] https://medium.com/@kasunsiyambalapitiya/fixing-this-is-incompatible-with-sql-mode-only-full-group-by-in-mysql-de811ed35ae9
-
+[3] https://www.reddit.com/r/mysql/comments/f8fmk5/loading_local_data_error/
 
 ## Step 1
 
