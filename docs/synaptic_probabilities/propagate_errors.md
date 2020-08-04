@@ -13,6 +13,16 @@ Usage note: while each implementation step is listed below, it is recommended to
 build_error_prop.sh to run all steps unless there is interest in inspecting an 
 individual intermediate table.
 
+MySQL note: MySQL needs to be run without "ONLY_FULL_GROUP_BY" to run this software.
+This can be done by running "SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY','') copy_me"
+in a MySQL session [1]. Then copy the result to /etc/mysql/my.cnf such as 
+<br>[mysqld]
+<br>sql_mode = STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
+<br>or whatever the copy_me result produced [2]. Then restart mysql, e.g., sudo service mysql restart.
+References: [1] https://stackoverflow.com/questions/23921117/disable-only-full-group-by
+[2] https://medium.com/@kasunsiyambalapitiya/fixing-this-is-incompatible-with-sql-mode-only-full-group-by-in-mysql-de811ed35ae9
+
+
 ## Step 1
 
 Define the parcel-independent constants to be used throughout the NxN calculations.
@@ -53,14 +63,14 @@ Implementation:
 
 <br>c. Calculate the mean potential volume of overlap and its standard deviation.
 <br>&nbsp;&nbsp;i. Calculate the overlap volume mean: overlap_volume_mean_[parcel] = (axonal_volume_mean_[parcel] + dendritic_volume_mean_[parcel]) / 4.
-<br>&nbsp;&nbsp;ii. Calculate the overlap volume standard deviation: overlap_volume_stdev_[parcel] = sqrt(axonal_volume_mean_[parcel]^2 + dendritic_volume_mean_[parcel]^2) / 4.
+<br>&nbsp;&nbsp;ii. Calculate the overlap volume standard deviation: overlap_volume_stdev_[parcel] = sqrt(axonal_volume_stdev_[parcel]^2 + dendritic_volume_stdev_[parcel]^2).
 
 Implementation:
 <br>Run volume_of_overlap.sql
 
 <br>d. Calculate the mean number of potential synapses (NPS) and its standard deviation.
 <br>&nbsp;&nbsp;i. Calculate the NPS mean: NPS_mean_[parcel] = c * axonal_length_mean_[parcel] * dendritic_length_mean_[parcel] / volume_[parcel].
-<br>&nbsp;&nbsp;ii. Calculate the NPS standard deviation: NPS_stdev_[parcel] = NPS_mean_[parcel] * sqrt((axonal_length_stdev_[parcel] / axonal_length_mean_[parcel])^2 + (dendritic_length_stdev_[parcel] / dendritic_length_mean_[parcel])^2) / volume_[parcel].
+<br>&nbsp;&nbsp;ii. Calculate the NPS standard deviation: NPS_stdev_[parcel] = NPS_mean_[parcel] * sqrt((axonal_length_stdev_[parcel] / axonal_length_mean_[parcel])^2 + (dendritic_length_stdev_[parcel] / dendritic_length_mean_[parcel])^2).
 
 Implementation:
 <br>Run nps.sql
