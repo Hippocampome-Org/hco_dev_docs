@@ -11,7 +11,9 @@ tables may become perminant but that can be decided in the future.
 
 Usage note: while each implementation step is listed below, it is recommended to run 
 build_error_prop.sh to run all steps unless there is interest in inspecting an 
-individual intermediate table.
+individual intermediate table. The build_error_prop script uses mysql_user, mysql_password, 
+and mysql_db_name found in database_save.sh in the base csv2db_import directory. This 
+is a file that a user creates based on the example_database_save.sh file.
 
 MySQL note: 
 <br>Importing data locally needs to be enabled in MySQL [1]. This has been observed to work by
