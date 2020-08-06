@@ -23,6 +23,10 @@ adding:
 <br>in /etc/mysql/my.cnf (or your different MySQL configuration file location), then restarting MySQL, e.g., sudo service mysql restart.
 <br>Reference: [1] https://www.reddit.com/r/mysql/comments/f8fmk5/loading_local_data_error/
 
+Csv file note:
+<br>In SynproParcelVolumes.csv for EC subregion the "L" in layer names was removed to match the way that
+is described in the neurite_quantified tables. This allows compatibility for queries.
+
 ## Step 1
 
 Define the parcel-independent constants to be used throughout the NxN calculations.
