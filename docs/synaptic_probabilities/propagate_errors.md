@@ -110,8 +110,9 @@ Implementation:
 Run total_noc.sql
 
 <br>c. Calculate the total mean connection probability and its standard deviation.
-<br>&nbsp;&nbsp;i. CP_mean_total = CP_mean_[parcel1] + CP_mean_[parcel2] + ...
-<br>&nbsp;&nbsp;ii. CP_stdev_total = sqrt(CP_stdev_[parcel1]^2 + CP_stdev_[parcel2]^2 + ...).
+<br>&nbsp;&nbsp;i. CP_mean_total = 1 – ((1 - CP_mean_[parcel1]) * (1 - CP_mean_[parcel2]) * ...)
+<br>&nbsp;&nbsp;ii. CP_stdev_total = CP_mean_total * sqrt((CP_stdev_[parcel1] / CP_mean_[parcel1])^2 + (CP_stdev_[parcel2] /
+CP_mean_[parcel2])^2 + ...).
 
 Implementation:
 Run total_cp.sql
