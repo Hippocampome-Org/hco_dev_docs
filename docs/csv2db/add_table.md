@@ -13,5 +13,5 @@ Adding a new table instructions
 ## 3. modify all.csv
 >	a. add a new row
 
-## 4. modify iconv_latin1_utf8.sh
+## 4. modify iconv_latin1_utf8.sh and run_csv2db_import.sh
 >	a. add a new conversion row
