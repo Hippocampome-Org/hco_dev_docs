@@ -15,14 +15,6 @@ individual intermediate table. The build_error_prop script uses mysql_user, mysq
 and mysql_db_name found in database_save.sh in the base csv2db_import directory. This 
 is a file that a user creates based on the example_database_save.sh file.
 
-MySQL note: 
-<br>Importing data locally needs to be enabled in MySQL [1]. This has been observed to work by
-adding:
-<br>[mysqld]
-<br>local_infile = 1
-<br>in /etc/mysql/my.cnf (or your different MySQL configuration file location), then restarting MySQL, e.g., sudo service mysql restart.
-<br>Reference: [1] https://www.reddit.com/r/mysql/comments/f8fmk5/loading_local_data_error/
-
 Csv file note:
 <br>In SynproParcelVolumes.csv for EC subregion the "L" in layer names was removed to match the way that
 is described in the neurite_quantified tables. This allows compatibility for queries.
