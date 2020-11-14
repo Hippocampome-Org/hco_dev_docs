@@ -25,17 +25,16 @@ Create new database tables for at least:
 
 Code for table processing:
 
-Create a new folder `php/{matrix_name}/class/`. This should contain files such as:
+Create a new folder `php/{matrix_name}/class/`. This should contain files such as: class.articleevidencerel.php, class.attachment.php, class.evidencepropertyyperel.php, class.evidencetypetyperel.php, class.fragment.php
 
-class.articleevidencerel.php
-class.attachment.php
-class.evidencepropertyyperel.php
-class.evidencetypetyperel.php
-class.fragment.php
-
-Theses files will manage functions for accessing the database tables.
+These files will manage functions for accessing the database tables.
 
 Population of tables
 ---------------------
 
+Csv files need to be created for the database tables. The same format of prior csv files should be used. All instructions in the "adding a new table" section need to be followed to process each csv file into a table. Manual or programming work is needed to create the values that the csv files contain.
 
+Programming the evidence pages
+---------------------
+
+The `property_page_{matrix_name}.php` code needs to be redesigned to accomidate the specific properties, and new property class files, to have the devidence pages appropriately use the database tables for evidence. For example, function(s) for retrieving evidence_ids need to match the properties needed to represent unique fragments in the new matrix.
