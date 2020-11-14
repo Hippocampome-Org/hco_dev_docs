@@ -15,13 +15,15 @@ E.g. neuron_id, parcel_id.
 
 Create new database tables for at least:
 
-attachment_<matrix_name>
+attachment_<matrix_name>. This includes data about what attachment image to include for a fragment.
 
-{matrix_name}_fragment
+{matrix_name}_fragment. This includes data about fragment info such as quote and article.
 
-{matrix_name}_evidence_{prop1}_rel
+`{matrix_name}_evidence_{prop1}_rel` where {prop1} is the 1st property, e.g., neuron_id. Additional properties can be included as needed.
 
-Add content later
+{matrix_name}_evidence_fragment_rel
+
+Purpose of tables
 ---------------------
 
-Content to be added
+
