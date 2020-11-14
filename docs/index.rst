@@ -22,6 +22,7 @@ Welcome to Hippocampome.org's Developer Documentation!
 
     web_pages/web_pages
     web_pages/color_codes
+    web_pages/adding_evidence_page
     
 .. toctree::
     :hidden:
