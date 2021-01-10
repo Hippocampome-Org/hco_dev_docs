@@ -46,6 +46,12 @@ Welcome to Hippocampome.org's Developer Documentation!
 
     editing/general_editing
     editing/stack_edit
+    
+.. toctree::
+    :hidden:
+    :caption: Adding On-hold Types
+
+    new_types/adding_on-hold_types.md
 
 Documentation Availible
 =======================
