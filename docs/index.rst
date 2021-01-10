@@ -49,9 +49,10 @@ Welcome to Hippocampome.org's Developer Documentation!
     
 .. toctree::
     :hidden:
-    :caption: Adding On-hold Types
+    :caption: Adding New and On-hold Types
 
     new_types/adding_on-hold_types.md
+    new_types/adding_new_types.md
 
 Documentation Availible
 =======================
