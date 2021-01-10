@@ -5,7 +5,7 @@ This described some steps involved with adding on-hold neuron types to the site.
 
 Steps involved in adding on-hold neuron types
 ----------------
-* addi material (data of the on-hold types) to at least the neuron name and neuron type (and neuron term if appropriate) searches.
+* add material (data of the on-hold types) to at least the neuron name and neuron type (and neuron term if appropriate) searches.
 * add any new article entries to the articles table.
 * update tables such as EvidenceFragmentRel and EvidencePropertyTypeRel to be able to associate the neuron type with the article evidence (or create new tables).
 
