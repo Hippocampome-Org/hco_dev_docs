@@ -16,5 +16,5 @@ Steps involved in adding on-hold neuron types
 * create all packet images.
 * somehow make sure on-hold types don't appear with regular types on the site.
 
-  Note: usually db->json would need to be done so if that conversion never happens possibly they won't show up.
+  Note: usually db->json would need to be done so if that conversion never happens possibly they won't show up. After discussing this with Giorgio, an idea that could help is to see if David knows where scripts/code are that convert content from the db->json. This could provide better insights into how the process works, so that unwanted propagations of on-hold types to the main site can be avoided.
 * create new neuron pages specifically with the on-hold descriptions.
