@@ -39,7 +39,13 @@ Welcome to Hippocampome.org's Developer Documentation!
     synaptic_probabilities/fragment.md
     synaptic_probabilities/header_height.md
     synaptic_probabilities/propagate_errors.md
-    
+
+.. toctree::
+    :hidden:
+    :caption: CARLsim Developer Documentation
+
+    csdevdocs/cstp.md
+
 .. toctree::
     :hidden:
     :caption: Editing Dev Docs
