@@ -22,7 +22,8 @@ A data bit is set when a spike occurs. A function getFiringBitGroupPtr() uses th
 </details>
 <details>
 <summary>Programming: STP formulas</summary>
-Fig. 1's equation 1 is coded in the line: ```cpp
+Fig. 1's equation 1 is coded in the line: 
+```
 runtimeDataGPU.stpu[ind_plus] += runtimeDataGPU.stp_U[pos] * (1.0f - runtimeDataGPU.stpu[ind_minus]);
 ```
 </details>
