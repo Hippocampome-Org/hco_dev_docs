@@ -6,7 +6,7 @@ This documentation will explain methods used in implementing synapse connection 
 Methods used in implementing CSTP
 ----------------
 
-<b>Spike events</b>
+<b>Spike events</b><br>
 Spike events are tracked. When a spike occurs the formulas in fig 1. are used to process what signal should be added to a post synaptic neuron.
 
 ![STP Equations](http://uci-carl.github.io/CARLsim4/form_0.png)
@@ -66,7 +66,7 @@ All eq.: Given that all equations in fig. 1 are derivatives, it is unclear where
 </details>
 <br>
 <b>Conductance variable</b><br>
-CARLsim processes g (conductance) as a "multiplicative gain factor for fast and slow synaptic channels" [3]. G values in hippocampome's synaptic physiology page can be set using this parameter and it multiplies specific types of receptor current.
+CARLsim processes g (conductance) as a "multiplicative gain factor for fast and slow synaptic channels" [3]. G values in hippocampome's synaptic physiology page can be set using this parameter and it multiplies specific types of receptor current.<br>
 <br>
 <b>Variable updates</b><br>
 Every timestep the STP variables are updated. As described in fig. 1's equations, certain parts of the equations are included only during the timestep a spike occurs. The other parts of the equations are updated over every timestep.<br>
@@ -85,7 +85,7 @@ In simulations with STP and without CSTP it has been observed that there is some
 GPU computing bug that is causing different results than in simulations with CSTP. Further investigations will be made.
 
 <br>References:<br>
-[1] http://uci-carl.github.io/CARLsim4/classCARLsim.html#a54170c96807d6cdf699fa3664f81505e
-[2] http://uci-carl.github.io/CARLsim4/ch3_neurons_synapses_groups.html
-[3] http://uci-carl.github.io/CARLsim4/ch4_connections.html#ch4s1s4_receptor_gain
+[1] http://uci-carl.github.io/CARLsim4/classCARLsim.html#a54170c96807d6cdf699fa3664f81505e<br>
+[2] http://uci-carl.github.io/CARLsim4/ch3_neurons_synapses_groups.html<br>
+[3] http://uci-carl.github.io/CARLsim4/ch4_connections.html#ch4s1s4_receptor_gain<br>
 [4] http://www.scholarpedia.org/article/Short-term_synaptic_plasticity
