@@ -81,8 +81,7 @@ An important part of calculations in a network as opposed to single synapses is 
 In STP, when spikes occur changes happen to presynaptic neuron chemical balances [4]. For instance, in short-term depression (STD) neurotransmitters are depleted at the axon. In short-term facilitation (STF), an influx of calcium occurs in the axon. In the synapse model, STD and STP are managed by u and x variables. The u and x variables are assigned to the presynaptic neuron index. The A variable is the synaptic response amplitude or weight (see programming: STP formulas: unknown section for more info). The A variable is assigned to a pair of preId and postId at the individual synapse level. This represents that each [preId,postId] can have its own synaptic response amplitude. I (current) is assigned to a pair of preId and postId at the individual synapse level. This means each synapse has its own unique current level. I current will eventually be added to a post-synaptic neuron at which point that value is assigned to a single post-synaptic neuron and not a synapse. Tau_d (aka tau_s in fig. 1) is assigned to [preId,postId] at the group level. Neuron types can be represented in CARLsim using neuron groups. Tau_d being at the group level means that it has a specific value for a neuron type pair.<br>
 <br>
 <b>CSTP and non-CSTP results differences</b><br>
-In simulations with STP and without CSTP it has been observed that there is some kind of possible
-GPU computing bug that is causing different results than in simulations with CSTP. Further investigations will be made.
+In simulations with STP and without CSTP it has been observed that there was a bug in non-CSTP processing of STP. A bug fix has been sent to the CARLsim team. References: https://github.com/UCI-CARL/CARLsim6/issues/16, https://github.com/UCI-CARL/CARLsim6/pull/17.
 
 <br>References:<br>
 [1] http://uci-carl.github.io/CARLsim4/classCARLsim.html#a54170c96807d6cdf699fa3664f81505e<br>
