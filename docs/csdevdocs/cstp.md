@@ -87,6 +87,6 @@ In simulations with STP and without CSTP it has been observed that there was a b
 <br>References:<br>
 [1] http://uci-carl.github.io/CARLsim4/classCARLsim.html#a54170c96807d6cdf699fa3664f81505e<br>
 [2] http://uci-carl.github.io/CARLsim4/ch3_neurons_synapses_groups.html<br>
-[3] https://ieeexplore.ieee.org/abstract/document/1257420/
+[3] https://ieeexplore.ieee.org/abstract/document/1257420/<br>
 [4] http://uci-carl.github.io/CARLsim4/ch4_connections.html#ch4s1s4_receptor_gain<br>
-[5] http://www.scholarpedia.org/article/Short-term_synaptic_plasticity
+[5] http://www.scholarpedia.org/article/Short-term_synaptic_plasticity<br>
