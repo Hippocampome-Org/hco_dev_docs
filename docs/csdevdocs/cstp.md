@@ -48,7 +48,7 @@ dI/dt = -I/tau_S + A * u^+ * x^- * \delta(t-t_{spk})<br>
 1. "-I/tau_S" is coded in the line: <br>
 runtimeDataGPU.AMPA_syn_i[synId] *= runtimeDataGPU.stp_dAMPA[pre_id];<br>
 Where AMPA is replaced by each receptor processed.
-Note: this is a part of the bug fix update.
+Note: this is a part of the bug fix update.<br>
 2. "A * u^+ * x^-" is coded in the lines: <br>
 float STP_A = (runtimeDataGPU.stp_U[pos] > 0.0f) ? 1.0 / runtimeDataGPU.stp_U[pos] : 1.0f;<br>
 change *= STP_A * runtimeDataGPU.stpx[ind_minus] * runtimeDataGPU.stpu[ind_plus];<br>
@@ -63,7 +63,7 @@ Eq. 3: How dirac delta is processed because it is a subtraction and not multipli
 Eq. 3: The CARLsim user guide describes "A" as "A is the synaptic weight". However, the code processes A as "if stp_U > 0 then stp_U = 1/stp_U else stp_U = 1". stp_U represents synaptic weight? Why is stp_U inverted or set to 1? It is described as "scaling factor weighted" in comments and what does that mean? This is specific to "LN_I_CALC_TYPES" code. The source scholarpedia article appears to describe A as "the response amplitude that would be produced by total release of all the neurotransmitter".<br>
 Eq. 3: Why tau_d is encoded as 1-(1/tau_d) based on what tau_d a user inputs for a synapse. Where is that formula from? It is possible that this is from the conductance formula from eq. 13 in [2]. However, that formula is exp(1-(1/tau_d)) and it is unclear if exp() is included in the programming code.<br>
 All eq.: Given that all equations in fig. 1 are derivatives, it is unclear where the source code solves for each variable's value for use in successive calculations in non-derivative form. For instance, u, x, and I, are all used in later calculations but where in the code are their values converted out of derivative form?<br>
-Note: NS has seen similar equation coding of Izhikevich model derivatives in pg. 3 code of [3]. Therefore, while it is unclear how it works, there seems to be evidence that derivatives processing can be computed in such a way. Izhikevich added processing of the derivative calculation twice per 1 ms timestep for "numerical stability" but perhaps that is optional.
+Note: NS has seen similar equation coding of Izhikevich model derivatives in pg. 3 code of [3]. Therefore, while it is unclear how it works, there seems to be evidence that derivatives processing can be computed in such a way. Izhikevich added processing of the derivative calculation twice per 1 ms timestep for "numerical stability" but perhaps that is optional. A point of confusion is that in Izhikevich's code, there is "value = value + derivative" for application of a value's derivative to the value. In the CARLsim code it appears it is just "value = derivative". It is unclear how the derivative is added to the value rather than the value just set to equal the value in the code.
 </details>
 <br>
 <b>Conductance variable</b><br>
