@@ -70,9 +70,10 @@ Note: NS has seen similar equation coding of Izhikevich model derivatives in pg.
 CARLsim processes g (conductance) as a "multiplicative gain factor for fast and slow synaptic channels" [4]. G values in hippocampome's synaptic physiology page can be set using this parameter and it multiplies specific types of receptor current.<br>
 <br>
 <b>Current decay</b><br>
-![Equation with tau_d](http://uci-carl.github.io/CARLsim4/form_53.png)<br>
+
+![Equation with tau_d](http://uci-carl.github.io/CARLsim4/form_53.png)
 Fig. 2. Equation with tau_d [2].<br>
-Synaptic currents are decayed with the use of the tau_d variable. Fig 2. shows how tau_d (tau in the equation) contributes to the conductance variable, g. The current decay is processed every timestep.<br>
+Synaptic currents are decayed with the use of the tau_d variable. Fig 2. shows how tau_d (tau in the equation) contributes to the conductance variable, g. The current decay is processed every timestep.<br><br>
 <b>Variable updates</b><br>
 Every timestep the STP variables are updated. As described in fig. 1's equations, certain parts of the equations are included only during the timestep a spike occurs. The other parts of the equations are updated over every timestep.<br>
 <details>
