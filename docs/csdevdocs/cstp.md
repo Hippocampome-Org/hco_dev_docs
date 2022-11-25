@@ -71,11 +71,18 @@ Answer: in fig. 1 equation 3, I * (1-(1/tau_d)) = I-I/tau_d. The reason tau_d is
 <b>Conductance variable</b><br>
 CARLsim processes g (conductance) as a "multiplicative gain factor for fast and slow synaptic channels" [4]. G values in hippocampome's synaptic physiology page can be set using this parameter and it multiplies specific types of receptor current.<br>
 <br>
-<b>Current decay</b><br>
+<b>Conductance computation</b><br>
 
 ![Equation with tau_d](http://uci-carl.github.io/CARLsim4/form_53.png)
 Fig. 2. Equation with tau_d [2].<br>
-Synaptic currents are decayed with the use of the tau_d variable. Fig 2. shows how tau_d (tau in the equation) contributes to the conductance variable, g. The current decay is processed every timestep.<br><br>
+Synaptic currents are have their conductance computed with the use of the tau_d variable. Fig 2. shows how tau_d (tau in the equation) contributes to the conductance variable, g. The potential for conductance is processed every timestep.<br>
+<details>
+<summary>Programming: Conductance computation</summary> 
+It is unclear where in the code this equation is included.<br>
+<br>
+Unknown:<br>
+In the equation, exp() is affected by time since last spike, yet the heaviside function causes the exp() to only be a factor if time since last spike is 0. This seems contradictory. Also, it is correct that the conductance only occurs at the timestep of a spike? This may be accurate because that is the time a synapse releases its current into the post-synaptic neuron. The time after that the current may just decay.<br>
+</details><br><br>
 <b>Variable updates</b><br>
 Every timestep the STP variables are updated. As described in fig. 1's equations, certain parts of the equations are included only during the timestep a spike occurs. The other parts of the equations are updated over every timestep.<br>
 <details>
