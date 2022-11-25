@@ -76,12 +76,16 @@ CARLsim processes g (conductance) as a "multiplicative gain factor for fast and 
 ![Equation with tau_d](http://uci-carl.github.io/CARLsim4/form_53.png)
 Fig. 2. Equation with tau_d [2].<br>
 Synaptic currents are have their conductance computed with the use of the tau_d variable. Fig 2. shows how tau_d (tau in the equation) contributes to the conductance variable, g. The potential for conductance is processed every timestep.<br>
+<br>
+Issues: while this equation is present in the CARLsim user guide, it does not appear implemented in the code and it appears to have mathematical issues as described in the unknown section.
 <details>
 <summary>Programming: Conductance computation</summary> 
-It is unclear where in the code this equation is included.<br>
+Potentially this equation is not implemented in the source code. In snn_gpu_module.cu, in the function updateNeuronState() the line:<br>
+I_sum = -(runtimeDataGPU.gAMPA[nid] * (v - 0.0f)...<br>
+appears to be where all synapse current is summed from each receptor type. Equation 13 from fig. 2. does not appear present in the code. As described in the unknown section below there seems to be mathematical issues with the equation too.
 <br>
 Unknown:<br>
-In the equation, exp() is affected by time since last spike, yet the heaviside function causes the exp() to only be a factor if time since last spike is 0. This seems contradictory. Also, it is correct that the conductance only occurs at the timestep of a spike? This may be accurate because that is the time a synapse releases its current into the post-synaptic neuron. The time after that the current may just decay.<br>
+In the equation, exp() is affected by time since last spike, yet the heaviside function causes the exp() to only be a factor if time since last spike is 0. This causes g to be +1 for each spike and 0 with no spikes. Is it correct that with no spikes the conductance fully stop? This does not seem to make sense because the synaptic current is meant to decay at a rate related to tau_d not just be instantly gone in a timestep with no spikes because the conductance becomes 0.<br>
 </details><br><br>
 <b>Variable updates</b><br>
 Every timestep the STP variables are updated. As described in fig. 1's equations, certain parts of the equations are included only during the timestep a spike occurs. The other parts of the equations are updated over every timestep.<br>
