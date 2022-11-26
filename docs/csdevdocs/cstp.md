@@ -79,7 +79,6 @@ For each receptor, e.g., AMPA, the conductance constant is applied in lines such
 Neurons can have synaptic strengths developer over learning with long-term placticity. A simulation that does not include learning methods such as spike-timing dependent placticity can still include synaptic strengths and assume these have been learned prior to the simulation time. A method for learning new weights is needed if the simulation is to include synaptic strength changes.<br>
 <br>
 Synaptic weights are specified when the connect() function is called for two neuron groups. The weights are a multiplier of the synaptic current that is produced through synapses.<br>
-<br>
 <details>
 <summary>Programming: Synaptic weights</summary>
 The weight is retrieved and stored in a "change" variable. E.g., in the line "change = runtimeDataGPU.wt[cum_pos + wtId];" in snn_gpu_module.cu or snn_cpu_module.cpp. Each time a pre-synaptic spike occurs which causes synaptic current to be sent to the post-synaptic neuron, the current of each receptor is multiplied by the synaptic weight variable. This occurs in a line such as "AMPA_sum = change * d_mulSynFast[connId];".<br>
