@@ -70,7 +70,11 @@ Answer: in fig. 1 equation 3, I * (1-(1/tau_d)) = I-I/tau_d. The reason tau_d is
 <br>
 <b>Conductance variable</b><br>
 CARLsim processes g (conductance) as a "multiplicative gain factor for fast and slow synaptic channels" [4]. G values in hippocampome's synaptic physiology page can be set using this parameter and it multiplies specific types of receptor current.<br>
-<br>
+<details>
+<summary>Programming: Conductance variable</summary>
+For each receptor, e.g., AMPA, the conductance constant is applied in lines such as "AMPA_sum = change * d_mulSynFast[connId]" in snn_gpu_module.cu or snn_cpu_module.cpp. The conductance constant is set when the connect() function is called for two neuron groups.<br>
+</details>
+<br><br>
 <b>Conductance computation</b><br>
 
 ![Equation with tau_d](http://uci-carl.github.io/CARLsim4/form_53.png)
