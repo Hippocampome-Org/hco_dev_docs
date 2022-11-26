@@ -7,7 +7,8 @@ Methods used in implementing CSTP
 ----------------
 
 <b>Spike events</b><br>
-Spike events are tracked. When a spike occurs the formulas in fig 1. are used to process what signal should be added to a post synaptic neuron.<br><br>
+Spike events are tracked. When a spike occurs the formulas in fig 1. are used to process what signal should be added to a post synaptic neuron.
+
 ![STP Equations](http://uci-carl.github.io/CARLsim4/form_0.png)
 Fig. 1. STP equations (CARLsim STP). 
 <details>
@@ -83,7 +84,8 @@ Synaptic weights are specified when the connect() function is called for two neu
 The weight is retrieved and stored in a "change" variable. E.g., in the line "change = runtimeDataGPU.wt[cum_pos + wtId];" in snn_gpu_module.cu or snn_cpu_module.cpp. Each time a pre-synaptic spike occurs which causes synaptic current to be sent to the post-synaptic neuron, the current of each receptor is multiplied by the synaptic weight variable. This occurs in a line such as "AMPA_sum = change * d_mulSynFast[connId];".<br>
 </details>
 <br><br>
-<b>Conductance computation</b><br><br>
+<b>Conductance computation</b>
+
 ![Equation with tau_d](http://uci-carl.github.io/CARLsim4/form_53.png)
 Fig. 2. Equation with tau_d (CARLsim COBA).<br><br>
 Synaptic currents are have their conductance computed with the use of the tau_d variable. Fig 2. shows how tau_d (tau in the equation) contributes to the conductance variable, g. The potential for conductance is processed every timestep.<br>
