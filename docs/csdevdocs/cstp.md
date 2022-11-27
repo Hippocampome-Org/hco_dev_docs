@@ -78,6 +78,7 @@ CARLsim processes g (conductance) as a "multiplicative gain factor for fast and 
 <details>
 <summary>Programming: Conductance variable</summary>
 For each receptor, e.g., AMPA, the conductance constant is applied in lines such as "AMPA_sum = change * d_mulSynFast[connId]" in snn_gpu_module.cu or snn_cpu_module.cpp. The conductance constant is set when the connect() function is called for two neuron groups.<br>
+A change from non-connection-specific STP to connection-specific STP is that AMPA_sum, and other receptors, are set to equal "change * d_mulSynFast[connId]" instead of "+=". This is due to each synapse having its signal stored in syn_i variables (e.g., AMPA_syn_i) instead of pooled in the gReceptor (e.g., gAMPA) variable. Lines such as "runtimeDataGPU.gAMPA[postNId] += AMPA_sum" are included to add the current at the timestep the spike occurs. Every timestep after that the current will be decayed in a connection-specific way (specific pre- and post-synaptic neuron current). The later code mentions of lines such as "runtimeDataGPU.gAMPA[postNId] += AMPA_sum" in the kernel_conductanceUpdate function were removed because the current needs to be added at the time in the loop when the current specific to a pre- and post-synaptic neuron is present. Each looping through pre neurons disposes of the AMPA_sum, etc., signal because of the "=" instead of "+=" change described above.<br>
 </details>
 <br><br>
 <b>Synaptic weights</b><br>
