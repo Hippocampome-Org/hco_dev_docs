@@ -46,7 +46,7 @@ This looks for a firing bit set that represents a spike.<br>
 <b>Fig. 1's equation 3</b><br>
 dI/dt = -I/tau_S + A * u^+ * x^- * \delta(t-t_{spk})<br>
 1. "-I/tau_S" is coded in the line: <br>
-runtimeDataGPU.AMPA_syn_i[synId] *= runtimeDataGPU.stp_dAMPA[pre_id];<br>
+runtimeDataGPU.AMPA_syn_g[synId] *= runtimeDataGPU.stp_dAMPA[pre_id];<br>
 Where AMPA is replaced by each receptor processed.
 Note: this is a part of the bug fix update.<br>
 2. "A * u^+ * x^-" is coded in the lines: <br>
@@ -78,7 +78,7 @@ CARLsim processes g (conductance) as a "multiplicative gain factor for fast and 
 <details>
 <summary>Programming: Conductance variable</summary>
 For each receptor, e.g., AMPA, the conductance constant is applied in lines such as "AMPA_sum = change * d_mulSynFast[connId]" in snn_gpu_module.cu or snn_cpu_module.cpp. The conductance constant is set when the connect() function is called for two neuron groups.<br>
-A change from non-connection-specific STP to connection-specific STP is that AMPA_sum, and other receptors, are set to equal "change * d_mulSynFast[connId]" instead of "+=". This is due to each synapse having its signal stored in syn_i variables (e.g., AMPA_syn_i) instead of pooled in the gReceptor (e.g., gAMPA) variable. Lines such as "runtimeDataGPU.gAMPA[postNId] += AMPA_sum" are included to add the current at the timestep the spike occurs. Every timestep after that the current will be decayed in a connection-specific way (specific pre- and post-synaptic neuron current). The later code mentions of lines such as "runtimeDataGPU.gAMPA[postNId] += AMPA_sum" in the kernel_conductanceUpdate function were removed because the current needs to be added at the time in the loop when the current specific to a pre- and post-synaptic neuron is present. Each looping through pre neurons disposes of the AMPA_sum, etc., signal because of the "=" instead of "+=" change described above.<br>
+A change from non-connection-specific STP to connection-specific STP is that AMPA_sum, and other receptors, are set to equal "change * d_mulSynFast[connId]" instead of "+=". This is due to each synapse having its signal stored in syn_g variables (e.g., AMPA_syn_g) instead of pooled in the gReceptor (e.g., gAMPA) variable. Lines such as "runtimeDataGPU.gAMPA[postNId] += AMPA_sum" are included to add the current at the timestep the spike occurs. Every timestep after that the current will be decayed in a connection-specific way (specific pre- and post-synaptic neuron current). The later code mentions of lines such as "runtimeDataGPU.gAMPA[postNId] += AMPA_sum" in the kernel_conductanceUpdate function were removed because the current needs to be added at the time in the loop when the current specific to a pre- and post-synaptic neuron is present. Each looping through pre neurons disposes of the AMPA_sum, etc., signal because of the "=" instead of "+=" change described above.<br>
 </details>
 <br><br>
 <b>Synaptic weights</b><br>
@@ -90,7 +90,7 @@ Synaptic weights are specified when the connect() function is called for two neu
 The weight is retrieved and stored in a "change" variable. E.g., in the line "change = runtimeDataGPU.wt[cum_pos + wtId];" in snn_gpu_module.cu or snn_cpu_module.cpp. Each time a pre-synaptic spike occurs which causes synaptic current to be sent to the post-synaptic neuron, the current of each receptor is multiplied by the synaptic weight variable. This occurs in a line such as "AMPA_sum = change * d_mulSynFast[connId];".<br>
 </details>
 <br><br>
-<b>Conductance computation</b>
+<b>Conductance to current computation</b>
 
 ![Equation with tau_d](http://uci-carl.github.io/CARLsim4/form_53.png)
 Fig. 2. Equation with tau_d (CARLsim COBA).<br><br>
@@ -105,7 +105,20 @@ appears to be where all synapse current is summed from each receptor type. Equat
 <br>
 Unknown:<br>
 In the equation, exp() is affected by time since last spike, yet the heaviside function causes the exp() to only be a factor if time since last spike is 0. This causes g to be +1 for each spike and 0 with no spikes. Is it correct that with no spikes the conductance fully stop? This does not seem to make sense because the synaptic current is meant to decay at a rate related to tau_d not just be instantly gone in a timestep with no spikes because the conductance becomes 0.<br>
-</details><br><br>
+</details><br>
+CARLsim translates STP variables into synaptic current through the use of formulas in fig. 3.
+
+![Equation with tau_d](http://uci-carl.github.io/CARLsim4/form_52.png)
+Fig. 3. Conductance to current (CARLsim COBA).<br><br>
+STP variables are used to translate a synapse occurence into current in a post-synaptic neuron through the equations:<br>
+g = wt * stp_g * A * u_ * x+<br>
+I = g * e_syn<br>
+where wt is the synaptic weight for the pre- and post-neuron pair. e_syn = (v - v_rev_receptor) or a variation on that, see (CARLsim COBA) for more info.<br>
+On each timestep after the synaptic spike, g is decayed with the equation:<br>
+d(g)/d(t) = -g/tau_d<br>
+Computed as: g = g * (1 - (1 / tau_d))<br>
+It can be noted that the processing of g is similar to what is decribed for I in fig 1. eq. 3. While the source scholarpedia article describes eq. 3 as processing I, perhaps an extension of that equation is what is used in CARLsim where g is updated instead of directly computing I. For g to become I, the equation I = g * e_syn must be used.<br>
+The reason the derivative of g is computed as g * (1 - (1 / tau_d)) is that is equvalent to g + (-g / tau_d).<br><br>
 <b>Variable updates</b><br>
 Every timestep the STP variables are updated. As described in fig. 1's equations, certain parts of the equations are included only during the timestep a spike occurs. The other parts of the equations are updated over every timestep.<br>
 <details>
