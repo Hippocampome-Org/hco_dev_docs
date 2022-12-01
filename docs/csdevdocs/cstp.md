@@ -20,6 +20,7 @@ Method: kernel_conductanceUpdate()<br>
 Each neuron and the presynaptic neurons that connect to it are looped through
 and saved in postNId and preNId variables.<br><br>
 A data bit is set when a spike occurs. A function getFiringBitGroupPtr() uses the [postId,preId] to check if the "firing bit" is set.<br><br>
+atomicAdd() is used to add each new conductance value from synaptic spikes to a common gReceptor variable. The atomic operation allows the gReceptor variable to be added to as shared memory while multiple threads are computing new conductance variables and may want to add to the gReceptor variable at the same time.<br><br>
 </details>
 <details>
 <summary>Programming: STP formulas</summary>
