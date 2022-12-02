@@ -45,6 +45,7 @@ Welcome to Hippocampome.org's Developer Documentation!
     :caption: CARLsim Developer Documentation
 
     csdevdocs/cstp.md
+    csdevdocs/synaptic_signal_decay.md
 
 .. toctree::
     :hidden:
