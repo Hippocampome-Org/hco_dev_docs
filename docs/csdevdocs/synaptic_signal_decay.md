@@ -34,6 +34,7 @@ for (int j2 = 0; j2 < lmt; j2++) {<br>
 The signal value that the synaptic spike's conductance is added to the total conductance for the relevant receptor at the timestep of the spike. This calculation of the synapse's conductance added to the total conductance will change after this timestep because each timestep after that of the spike will have signal decay applied to it. The adding of the signal at the spike's timestep is in lines such as:<br>
 runtimeDataGPU.gAMPA[postNId] += AMPA_sum;<br>
 <br>
+<b>Decay of the synaptic signal</b><br>
 The function kernel_STPUpdateAndDecayConductances() is where the synaptic signal is decayed. Functions such as getNMDARSynGPtr() retrieve the conductance values for each synapse. Those are then decayed by stp_d variables in lines such as<br>
 *ampa_ptr *= runtimeDataGPU.stp_dAMPA[lSId];<br>
 Once the decay has been processed the conductance is then added to the total conductance for the receptor in lines such as:<br>
