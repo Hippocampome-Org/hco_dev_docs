@@ -134,8 +134,10 @@ In STP, when spikes occur changes happen to presynaptic neuron axon terminal che
 <br>
 The A variable is the synaptic response amplitude or weight (see programming: STP formulas: unknown section for more info). The A variable is assigned to a pair of preId and postId at the individual synapse level. This represents that each [preId,postId] can have its own synaptic response amplitude. I (current) and g (conductance) is assigned to a pair of preId and postId at the individual synapse level. This means each synapse has its own unique conductance and current level. I (current) will eventually be added to a post-synaptic neuron at which point that value is assigned to a single post-synaptic neuron and not a synapse. Tau_d (aka tau_s in fig. 1) is assigned to [preId,postId] at the group level. Neuron types can be represented in CARLsim using neuron groups. Tau_d being at the group level means that it has a specific value for a neuron type pair. Each of the other TM model constants, i.e., tau_u, tau_x, U, and g, are indexed at the preId+postId group level for the same reason.<br>
 <br>
+<b>Synapse signal decay</b><br>
+More details on computing signal decay is here: [link](https://hco-dev-docs.readthedocs.io/en/latest/csdevdocs/synaptic_signal_decay.html).<br><br>
 <b>CSTP and non-CSTP results differences</b><br>
-In simulations with STP and without CSTP it has been observed that there was a bug in non-CSTP processing of STP. A bug fix has been sent to the CARLsim team. References: https://github.com/UCI-CARL/CARLsim6/issues/16, https://github.com/UCI-CARL/CARLsim6/pull/17.
+In simulations with STP and without CSTP it has been observed that there was a bug in non-CSTP processing of STP. A bug fix has been sent to the CARLsim team. References: https://github.com/UCI-CARL/CARLsim6/issues/16, https://github.com/UCI-CARL/CARLsim6/pull/17.<br>
 
 <br>References:<br>
 CARLsim COBA, http://uci-carl.github.io/CARLsim4/ch3_neurons_synapses_groups.html<br>

@@ -6,3 +6,4 @@ This documentation will explain methods used in programming synaptic signal deca
 Methods used in implementing Synaptic Signal Decay
 ----------------
 
+This page is a work in progress and will be added to soon.
