@@ -97,7 +97,7 @@ The weight is retrieved and stored in a "change" variable. E.g., in the line "ch
 Fig. 2. Equation with tau_d (CARLsim COBA).<br><br>
 Synaptic currents are have their conductance computed with the use of the tau_d variable. Fig 2. shows how tau_d (tau in the equation) contributes to the conductance variable, g. The potential for conductance is processed every timestep.<br>
 <br>
-Issues: while this equation is present in the CARLsim user guide, it does not appear implemented in the code and it appears to have mathematical issues as described in the unknown section.
+Issues: while this equation is present in the CARLsim user guide, it does not appear implemented in the code and it appears to have mathematical issues as described in the programming: unknown section below.
 <details>
 <summary>Programming: Conductance computation</summary> 
 Potentially this equation is not implemented in the source code. In snn_gpu_module.cu, in the function updateNeuronState() the line:<br>
