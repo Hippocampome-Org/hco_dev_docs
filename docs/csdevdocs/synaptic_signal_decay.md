@@ -47,16 +47,18 @@ Note: the author of this page is unsure how all the details work with the use of
 <details>
 <summary>Optional: test that wtId = pre_synaptic_neuron_index</summary>
 Confirming wtID is equal to the pre-synaptic neuron index can be done if wanted by creating a loop through all pre indices given a post and using GET_CONN_NEURON_ID() to ensure wtId == pre_neuron_index. For example:<br>
-for (int j2 = 0; j2 < lmt; j2++) {<br>
-	synInfo2 = runtimeDataGPU.preSynapticIds[cum_pos + j2];<br>
-	preNId2 = GET_CONN_NEURON_ID(synInfo2);<br>
-	if (preNId == preNId2) {<br>
-		preIndex = j2;<br>
-		if (preIndex != wtId) {<br>
-			printf("mismatch found: post:%d preindex:%d wtId:%d\n",postNId,preIndex,wtId);<br>
-		}<br>
-	}<br>
-}<br>
+.. code-block:: cpp
+
+	for (int j2 = 0; j2 < lmt; j2++) {
+		synInfo2 = runtimeDataGPU.preSynapticIds[cum_pos + j2];
+		preNId2 = GET_CONN_NEURON_ID(synInfo2);
+		if (preNId == preNId2) {
+			preIndex = j2;
+			if (preIndex != wtId) {
+				printf("mismatch found: post:%d preindex:%d wtId:%d\n",postNId,preIndex,wtId);
+			}
+		}
+	}
 </details><br>
 The signal value that the synaptic spike's conductance is added to the total conductance for the relevant receptor at the timestep of the spike. This calculation of the synapse's conductance added to the total conductance will change after this timestep because each timestep after that of the spike will have signal decay applied to it. The adding of the signal at the spike's timestep is in lines such as:<br>
 runtimeDataGPU.gAMPA[postNId] += AMPA_sum;<br>
