@@ -34,7 +34,15 @@ Therefore, as the value examples above show,<br>
 (0000010 >> 1) & 1 = 1<br>
 (0100000 >> 5) & 1 = 1<br>
 (0110000 >> 4) & 1 = 1<br>
-note how cnt in the calculated examples here match cnt in the example table above. The maximum size of cnt is 7, which matches the number of bits in each value in the example table. See [reference](https://en.wikipedia.org/wiki/Bit_numbering) for some further info. Somehow a loop involving cnt is used to decode which neuron position a spike has occured in and find wtId. Note: the author of this page is unsure how all the details work with the use of the bitwise shifting to find neuron position but finds the neuron position returned with wtId can be used to track what pre-synaptic neuron index had a synaptic spike. More details could be added to this documentation in the future if it is further understood.<br>
+note how cnt in the calculated examples here match cnt in the example table above. The maximum size of cnt is 7, which matches the number of bits in each value in the example table. See [reference](https://en.wikipedia.org/wiki/Bit_numbering) for some further info. Somehow a loop involving cnt is used to decode which neuron position a spike has occured in and find wtId. <br>
+<br>
+The NUM_THREADS in snn_gpu_module.cu was defined as 128. Max size of a 7 bit integer, 1111111, is 127, but if 0 is considered a value, there are 128 values that can be represented in a 7 bit int. This is also found by 2^7=128. sh_quickSynIdTable is built through a loop (up to 256 indeces) using "i + threadIdx.x" as its array index. In C++, a standard int has 16 bits. The author of this page guesses the number of synapse firing bits encoded in each int value in I_set is related to these bit values.<br>
+<br>
+For every post neuron, there are maxNumPreSynN/32.0f array indices stored in the I_set array for pre neurons. This indicates that each array index for a pre neuron contains a value that can represent the synapse firing bits for at least 32 synapses. This is understood given maxNumPreSynN representing the most pres that a post can have, and for enough [pre,post] indeces to exist given the memory allocation, each index must represent at least 32 synapses with a total of maxNumPreSynN/32.0f per index.<br>
+<br>
+With the standard int size having 16 bits, and each bit per se representing one synapse firing bit with the bit shift operation described above, it is unclear how each int could encode up to 32 synapse firing bits. However, somehow perhaps each int represents more synapse firing bits than its total number of bits.<br>
+<br>
+Note: the author of this page is unsure how all the details work with the use of the bitwise shifting to find neuron position but finds the neuron position returned with wtId can be used to track what pre-synaptic neuron index had a synaptic spike. More details could be added to this documentation in the future if it is further understood.<br>
 </details><br>
 <details>
 <summary>Optional: test that wtId = pre_synaptic_neuron_index</summary>
