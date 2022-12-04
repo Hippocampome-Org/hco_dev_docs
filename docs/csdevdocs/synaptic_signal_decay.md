@@ -18,6 +18,25 @@ The inputs to the functions are post-synaptic neuron id and a pre-synaptic neuro
 The wtId variable finds the pre-synaptic neuron index with the use of a quick access synapse id table (sh_quickSynIdTable). wtId was originally created to track which synaptic weight value each synapse has, but can also be used as an index for the synapse-specific conductance arrays. In functions such as setAMPASynGValue(), atomicAdd() is used to avoid race conditions where multiple threads are attempting to access a variable's memory storage included in the function at the same time and a conflict occurs. Removing atomicAdd() seems to cause unwanted results.<br>
 <br>
 <details>
+<summary>Optional: quick synaptic table programming</summary>
+A sequence of bits is used to denote firing of a synapse. The position of the fired neuron can be found with the use of the quickSynIdTable array. Values in I_set can be processed through a sh_quickSynIdTable array based on quickSynIdTableGPU array to detect the neuron's position. Bit shift operations are used in the array values. Examples of values, as seen in snn_gpu_module.cu's code comments are:<br>
+index |   cnt<br>
+0000000 | 0<br>
+0000001 | 0<br>
+0000010 | 1<br>
+0100000 | 5<br>
+0110000 | 4<br>
+<br>
+In the initQuickSynIdTable() function, a bitwise operator is used to create quickSynIdTable indices. This is the "x & 1" operation where x is "i >> cnt" and i is an index of a loop starting at 1 up to the size of the quickSynIdTable array. "i >> cnt" bitwise shifts i by cnt bits to the right. The "x & 1" operation produces a value that is 1 or 0, depending on the least significant bit of x [source](https://stackoverflow.com/questions/38922606/what-is-x-1-and-x-1) . "least significant" seems to mean the bit furthest to the right in the variable value. If the last bit (least significant bit) is 1, the result is 1, otherwise it is 0.<br>
+<br>
+Therefore, as the value examples above show,<br>
+(0000001 >> 1) & 1 = 0<br>
+(0000010 >> 1) & 1 = 1<br>
+(0100000 >> 5) & 1 = 1<br>
+(0110000 >> 4) & 1 = 1<br>
+note how cnt in the calculated examples here match cnt in the example table above. The maximum size of cnt is 7, which matches the number of bits in each value in the example table. See [reference](https://en.wikipedia.org/wiki/Bit_numbering) for some further info. Somehow a loop involving cnt is used to decode which neuron position a spike has occured in and find wtId. Note: the author of this page is unsure how all the details work with the use of the bitwise shifting to find neuron position but finds the neuron position returned with wtId can be used to track what pre-synaptic neuron index had a synaptic spike. More details could be added to this documentation in the future if it is further understood.<br>
+</details><br>
+<details>
 <summary>Optional: test that wtId = pre_synaptic_neuron_index</summary>
 Confirming wtID is equal to the pre-synaptic neuron index can be done if wanted by creating a loop through all pre indices given a post and using GET_CONN_NEURON_ID() to ensure wtId == pre_neuron_index. For example:<br>
 for (int j2 = 0; j2 < lmt; j2++) {<br>
