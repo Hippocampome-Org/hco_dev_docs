@@ -18,7 +18,7 @@ The inputs to the functions are post-synaptic neuron id and a pre-synaptic neuro
 The wtId variable finds the pre-synaptic neuron index with the use of a quick access synapse id table (sh_quickSynIdTable). wtId was originally created to track which synaptic weight value each synapse has, but can also be used as an index for the synapse-specific conductance arrays. In functions such as setAMPASynGValue(), atomicAdd() is used to avoid race conditions where multiple threads are attempting to access a variable's memory storage included in the function at the same time and a conflict occurs. Removing atomicAdd() seems to cause unwanted results.<br>
 <br>
 <details>
-<summary>Optional: quick synaptic table programming</summary>
+<summary>Extra: quick synaptic table programming</summary>
 A sequence of bits is used to denote firing of a synapse. The position of the fired neuron can be found with the use of the quickSynIdTable array. Values in I_set can be processed through a sh_quickSynIdTable array based on quickSynIdTableGPU array to detect the neuron's position. Bit shift operations are used in the array values. Examples of values, as seen in snn_gpu_module.cu's code comments are:<br>
 index |   cnt<br>
 0000000 | 0<br>
@@ -45,7 +45,7 @@ With the standard int size having 16 bits, and each bit per se representing one 
 Note: the author of this page is unsure how all the details work with the use of the bitwise shifting to find neuron position but finds the neuron position returned with wtId can be used to track what pre-synaptic neuron index had a synaptic spike. More details could be added to this documentation in the future if it is further understood.<br>
 </details><br>
 <details>
-<summary>Optional: test that wtId = pre_synaptic_neuron_index</summary>
+<summary>Extra: test that wtId = pre_synaptic_neuron_index</summary>
 Confirming wtID is equal to the pre-synaptic neuron index can be done if wanted by creating a loop through all pre indices given a post and using GET_CONN_NEURON_ID() to ensure wtId == pre_neuron_index. For example:<br>
 .. code-block:: cpp
 
@@ -68,3 +68,9 @@ The function kernel_STPUpdateAndDecayConductances() is where the synaptic signal
 *ampa_ptr *= runtimeDataGPU.stp_dAMPA[lSId];<br>
 Once the decay has been processed the conductance is then added to the total conductance for the receptor in lines such as:<br>
 runtimeDataGPU.gAMPA[nid] += *ampa_ptr;<br>
+<br>
+Adding each synapse's conductance after it has decayed to the total receptor conductance is seperated into two steps. The first step is at j == 0. This is the first pre index, and at this step each gReceptor (e.g., gAMPA) is set to equal the conductance of the synapse at j == 0. This clears prior values of conductance so that the gReceptor conductance can be rebuilt by looping through all relevant pres. The second step is that for each successive pre (j index) gReceptor is set to += each synapse's conductance. This loop is processed untill the gReceptor conductance is fully rebuilt.<br><br>
+<details>
+<summary>Extra: reasoning behind clearing and rebuilding</summary>
+The reason the clearing and rebuilding is done is that a simple += new_conductance will not suffice. The updated gReceptor conductance can either be increased by additional synapse conductance or decreased by synapse conductance decay. A += operation without clearing gReceptor would add on top of a prior gReceptor total conductance when in some cases it should be reduced. Another way to compute the change could be finding the change in each synapse's conductance since the last timestep and += that to gReceptor but that would require tracking synaptic conductance at more than one timestep at a time. This method of clearing and rebuilding avoids the need to track those values at two timesteps.<br>
+</details><br>
