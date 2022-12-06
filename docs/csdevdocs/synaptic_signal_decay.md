@@ -18,7 +18,9 @@ The inputs to the functions are post-synaptic neuron id and a pre-synaptic neuro
 <details>
 <summary>Extra: additional pitched memory details</summary>
 The 2D array referred to in pitched memory is not actually a 2D array but instead a 1D array with storage in the array that accomidates a 2D indexing calculation. This calculation takes a column and row index and finds the appropriate index in the array. In this case of synapse conductances, the row indices are post-synaptic neuron ids, and the column indices are pre-synaptic neuron index (not pre id). The "pitch" is set based on the max number of columns, which in this case is the max number of pre neurons given a post. The pitch may be automatically adjusted to a greater value than that max column number, to accomidate parallel processing memory positioning.<br>
+<br>
 Therefore, at a minimum, the memory allocated for each receptor's synapse current is an array at least the size of total_neurons * max_pres_per_post along with the size of a float datatype for each array index. This may be of note for resource management in large networks and the arrays being the size of total_neurons * pitch can be bigger than that minimum.<br>
+<br>
 The trade off for pitched memory is that it has faster memory access but takes more memory allocation. An array that is simply the number of synapses in the simulation would be more compact storage. It is possible these arrays allocate the most memory out of any array in CARLsim. If memory resources became and issue, using smaller arrays that cause slower computation could be an option.<br>
 </details><br>
 The kernel_conductanceUpdate() function indentifies which synapses have had spikes using the I_set array. That array uses both pitched memory and bitwise shifts. Bitwise shifts cause shifts in variable value bit positions. Such shifts can be used to encode different information in a single variable value relative to a bit position. To find which pre-neuron index is in a spike, decoding the I_set array's indices is needed.<br>
@@ -68,7 +70,7 @@ Confirming wtID is equal to the pre-synaptic neuron index can be done if wanted 
 		}
 	}
 </details><br>
-The signal value that the synaptic spike's conductance is added to the total conductance for the relevant receptor at the timestep of the spike. This calculation of the synapse's conductance added to the total conductance will change after this timestep because each timestep after that of the spike will have signal decay applied to it. The adding of the signal at the spike's timestep is in lines such as:<br>
+The new spike's synaptic conductance is added to the total conductance of the relevant receptor at the timestep of the spike. This calculation of the synapse's conductance adding to the total conductance will change after this timestep because each timestep after that will have signal decay applied to it. The adding of the signal at the spike's timestep is in lines such as:<br>
 runtimeDataGPU.gAMPA[postNId] += AMPA_sum;<br>
 <br>
 <b>Decay of the synaptic signal</b><br>

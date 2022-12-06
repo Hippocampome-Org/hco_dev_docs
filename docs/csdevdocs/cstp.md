@@ -136,6 +136,8 @@ The A variable is the synaptic response amplitude or weight (see programming: ST
 <br>
 <b>Synapse signal decay</b><br>
 More details on computing signal decay is here: [link](https://hco-dev-docs.readthedocs.io/en/latest/csdevdocs/synaptic_signal_decay.html) .<br><br>
+<b>Testing STP response</b><br>
+Python code that can be used to compare CARLsim's STP calculations to those used in (Moradi, 2022) is availible here: [link](https://github.com/nmsutton/tm_activity_test) .<br><br>
 <b>CSTP and non-CSTP results differences</b><br>
 In simulations with STP and without CSTP it has been observed that there was a bug in non-CSTP processing of STP. A bug fix has been sent to the CARLsim team. References: https://github.com/UCI-CARL/CARLsim6/issues/16, https://github.com/UCI-CARL/CARLsim6/pull/17.<br>
 
