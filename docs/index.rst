@@ -36,6 +36,7 @@ Welcome to Hippocampome.org's Developer Documentation!
     :hidden:
     :caption: Synaptic Probabilities
 
+    synaptic_probabilities/overview.md
     synaptic_probabilities/fragment.md
     synaptic_probabilities/header_height.md
     synaptic_probabilities/propagate_errors.md
