@@ -12,9 +12,9 @@ created by rebuilding the tables with the material in the prior tables.
 
 ## Tables Related to Propagate Errors Data
 
-Instructions for building these tables are in the (Propagate Errors Calculations)[https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/docs/synaptic_probabilities/propagate_errors.md] page in this documentation.
+Instructions for building these tables are in the [Propagate Errors Calculations](https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/docs/synaptic_probabilities/propagate_errors.md) page in this documentation.
 These tables require data from the tables neurite_quantified, number_of_contacts, and table based on the SynproParcelVolumes.csv file in the prop_error directory. The csv files created are for the tables SynproCP, SynproCPTotal, SynproNOC, SynproNOCTotal, SynproNoPS, and SynproNoPSTotal.
 
 ## Other Tables
 
-Instructions for building all other synaptic probabilities related tables are in the (Synaptic Probabilities)[https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/docs/synaptic_probabilities/fragment.md] page in this documentation.
+Instructions for building all other synaptic probabilities related tables are in the [Synaptic Probabilities](https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/docs/synaptic_probabilities/fragment.md) page in this documentation.
