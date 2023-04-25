@@ -15,6 +15,12 @@ individual intermediate table. The build_error_prop script uses mysql_user, mysq
 and mysql_db_name found in database_save.sh in the base csv2db_import directory. This 
 is a file that a user creates based on the example_database_save.sh file.
 
+Exported csv files:
+By default build_error_prop.sh will export SynproCP.csv, SynproCPTotal.csv, SynproNOC.csv, SynproNOCTotal.csv, SynproNoPS.csv, and SynproNPSTotal.csv to the standard export directory. That directory is /var/tmp/SynproExports/. The csv files can then be moved to the appropriate iconv subfolder to for the csv2db_import processes to insert them into the database using map.py.
+
+One time import of tables:
+By default build_error_prop.sh has create_synpro_sub_layers.sql and create_synpro_parcel_volumes.sql commented out. If those tables are not in the database those lines should be uncommented out to add them. They can then be commented out again to avoid trying to reimport them any additional time there is an interest in running build_error_prop.sh.
+
 Csv file note:
 <br>In SynproParcelVolumes.csv for EC subregion the "L" in layer names was removed to match the way that
 is described in the neurite_quantified tables. This allows compatibility for queries.
