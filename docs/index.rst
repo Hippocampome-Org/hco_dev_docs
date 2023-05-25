@@ -40,6 +40,12 @@ Welcome to Hippocampome.org's Developer Documentation!
     synaptic_probabilities/fragment.md
     synaptic_probabilities/header_height.md
     synaptic_probabilities/propagate_errors.md
+    
+.. toctree::
+    :hidden:
+    :caption: Oscillatory Phases
+
+    phases/phases.md
 
 .. toctree::
     :hidden:
