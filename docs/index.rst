@@ -38,8 +38,11 @@ Welcome to Hippocampome.org's Developer Documentation!
 
     synaptic_probabilities/overview.md
     synaptic_probabilities/fragment.md
-    synaptic_probabilities/header_height.md
     synaptic_probabilities/propagate_errors.md
+    synaptic_probabilities/json_files.md
+    synaptic_probabilities/csv_dls.md
+    synaptic_probabilities/probabilities_tool.md
+    synaptic_probabilities/header_height.md
     
 .. toctree::
     :hidden:
