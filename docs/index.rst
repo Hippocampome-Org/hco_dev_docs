@@ -37,8 +37,8 @@ Welcome to Hippocampome.org's Developer Documentation!
     :caption: Synaptic Probabilities
 
     synaptic_probabilities/overview.md
-    synaptic_probabilities/fragment.md
     synaptic_probabilities/propagate_errors.md
+    synaptic_probabilities/fragment.md
     synaptic_probabilities/json_files.md
     synaptic_probabilities/csv_dls.md
     synaptic_probabilities/probabilities_tool.md
