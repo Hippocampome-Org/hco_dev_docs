@@ -52,6 +52,12 @@ Welcome to Hippocampome.org's Developer Documentation!
 
 .. toctree::
     :hidden:
+    :caption: Synaptome
+
+    synaptome/synaptome.md
+
+.. toctree::
+    :hidden:
     :caption: CARLsim Developer Documentation
 
     csdevdocs/cstp.md
