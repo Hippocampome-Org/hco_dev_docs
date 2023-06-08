@@ -19,17 +19,15 @@ Csv file note:
 ## Step 1
 
 Define the parcel-independent constants to be used throughout the NxN calculations.
-<br>a. Inter-bouton distance: length_bouton = 6.2.
+<br>a. Inter-bouton distance: length_bouton = 6.2 (or value specific to neuron pair and parcel).
 <br>b. Dendritic spine distance: length_spine = 1.09.
 <br>c. Radius of interaction: radius_int = 2.
 <br>d. Volume of interaction: volume_int = (4/3) * pi * radius_int^3.
 <br>e. Constant: c = volume_int / (length_bouton * length_spine).
 
 Implementation:
-<br>Run constants.sql
-
-<br>Important note: the length_bouton, which is the inter-buton distance (IBD), is specific to the neuron pair, subregion, and layer ever since cross-subregion connections were added.
-The table SynproIBD supplies the IBD values.
+<br>The length_bouton, which is the inter-buton distance (IBD), is specific to the neuron pair, subregion, and layer ever since cross-subregion connections were added.
+The table SynproIBD supplies the IBD values and is created when the hippocampome database is built. In nps.sql and number_of_contacts.sql scripts described later the formula ((4/3)\*PI()\*8/(ibd\*1.09)) provides the c (constant) factor in calculations.
 
 ## Step 2
 Select the first parcel for performing the NxN calculations.
