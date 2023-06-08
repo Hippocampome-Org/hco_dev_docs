@@ -28,6 +28,9 @@ Define the parcel-independent constants to be used throughout the NxN calculatio
 Implementation:
 <br>Run constants.sql
 
+<br>Important note: the length_bouton, which is the inter-buton distance (IBD), is specific to the neuron pair, subregion, and layer ever since cross-subregion connections were added.
+The table SynproIBD supplies the IBD values.
+
 ## Step 2
 Select the first parcel for performing the NxN calculations.
 <br>a. Query the database for the needed values.
