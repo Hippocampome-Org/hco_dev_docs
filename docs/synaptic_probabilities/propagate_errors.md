@@ -114,7 +114,7 @@ Run total_cp.sql
 ## Step 6
 Export views into tables for perminant storage in the database.
 <br> The method of `SET STATEMENT max_statement_time=0 FOR SELECT * FROM \
-$DB.<table_name> INTO OUTFILE '$EXP_DIR/<table_name>.csv';" > export_table.sql` then `mysql -h $ADDR -u $USER -p$PASS $DB < export_table.sql` as included in build_prop_error.sh under the exporting tables section enables converting the views into tables. Once they are tables they can then be exported into csv files. Specifically, the csv files SynproCP.csv, SynproCPTotal.csv, SynproNOC.csv, SynproNOCTotal.csv, SynproNoPS.csv, and SynproNPSTotal.csv should be created. Then those files should be tranfered to /iconv/latin1 of the csv2db software. The csv2db software will use those csv files to create tables for them when the database is built.
+$DB.<table_name> INTO OUTFILE '$EXP_DIR/<table_name>.csv';" > export_table.sql` then `mysql -h $ADDR -u $USER -p$PASS $DB < export_table.sql` as included in build_prop_error.sh under the exporting tables section enables converting the views into tables. Once they are tables they can then be exported into csv files. Specifically, the csv files SynproCP.csv, SynproCPTotal.csv, SynproNOC.csv, SynproNOCTotal.csv, SynproNoPS.csv, SynproNPSTotal.csv, and SynproPairsOrder should be created. Then those files should be tranfered to /iconv/latin1 of the csv2db software. The csv2db software will use those csv files to create tables for them when the database is built.
 
 ## Php files
 - Related php files are synapse_probabilities.php, synapse_probabilities_ps.php, synapse_probabilities_sd.php, synapse_probabilities_dal.php, synapse_probabilities_noc.php, synapse_probabilities_sypr.php
