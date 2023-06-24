@@ -14,7 +14,7 @@ In general, the data exists as values in the database, matrix values in json, ev
 ## Synaptic Probabilities Statistical Values
 
 Instructions for building statistical values in the database are in [Synaptic Probabilities Calculations](https://hco-dev-docs.readthedocs.io/en/latest/synaptic_probabilities/propagate_errors.html) page in this documentation.
-These tables require data from the tables neurite_quantified, number_of_contacts, and table based on the SynproParcelVolumes.csv file in the prop_error directory. The csv files created are for the tables SynproCP, SynproCPTotal, SynproNOC, SynproNOCTotal, SynproNoPS, and SynproNoPSTotal.
+These tables require data from the tables neurite_quantified, number_of_contacts, and table based on the SynproParcelVolumes.csv file in the prop_error directory. The csv files created are for the tables SynproCP, SynproCPTotal, SynproNOC, SynproNOCTotal, SynproNoPS, SynproNoPSTotal, and SynproPairsOrder.
 
 ## Evidence Tables
 
