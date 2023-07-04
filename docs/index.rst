@@ -58,6 +58,14 @@ Welcome to Hippocampome.org's Developer Documentation!
 
 .. toctree::
     :hidden:
+    :caption: Spatial Navigation Simulation
+
+    spatial_nav/overview.md
+    spatial_nav/initial_run.md
+    spatial_nav/addit.md
+
+.. toctree::
+    :hidden:
     :caption: CARLsim Developer Documentation
 
     csdevdocs/cstp.md
