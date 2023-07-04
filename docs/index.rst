@@ -85,9 +85,9 @@ Welcome to Hippocampome.org's Developer Documentation!
     new_types/adding_on-hold_types.md
     new_types/adding_new_types.md
 
-Documentation Availible
-=======================
-This site will be used for recording methods for working on development on the site. This is only at a early stage and content is planned to be added for the future.
+Documentation In General
+========================
+This site will be used for recording methods for working on development on the site.
 
 Indices and tables
 ==================
