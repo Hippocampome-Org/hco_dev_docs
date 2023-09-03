@@ -9,4 +9,4 @@ Instructions for initial run of the software is [here](https://hco-dev-docs.read
 
 ## Additional docs
 
-Further documentation on the software is [here](https://hco-dev-docs.readthedocs.io/en/latest/spatial_nav/addit.html).
+Further documentation on the software is listed on the left side menu under the Spatial Navigation Simulation section.

@@ -64,6 +64,7 @@ Welcome to Hippocampome.org's Developer Documentation!
     spatial_nav/initial_run.md
     spatial_nav/movement_paths.md
     spatial_nav/change_network_size.md
+    spatial_nav/moves_converter.md
 
 .. toctree::
     :hidden:
