@@ -12,8 +12,8 @@ In the article's Fig 2., filenames used for experiments were:
 <br>* GCaMP6fChAT10_gridCell_mergedSessions.mat T2C1 for large-grid scale.
 <br>
 <br>Any users wanting to use this specific data should please contact us for it.
-</details>
-<br>
+</details><br>
+
 ## Converting data files into a format for the simulation
 
 ### moves_reporter
@@ -28,10 +28,10 @@ Additional reformatting should be done by running moves_converter.m. Any paramet
 
 Use moves_get_time.m to get experiment time in milliseconds. This will be used later for informing the simulation of how long to run the experiment with the animal movement data. The technical way this script does this is by counting the number of entries in CMBHome's root.ts.
 
-<br><details>
+<details>
 <summary>Alternative methods</summary>
 Alternative 1
-<br>An alternative way to find this is to use CMBHome's Visualize script and plot the trajectory. From plot data, calculate floor((1/\<num_spikes_per_sec\>) * \<total_spikes\>) = \<seconds_in_epoch\>. E.g., a large-grid scale cell was found to have 8553ms.
+<br>An alternative way to find this is to use CMBHome's Visualize script and plot the trajectory. From plot data, calculate floor((1 / num_spikes_per_sec) * total_spikes) = seconds_in_epoch. E.g., a large-grid scale cell was found to have 8553ms.
 <br>
 <br>Alternative 2
 <br>Open CMBHome's root object in the workspace. Open root.ts. Add up all timesteps listed there (num_entries of timesteps). Then (num_entries * timestep)/1000 = seconds in sim. For example, 8553860 ms has been found for a large-grid scale cell. 1440140 ms has been found for a small-grid scale cell. Alt. 2 gives a more exact count but can be confirmed with alt. 1.
@@ -41,4 +41,22 @@ Alternative 1
 
 A useful starting position for the virtual animal should be found to center the animal movement trajectory for plots and other reasons. The starting position for the virtual animal is set with pos\[2\] in general_params.cpp, and set for the bump with bpos\[2\]. The movement function move_animal_onlypos can be used to help find a good starting position. Details about using the function are in the movement paths documentation. 
 
-Plotting of the trajectory can be done with the script gridscore_sim_run_local.m. This presents how the trajectory is processed compared to the grid cell layer. Some trial and error may be needed to find the correct starting point. The matlab plots allow moving the cursor over points to see their coordinates. In a 40x40 sized layer, it is useful to have the trajectory in the bounds of \[4.5,4.5\] to \[35.5,35.5\]. 
+Plotting of the trajectory can be done with the script gridscore_sim_run_local.m. This presents how the trajectory is processed compared to the grid cell layer. Some trial and error may be needed to find the correct starting point. The matlab plots allow moving the cursor over points to see their coordinates. In a 40x40 sized layer, it is useful to have the trajectory in the bounds of \[4.5,4.5\] to \[35.5,35.5\] if a 31x31 cropped area of firing is desired to be plotted. 
+
+Finding a useful starting virtual animal position may be aided by locating the position of the animal at the first time point in the real data. For example, with CMBHome's root object, the first entries for root.x and root.y show that initial position. The y value may need to be adjusted by a correction value of per se 660 because that offset has been observed in animal recordings. In practice, the starting position listed in the root.x and root.y may not translate into a good starting position in the simulation. Trial and error is needed to find a good position. The move_animal_onlypos function can assist.
+
+<details>
+<summary>Example starting positions found with animal data</summary>
+Some starting positions found to work reasonably well are:
+<br>* Large-grid scale (GCaMP6fChAT10_gridCell_mergedSessions.mat):
+<br>pos\[2\]={28.5,16.75} (40x40 grid cell layer)
+<br>pos\[2\]={30,18} (42x42 grid cell layer possibly)
+<br>* Medium-grid scale (merged_sessions_ArchTChAT#22_cell1.mat):
+<br>pos\[2\]={27.5,12.5} (40x40 grid cell layer with 32x32 cropped plot and grid_pattern_scale = 1.0)
+<br>pos\[2\]={26.5,12.5} (40x40 grid cell layer with 31x31 cropped plot and grid_pattern_scale = 0.95)
+<br>pos\[2\]={28,14} (42x42 grid cell layer)
+<br>pos\[2\]={22,7.75} (30x30 grid cell layer with grid_pattern_scale = 0.95)
+<br>* Small-grid scale (191108_S1_lightVSdarkness_cells11and12.mat):
+<br>pos\[2\]={21,27} (40x40 grid cell layer)
+<br>pos\[2\]={23,29} (42x42 grid cell layer possibly)
+</details>
