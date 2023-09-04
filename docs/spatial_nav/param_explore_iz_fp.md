@@ -27,3 +27,48 @@ Users should set the file "primary_input" in the base EA software folder to the 
 
 izhikevich_base.params can set the number of generations (number of runs) to use for finding a results score. The article's work used generations = 3 because parameters were not meant to be changed by the EA but instead were changed by a seperate script. Because of that, multiple generations were not expected to create different results but 3 were used just for comparison and any initialization of the software purposes.
 
+## Preparing the json file
+
+The json file will have its parameters automatially changed by the parameter exploration script and because of that it needs a few types of reformatting to accomidate the software. The original json file can be backed up as file_name_original.json and can be used as a reference if wanted. The original file can provide guidance on what parameter ranges are relevant to biology that can be explored. The EA software was originally allowed to go somewhat beyond the ranges listed in the json files, based on the EA mutation operator, so there is flexibility in what parameters are suggested to use relative to those ranges. Hippocampome.org's Izhikevich model page can also provide guidance on what parameters were found to be acceptable given a neuron type.
+
+The values for each Izhikevich parameter need to be stored on one line per parameter. For example:
+<br>	"parameter_ranges" : {
+<br>			"K" : \[0.62, 0.62\],
+<br>			"A" : \[0.005, 0.005\],
+<br>			"B" : \[11.69, 11.69\],
+<br>			...
+<br>		}
+<br>
+This allows the parameter exploration script to correctly detect the link with the parameter of interest to change the values. The values should all have values in the whole number and fraction places, e.g., 1.0 not 1 or .1. This is for pattern matching. It is recommended to create a file with the standard version of the parameters before they are altered by the exploration script. This will allow for easily copying over the standard version to the json file used for testing to "reset" the values back to the standard levels. This could be stored as file_name_custom.json. The json file used for testing will normally have the neuron_type-subtype.json name, and the primary_input file will be set to use this file to run firing pattern tests on it
+
+## Conversions
+
+An important note is that the parameters VMIN, VT, and VPEAK have values in the json file that are relative to the VR parameter. For example, if VR decreases by 1, those three other parameters should accordingly decrease by 1 to retain their original parameter values. On Hippocampome.org, for neuron id 6003, subtype 1 lists VT as -43.52 and VR as -58.53. Because of this, in the EA software to enter those same values, VR should be listed as -58.53 and VT as 15.01. This is because VT relative to VR is 15.01 greater. This will have the EA software test the parameters with VR=-58.53 and VT=-43.52.
+
+## Setting parameter value ranges
+
+A method that can help to set parameter ranges is using matlab's linspace() function. E.g., linspace(starting_value,ending_value,total_values). Probably similar functions exist in other languages. Values listed as the upper and lower range bounds for each parameter in the original json files can be starting points as starting and ending values to test but additional ranges can be tested beyond that.
+
+The number of values intended to test for each parameter must be specified in auto_mod_fp_iz.sh lines:
+<br>for i in {0..8} 
+<br>for j in {0..8} 
+<br>
+<br>where 0..8 means to cycle through 9 values per parameter. i is the value index for parameter 1 and j is that for parameter 2. Setting a different number of values to be tested must include updating these lines to match the number of values to be tested.
+
+## Run auto_mod_fp_iz.sh
+
+Once the settings have been entered, a user should run auto_mod_fp_iz.sh to generate tests of how each parameter value scores with the reference firing pattern. The scores are in the form of "fitness scores". As described in the spatial navigation simulation article, the fitness score is the sum of the combined error scores representing difference in model firing from real firings in a firing pattern. The errors are also weighted in a process described in ([Venkadesh et al., 2019](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007462))'s original work. The results and parameter values appear in the file /scripts/param_explore/output/param_records_ea_iz.txt. If a user has a text editor, e.g., Sublime Text, that can show document updates in real time, then the user can open the file in the editor and watch the scores reported in realtime to ensure the correct parameters are being tested.
+
+## Plotting
+
+Plotting the results can be done with scripts/param_explore/plotting/plot_params2.m. This plotting script uses the values reported from the exploration and interpolates values between those values for the purposes of plotting a colored surface of values. The results need to be formatted for use in the plotting software. The file reformat_ea.sh is designed to create this reformatting. A user needs to set param_column_a and param_column_b to the columns in the results file that are for the parameters of interest. The reformatting script replaces the extra low value -3.40E38 with -20.0 to aid with plotting. A user will need to manually replace other extra high/low scores, e.g., 1000.0, with lower scores, e.g., 20.0, to aid with plotting. Given that such scores are far beyond the levels tested for, and that the plot is much easier to read with the rescaled scores, rescaling them is useful. A file gridness_score_ea_iz.txt will be generated that can be used for plotting.
+
+The plotting script will need to have the variables plot_rotation_factor_1, plot_rotation_factor_2, and maybe plot_rotation_factor_3 altered to set the 3d camera location to a preferred place for capturing the plot. The plot is of a 3d surface but the article's plots have the camera directly overhead of them which turns them into 2d plots. Work in the article used a score threshold of 200% of the top ranked parameters reported on Hippocampome.org. For example, for neuron 6003 the fitness score is approximately -2.9, and 200% of that is appox. -5.8. This fitness score was found through setting the parameters in the json file to those displayed for subtype 1 on Hippocampome.org's neuron id 6003 neuron page in the Izhikevich model section. Then startEAbatch.sh was run to retreive the scores.
+
+The downsample_amount setting allows for controlling the number of colors used to represent values in the plot. In the article, lines that represent scores within the 200% threshold were added to plots. Setting the downsampling to 1 allows a wide range of colors. This can be used in an image editor such as [GIMP](https://www.gimp.org/) with the "select by color" tool to find the line on the plot that represents the threshold. That line can be then overlayed on a plot with downsampling of 10 that helps show different color sections with groups of values. This was done in plots in the article.
+
+Parameters that are chosen to be tested in this software can be reapplied in testing grid scores. In the article, plots with the firing patten score threshold line and grid score threshold line were included. To generate those plots it was useful to test the same Izhikevich parameters in both the firing patterns and grid score parameter exploration tests. An additional note is that the file auto_mod_fp_iz_vr.sh is a specialized script which tests changing more than 2 parameters at a time.
+
+## Optional parameters
+
+The parameters for a neuron type listed on Hippocampome.org are the top ranked parameters found to fit a firing pattern. There are also lower ranked parameter that can be explored if wanted as well. Those are listed in rank order in "ensemble" files in the downloads section of the Izhikevich Model section of neuron pages.
