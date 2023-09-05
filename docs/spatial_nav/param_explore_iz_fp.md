@@ -1,5 +1,5 @@
-Parameter exploration with firing pattern approximations and Izhikevich model values
-====================================================================================
+Izhikevich model parameter exploration testing firing patterns
+==============================================================
 
 This documentation is for running parameter exploration with Izhikevich model parameters and testing similarity to firing patterns as reported in published articles. The step of the Izhikevich model parameter exploration focused on here is fitting parameter values to results that are similar to published firing patterns.
 
@@ -59,15 +59,11 @@ The number of values intended to test for each parameter must be specified in au
 
 Once the settings have been entered, a user should run auto_mod_fp_iz.sh to generate tests of how each parameter value scores with the reference firing pattern. The scores are in the form of "fitness scores". As described in the spatial navigation simulation article, the fitness score is the sum of the combined error scores representing difference in model firing from real firings in a firing pattern. The errors are also weighted in a process described in ([Venkadesh et al., 2019](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007462))'s original work. The results and parameter values appear in the file /scripts/param_explore/output/param_records_ea_iz.txt. If a user has a text editor, e.g., Sublime Text, that can show document updates in real time, then the user can open the file in the editor and watch the scores reported in realtime to ensure the correct parameters are being tested.
 
+An additional note is that the file auto_mod_fp_iz_vr.sh is a specialized script which tests changing more than 2 parameters at a time.
+
 ## Plotting
 
-Plotting the results can be done with scripts/param_explore/plotting/plot_params2.m. This plotting script uses the values reported from the exploration and interpolates values between those values for the purposes of plotting a colored surface of values. The results need to be formatted for use in the plotting software. The file reformat_ea.sh is designed to create this reformatting. A user needs to set param_column_a and param_column_b to the columns in the results file that are for the parameters of interest. The reformatting script replaces the extra low value -3.40E38 with -20.0 to aid with plotting. A user will need to manually replace other extra high/low scores, e.g., 1000.0, with lower scores, e.g., 20.0, to aid with plotting. Given that such scores are far beyond the levels tested for, and that the plot is much easier to read with the rescaled scores, rescaling them is useful. A file gridness_score_ea_iz.txt will be generated that can be used for plotting.
-
-The plotting script will need to have the variables plot_rotation_factor_1, plot_rotation_factor_2, and maybe plot_rotation_factor_3 altered to set the 3d camera location to a preferred place for capturing the plot. The plot is of a 3d surface but the article's plots have the camera directly overhead of them which turns them into 2d plots. Work in the article used a score threshold of 200% of the top ranked parameters reported on Hippocampome.org. For example, for neuron 6003 the fitness score is approximately -2.9, and 200% of that is appox. -5.8. This fitness score was found through setting the parameters in the json file to those displayed for subtype 1 on Hippocampome.org's neuron id 6003 neuron page in the Izhikevich model section. Then startEAbatch.sh was run to retreive the scores.
-
-The downsample_amount setting allows for controlling the number of colors used to represent values in the plot. In the article, lines that represent scores within the 200% threshold were added to plots. Setting the downsampling to 1 allows a wide range of colors. This can be used in an image editor such as [GIMP](https://www.gimp.org/) with the "select by color" tool to find the line on the plot that represents the threshold. That line can be then overlayed on a plot with downsampling of 10 that helps show different color sections with groups of values. This was done in plots in the article.
-
-Parameters that are chosen to be tested in this software can be reapplied in testing grid scores. In the article, plots with the firing patten score threshold line and grid score threshold line were included. To generate those plots it was useful to test the same Izhikevich parameters in both the firing patterns and grid score parameter exploration tests. An additional note is that the file auto_mod_fp_iz_vr.sh is a specialized script which tests changing more than 2 parameters at a time.
+See the plotting documentation for instructions on plotting results.
 
 ## Optional parameters
 

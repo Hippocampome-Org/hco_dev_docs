@@ -62,10 +62,13 @@ Welcome to Hippocampome.org's Developer Documentation!
 
     spatial_nav/overview.md
     spatial_nav/initial_run.md
+    spatial_nav/new_carlsim_project.md
     spatial_nav/movement_paths.md
     spatial_nav/change_network_size.md
     spatial_nav/moves_converter.md
     spatial_nav/param_explore_iz_fp.md
+    spatial_nav/param_explore_iz_or_tm.md
+    spatial_nav/param_explore_plotting.md
 
 .. toctree::
     :hidden:
