@@ -51,7 +51,7 @@ This script will create the trajectory plot. This script will need to have the v
 ## activity_image_phys_spc_smooth.m
 
 This script will create the physical space rate map plot. Some methods included in ([Dannenberg, 2020](https://elifesciences.org/articles/62500)) were included in the physical space rate map plotting to help with comparing simulated results to those obtained in that article's work. Some variables that enable use of those methods are:
-<br>occupancy_norm: perform occupancy normalization. this adjusts rates by number of visits to locations.
+<br>`occupancy_norm`: perform occupancy normalization. this adjusts rates by number of visits to locations.
 <br>omit_islands: Takes matrix of occupancy values, calculates center of mass of pixels>0,
 and then finds all disconnected pixels and sets them = 0.
 <br>omit_noocc: set no occupancy to zero
