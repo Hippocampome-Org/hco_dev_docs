@@ -21,3 +21,7 @@ The files synapse_weights.csv and grc_to_in_conns.csv will need to be rebuilt. I
 ## Renaming main file
 
 The main cpp file in the src directory needs to be renamed to main_proj_name.cpp where proj_name is the name a user has selected for their CARLsim project name.
+
+## Animal data
+
+Any real animal data a user wants to include should be added with instructions in the "converting animal recordings" documentation.
