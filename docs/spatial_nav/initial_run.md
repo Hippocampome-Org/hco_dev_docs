@@ -66,3 +66,7 @@ A new CARLsim project should be created for this software. A script is provided 
 ## Animal data
 
 Note: "import_animal_data" in general_params.cpp should be set to "#define import_animal_data 0" if real animal data is not included for the software. Otherwise, a file import error will occur.
+
+## Building required files
+
+See the building required files documentation to build files needed to run the simulation.
