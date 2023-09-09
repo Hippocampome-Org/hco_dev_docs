@@ -13,7 +13,7 @@ The grc_to_in_conns.csv file includes connectivity data from grid cells to inter
 <br>#define use_saved_g_to_i_conns 0
 in general_params.cpp, and then running the simulation. Once the grc_to_in_conns.csv file is created, the variable can be set to:
 <br>#define use_saved_g_to_i_conns 1
-This allows running the simulation to take less time by not needing to recompute it. This csv file is built by using the cent_x and cent_y variables to select where center-surround connections should be positioned based on grid cell to interneuron connections. The file plot_weights.m can be used to view the positioning of center-surround rings once generate_weights.m is run and a comb_syn_wts object is in Matlab memory from that script.
+<br>This allows running the simulation to take less time by not needing to recompute it. This csv file is built by using the cent_x and cent_y variables to select where center-surround connections should be positioned based on grid cell to interneuron connections. The file plot_weights.m can be used to view the positioning of center-surround rings once generate_weights.m is run and a comb_syn_wts object is in Matlab memory from that script.
 
 ## ext_dir_initial.cpp, ext_dir.cpp, init_firings.cpp
 

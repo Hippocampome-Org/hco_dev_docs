@@ -70,3 +70,16 @@ Note: "import_animal_data" in general_params.cpp should be set to "#define impor
 ## Building required files
 
 See the building required files documentation to build files needed to run the simulation.
+
+## Data directory link
+
+A user should create a softlink to the data directory in the project folder in CARLsim's build folder. In linux this can be done by:
+<br>$ ln -s project_data_directory build_directory
+
+## Output directory
+
+In the build folder a directory named "output" is needed. That folder needs to have a directory named "spikes" in it.
+
+## Output, results, and build_dir links
+
+The project folder must contain links named "output" and "results" to folders with those same names in the build directory. Some scripts may require a softlink named "build_dir" in the project directory that links to the build directory.
