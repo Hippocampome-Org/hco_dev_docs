@@ -72,6 +72,7 @@ Welcome to Hippocampome.org's Developer Documentation!
     spatial_nav/new_carlsim_project.md
     spatial_nav/building_required_files.md
     spatial_nav/project_settings_examples.md
+    spatial_nav/connectivity_designing.md
     spatial_nav/movement_paths.md
     spatial_nav/plotting_results.md
     spatial_nav/change_network_size.md
