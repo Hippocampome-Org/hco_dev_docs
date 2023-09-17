@@ -9,3 +9,4 @@ It can be observed in real cell recordings that rotations are present. This can 
 
 ## Simulating a rotated pattern
 
+Applying an angle of rotation to the animal movements input into the simulation creates a rotation of bump movement that translates into a rotation of grid fields in physical space plots. This is able to help recreate rotations of grid patterns that are observed in real cells. 
