@@ -17,7 +17,7 @@ Another factor considered in avoiding the wrapping appearance is the bounds of t
 <center>
 <img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/neuron_space.jpg?raw=true"  width="300" height="300">
 <br>Fig. 1. Neural layer including subsection highlighed in teal.
-<br></center>
+<br></center><br>
 
 The appearance of fields wrapping around can be avoided by having the space of bump movement set to the subsection of the total layer, and therefore in the plots avoids capturing bump movement over a recorded neuron that is at the arbitrarily defined "borders" of the neural layer. Borders in this sense are the minimum and maximum neuron soma position in 3d space in the layer when the layer is plotted as a 2d plot. These are arbitrary designations due to how the layer loops around in the toroidal manifold. This concept is shown in Fig. 1 having units on the x- and y-axes being 0-40 representing the 3d spacing of 40x40 neuron somas.
 
@@ -25,7 +25,7 @@ Shown in Fig. 1 in a teal highlight is a 30x30 subsection within the neural laye
 <center>
 <img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/neuron_space_traj.jpg?raw=true"  width="300" height="300">
 <br>Fig. 2. Virtual animal movements show in teal overlayed on to a neural layer.
-<br></center>
+<br></center><br>
 
 A line that traces the movements of a real animal in a 40x40 cm enviornment is shown in teal overlayed onto a neural layer in Fig. 2. This shows how the movements can be mapped to the 30x30 neuron distance space as described earlier. Methods described in the "converting animal recordings" documentation are used to position the movements in the layer. For instance, selecting a virtual animal starting position relative to the neural layer's coordinates can help center the movement trajectory to an intended part of the layer. Plotted results in the article show how these methods of mapping animal movement to bump movement in selected parts of a grid cell neural layer produce plots that avoid the field wrapping appearance.
 
