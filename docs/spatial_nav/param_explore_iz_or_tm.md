@@ -7,6 +7,10 @@ This documentation is for running parameter exploration with Izhikevich model (I
 
 The main script used for TM parameter exploration is auto_mod_tm.sh and its settings are in params_config_tm.sh. For IM, the files are auto_mod_tm.sh and params_config_iz.sh. If it is needed, update the params_config file for the parameter values that are intended to be included. The param_pattern variables are pattern matching strings for C++'s regex library to find the data in the the project's .cpp file and update it to the intended values. The param_vals variables include the values to test. param_file specifies which .cpp file the values should be changed in.
 
+## Example settings files
+
+In the scripts/param_explore/config_files/archive directory are example params_config.sh files. The files named params_config_iz and params_config_tm are for Izhikevich model and Tsodyks-Markram model parameters, respectively. The files named params_config_fp_iz are for seperately testing parameters with firing patterns, and is covered in the "testing firing patterns" documentation. The example files were ones used in the article to create parameter exploration plots. The last part in the filename lists what parameters are explored with the settings file. For example, the file "params_config_iz_a_k.sh" includes settings for exploring Izhikevich a and k parameters.
+
 ## Creating a CARLsim project
 
 For running this parameter exploration a unique CARLsim project should be created. This is recommended to be separate from the main spatial navigation project because the parameters in this project will be automatically altered. To avoid accidental changes to parameters, it is useful to have this experiment use a seperate CARLsim project where its parameter changes will only affect its project. Instructions for creating a project are in the "new CARLsim project" documentation. 
