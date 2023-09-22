@@ -135,6 +135,14 @@ A video that combines rate map, trajectory, raster, and voltage plot videos can 
 
 A part of the video production was changing the speed of the individual videos to match each other. The different videos showed time occuring at different rates and needed to be syncronized. Kdenlive has a function to duplicate a video clip with a speed change. That function was used to get the videos at least very close to matching each others' rate of time passing.
 
+## Comparing firing rates
+
+Statistics on firing rates and grid scores can be compared between simulated results and real animal recording results. Scripts are provided to help with these analyses.
+
+### Average firing rates
+
+The average firing rates of each neuron of interest in an experiment needs to be saved for this analysis. In the article, firing rates used for comparison were based on those generated with physical space rate map plots described earlier. A script helps record these rates for all grid cells in a simulation, and its name is find_spiking_distro_sim.m. It is designed to be run without a graphical user interface via command line, and the script find_spiking_distro_sim.sh is designed to run it through running the script on the command line.
+
 ## References:
 
 Dannenberg, H., Lazaro, H., Nambiar, P., Hoyland, A., & Hasselmo, M. E. (2020). Effects of visual inputs on neural dynamics for coding of location and running speed in medial entorhinal cortex. ELife, 9, e62500. https://doi.org/10.7554/eLife.62500

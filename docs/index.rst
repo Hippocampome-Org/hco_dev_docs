@@ -83,6 +83,7 @@ Welcome to Hippocampome.org's Developer Documentation!
     spatial_nav/param_explore_iz_fp.md
     spatial_nav/param_explore_iz_or_tm.md
     spatial_nav/param_explore_plotting.md
+    spatial_nav/system_specs.md
 
 .. toctree::
     :hidden:
