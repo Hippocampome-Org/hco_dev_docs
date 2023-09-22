@@ -82,11 +82,58 @@ Grid scores from parameter testing can be plotted with the instructions in the "
 
 ## Raster plot
 
-To be completed later...
+The script plot_spikes_combined.m can create a raster plot of all spikes in a simulation as shown in the article's Fig. 4. The required data for this plot includes simulation results that ran for at least the "Te" variable time (end time to plot). Spike time results files for every neuron in the simulation are also needed. The can be produced by setting the "spk_mon_additional" variable to 1 in general_params.cpp, and then running the simulation.
+
+The plot legend can be toggled with the "ShowLegend" variable. The legend may obscure the view of some spikes, so saving a version of the plot with it disabled may be wanted.
+
+A user can set any additional variables wanted. For example:
+<br>`Ne`: number of principal cells to plot in each principal cell group.
+<br>`Nei`: number of interneurons to plot in each interneuron group.
 
 ## Voltage and current plots
 
-To be completed later...
+The script plot_volt_or_current.m can be used to produce plots of voltage or current. Examples of such plots are shown in Fig. 5. Requirements for these plots include that data files from CARLsim's NeuronMonitor function are created for the neurons that the user would like to plot. This can be produced by setting the variable "monitor_voltage" or "monitor_voltage2" to 1 in general_params.cpp. The choice of what variable to set depends on what neuron is intended to be recorded. The neurons that each variable matches are listed in generate_config_state.cpp.
+
+Users can also set additional variables as wanted, such as:
+<br>`plot_voltage`: set to 1 for voltage and 0 for current plotting
+<br>`include_in`: plot interneuron(s) in addition to the principal cell(s)
+<br>`t_start`: start time to plot
+<br>`t_end`: end time to plot
+<br>`nrns_tot`: number of neurons to plot
+<br>`rsz_peaks_active`: resize peak values. The Izhikevich model in CARLsim does not have peak voltage values from spikes that would be similar to peak values in real animal recordings. Activating this variable corrects for this by setting any value above a certain threshold to a "peak" value. This causes simulated voltage plots to appear more similar to real plots. The Izhikevich model potentially having lower peaks does not seem to cause much of an issue with neural activity fitting with biological realism because the process of "spiking" is still performed. The article's voltage plot uses this resizing correction and it is noted in the article.
+<br>`min_spk_v`: threshold to detect voltage as a spike
+<br>`new_peak`: new peak voltage once threshold is met
+<br>`min_isi`: minimum inter-spike interval required from last resized spike voltage peak to next voltage peak to resize the next peak.
+
+## Animated trajectory plot
+
+The script activity_movie_animate_spike_traj.m can create a video of a trajectory plot being created over time including spikes. Some settings can be set with the variables:
+<br>`start_time`: the start time to be plotted
+<br>`restrict_time`: amount of time to plot. Use value 0 for no restriction on amount of time to plot (plots the full experiment time).
+<br>`fdr_prefix`: first part of project name.
+<br>`local_run`: end of project name (typically a number).
+<br>`sel_nrn`: neuron index to plot.
+<br>`spk_bin_size`: spike reader bin size. This is the number of millisecond in which to look for a spike. For instance, a spike occuring in every 10 ms bin can be chosen as the setting. Shorter bins require more processing time.
+
+## Animated raster plot
+
+The script activity_movie_plot_spikes_group.m can create a video of a raster plot of a group of neurons occuring over time. Some variables that control settings include:
+<br>`N`: number of neurons to plot.
+<br>`t_window`: amount of time (window of time) to plot as the experiment time increases.
+<br>`t_start`: start time to plot
+<br>`t_end`: end of plot time
+<br>`use_selected_time`: supply a csv file with saved spike times rather than using ".dat" results files from CARLsim. This is useful if a user wants to plot time far after the start of an experiment, e.g., 1 hr after the start as shown in the second half of the article's supplemental material Fig. S5 video. Having to load data from such a long time in an experiment may produce memory issues on a computer. Creating the csv file through seperate processing of a ".dat" file from CARLsim's spike recording can help avoid the computer resource overload isse.
+<br>`alter_plot_start_time`: alter time shown in the video by a value. This is useful when specifying a time to match the time present in a `use_selected_time` file.
+
+## Animated voltage or current plot
+
+The script activity_movie_volt_or_current.m can create a video of voltage or current occuring over time in an experiment. Many of the plot options are similar to the script plot_volt_or_current.m described above. Additional settings parameters include setting the name of a video file, e.g., "volt_movie.avi", in the line that includes VideoWriter.
+
+## Combined real time signals animation
+
+A video that combines rate map, trajectory, raster, and voltage plot videos can be created through video production. An example of such a video is the one shown in the article's supplemental material figure Fig S5. This video was created with the video editor Kdenlive (kdenlive.org; an open source tool) on Ubuntu Linux.
+
+A part of the video production was changing the speed of the individual videos to match each other. The different videos showed time occuring at different rates and needed to be syncronized. Kdenlive has a function to duplicate a video clip with a speed change. That function was used to get the videos at least very close to matching each others' rate of time passing.
 
 ## References:
 
