@@ -135,13 +135,25 @@ A video that combines rate map, trajectory, raster, and voltage plot videos can 
 
 A part of the video production was changing the speed of the individual videos to match each other. The different videos showed time occuring at different rates and needed to be syncronized. Kdenlive has a function to duplicate a video clip with a speed change. That function was used to get the videos at least very close to matching each others' rate of time passing.
 
-## Comparing firing rates
+## Comparing firing rates and grid scores
 
 Statistics on firing rates and grid scores can be compared between simulated results and real animal recording results. Scripts are provided to help with these analyses.
 
 ### Average firing rates
 
-The average firing rates of each neuron of interest in an experiment needs to be saved for this analysis. In the article, firing rates used for comparison were based on those generated with physical space rate map plots described earlier. A script helps record these rates for all grid cells in a simulation, and its name is find_spiking_distro_sim.m. It is designed to be run without a graphical user interface via command line, and the script find_spiking_distro_sim.sh is designed to run it through running the script on the command line.
+The average (mean) firing rates of each neuron of interest in an experiment needs to be saved for this analysis. In the article, firing rates used for comparison were based on those generated with physical space rate map plots described earlier. A script helps record these rates for all grid cells in a simulation, and its name is find_spiking_distro_sim.m. It is designed to be run without a graphical user interface via command line, and the script find_spiking_distro_sim.sh is designed to run it through running the script on the command line. A user should use the variables "fdr_prefix" and "local_run" to set the project name for use in aquiring the statistics.
+
+Running the find_spiking_distro_sim.m script outputs average firing rate results into the file scripts/firing_rate_records.txt. The data in that file should be read into matlab with the command `avg_fr=readmatrix('path_to_firing_rate_records.txt');`. The data should then be transposed with `avg_fr=avg_fr';`. A file such as scripts/fr_data.m can be used to store data for comparison. A variable name should be chosen for the new avg_fr data that indicates something unique about it. For example, sml_f_high_fr can be the data for grid cell results with small field and high average firing rate. In the file fr_data.m, the average firing rates found in SD1 along with new grid cells recorded as a part of work in the article were combined in the the variable real_dc.
+
+The script firing_rates_comparison.m can be used to statistically compare simulated results to real cell results. fr_data.m's data is used in the comparison script. The variables listed under "choose stat reports" allow a user to select the stat reports of interest, but the matching data must be availible to run the reporting. One of the statistics reported is "ranksum" from matlab's ranksum() function and computes the Wilcoxon rank sum test described in the article.
+
+### Peak firing rates
+
+In find_spiking_distro_sim.m the option save_firingpeak_file enables saving the peak firing rates from grid cell physical space plots to a file. It by default saves this data in the file firing_peak_records.txt. The data in that file can be processed in the same way as the firing_rate_records.txt file described above to prepare it for statistical reporting with firing_rates_comparison.m.
+
+### Grid scores
+
+In find_spiking_distro_sim.m the option save_gridscore_file enables saving the grid scores from grid cell physical space plots to a file. It by default saves this data in the file /scripts/param_explore/output/gridness_score.txt. The same file used in parameter exploration is reused for the purpose of this grid score comparison analysis. Although the file is in the param_explore directory, parameter exploration is not assumed to be involved in experiments recreating these results. The column of grid score values in the file (columns are separated by commas) can be copied into a new file that only contains those values. Spreadsheet programs are useful for copying such a column and that copied data can be placed into a new text document. The file containing only the grid scores can than be processed in the same way as the firing_rate_records.txt file described above to prepare it for statistical reporting with firing_rates_comparison.m.
 
 ## References:
 
