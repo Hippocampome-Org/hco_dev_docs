@@ -1,7 +1,7 @@
-Connectivity design methods
-===========================
+Connectivity and synapse weight design methods
+==============================================
 
-This documentation will cover methods and reasons to design connectivity in the simulation.
+This documentation will cover methods and reasons to design connectivity and synapse weights in the simulation.
 
 ## Grid cell to interneuron connections
 
