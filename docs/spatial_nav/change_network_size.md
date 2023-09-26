@@ -25,7 +25,7 @@ All vectors that are used to set initial current to grid cells with setExternalC
 
 ## Synaptic connectivity
 
-Synaptic connectivity between grid cells and interneurons will need to be adjusted to accomidate the different layer sizes. The script generate_weights.m is designed to help generate synaptic weight values for connections from interneurons to grid cells. Settings in that script should be set to the new layer size. For example, grid_size_ref and grid_size_target. Some other variables that should be altered in the script include start_x_shift and start_y_shift. Also, the center and surround sizes in the center-surround ring should be set proportionally to the amount of inhibition wanted with the new layer size.
+Synaptic connectivity between grid cells and interneurons will need to be adjusted to accomidate the different layer sizes. The script generate_weights.m is designed to help generate synaptic weight values for connections from interneurons to grid cells. Settings in that script should be set to the new layer size. For example, grid_size_ref and grid_size_target. Some other variables that should be altered in the script include start_x_shift and start_y_shift. Also, the center and surround sizes in the center-surround ring should be set proportionally to the amount of inhibition wanted with the new layer size. See connectivity design methods documentation for more instructions.
 
 ## Conductance (g) constant
 

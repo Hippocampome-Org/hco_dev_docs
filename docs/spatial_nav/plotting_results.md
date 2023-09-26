@@ -147,6 +147,8 @@ Running the find_spiking_distro_sim.m script outputs average firing rate results
 
 The script firing_rates_comparison.m can be used to statistically compare simulated results to real cell results. fr_data.m's data is used in the comparison script. The variables listed under "choose stat reports" allow a user to select the stat reports of interest, but the matching data must be availible to run the reporting. One of the statistics reported is "ranksum" from matlab's ranksum() function and computes the Wilcoxon rank sum test described in the article.
 
+Example settings for different projects that are in the /scripts/settings_archive/ directory can be used to generate simulation results with different average firing rates. The project directories in settings_archive have names with \[size\]\_fr where \[size\] is the level of average firing rate. These settings were used in the article to produce results reported in a firing rates analysis.
+
 ### Peak firing rates
 
 In find_spiking_distro_sim.m the option save_firingpeak_file enables saving the peak firing rates from grid cell physical space plots to a file. It by default saves this data in the file firing_peak_records.txt. The data in that file can be processed in the same way as the firing_rate_records.txt file described above to prepare it for statistical reporting with firing_rates_comparison.m.
