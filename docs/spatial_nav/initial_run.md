@@ -8,15 +8,15 @@ These are instructions for setting up the software for an initial run
 Users need to install the branch named "ca3net" (aka the Hippocampome of CSTP branch) of CARLsim6 ([link](https://github.com/UCI-CARL/CARLsim6/tree/feat/ca3net)) to run this simulation. This was required at the time this documentation was made. Possibly, the Hippocampome branch will be merged with the main branch in the future but there is further development to be done before that. Some conditions should be known about using the hippocampome branch.
 
 A quick overview is:
-<br>COBA is enabled by default and should always be used (see [issue #27](https://github.com/UCI-CARL/CARLsim6/issues/27)).
-<br>Do not include setConductances() in a line of code (see [issue #27](https://github.com/UCI-CARL/CARLsim6/issues/27)).
-<br>setSTP() needs to be set to "true" for any synaptic connection to work (see [issue #27](https://github.com/UCI-CARL/CARLsim6/issues/27)). The 9-parameter and not 3-parameter version of setSTP() should be used.
-<br>Spike generator code may not work (see [issue #29](https://github.com/UCI-CARL/CARLsim6/issues/29)).
-<br>If using a refractory period (e.g., setting its value to 1 or more in setNeuronParameters()) then a user should only use the RUNGE_KUTTA4 integration method (see [issue #24](https://github.com/UCI-CARL/CARLsim6/issues/24)).
-<br>In connect() and other synaptic connection statements a user should only use a delay of 1 (see [issue #20](https://github.com/UCI-CARL/CARLsim6/issues/20)). Setting connection delays greater than one are allowed in the CSTP branch unlike in the main branch CARLsim code. However, there is indicated to be bugs with any delay greater than 1 so that should not be used.
-<br>Grid3D neuron sizes are not processed correctly (see [issue #18](https://github.com/UCI-CARL/CARLsim6/issues/18)).
-<br>Only the GPU version of CARLsim's processing should be used. For example, when including sim(), a user should only use GPU_MODE not CPU_MODE (see [issue #18](https://github.com/UCI-CARL/CARLsim6/issues/18)). Code for the Hippocampome features has only been developed for GPUs and will not work correctly with CPU.
-<br>Only use CARLsim6 not a different CARLsim version (see [issue #18](https://github.com/UCI-CARL/CARLsim6/issues/18)). The code has not been developed for any other version.
+<br>* COBA is enabled by default and should always be used (see [issue #27](https://github.com/UCI-CARL/CARLsim6/issues/27)).
+<br>* Do not include setConductances() in a line of code (see [issue #27](https://github.com/UCI-CARL/CARLsim6/issues/27)).
+<br>* setSTP() needs to be set to "true" for any synaptic connection to work (see [issue #27](https://github.com/UCI-CARL/CARLsim6/issues/27)). The 9-parameter and not 3-parameter version of setSTP() should be used.
+<br>* Spike generator code may not work (see [issue #29](https://github.com/UCI-CARL/CARLsim6/issues/29)).
+<br>* If using a refractory period (e.g., setting its value to 1 or more in setNeuronParameters()) then a user should only use the RUNGE_KUTTA4 integration method (see [issue #24](https://github.com/UCI-CARL/CARLsim6/issues/24)).
+<br>* In connect() and other synaptic connection statements a user should only use a delay of 1 (see [issue #20](https://github.com/UCI-CARL/CARLsim6/issues/20)). Setting connection delays greater than one are allowed in the CSTP branch unlike in the main branch CARLsim code. However, there is indicated to be bugs with any delay greater than 1 so that should not be used.
+<br>* Grid3D neuron sizes are not processed correctly (see [issue #18](https://github.com/UCI-CARL/CARLsim6/issues/18)).
+<br>* Only the GPU version of CARLsim's processing should be used. For example, when including sim(), a user should only use GPU_MODE not CPU_MODE (see [issue #18](https://github.com/UCI-CARL/CARLsim6/issues/18)). Code for the Hippocampome features has only been developed for GPUs and will not work correctly with CPU.
+<br>* Only use CARLsim6 not a different CARLsim version (see [issue #18](https://github.com/UCI-CARL/CARLsim6/issues/18)). The code has not been developed for any other version.
 <br>
 <br>While these issues exist, a user can just avoid using code that they instruct to avoid, and experiments such as those in the article can be performed correctly.
 
