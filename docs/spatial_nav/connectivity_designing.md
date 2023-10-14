@@ -3,6 +3,10 @@ Connectivity and synapse weight design methods
 
 This documentation will cover methods and reasons to design connectivity and synapse weights in the simulation.
 
+## TPM vs TM models
+
+CARLsim implements a variation of the Tsodyks-Pawelzik-Markram (TPM) synapse model (Moradi & Ascoli, 2019; Moradi et al., 2022) which will be referred to as the TM (Tsodyks and Markram) model (Moradi et. al., 2022; Senn et al., 2001). Through personal correspondence, it was established that part of the work in (Kopsick, 2023) found the TM model produces equivalent results to the TPM model when the same Hippocampome.org site parameters were used in each model. Therefore, this work used Hippocampome.org's synapse model parameters in CARLsim’s TM model.
+
 ## Grid cell to interneuron connections
 
 Selecting which connections should occur from grid cells to interneurons (INs) can help control the spacing, positioning, and rotation of grid feilds. Adding grid cell to interneuron connection can help reinforce firing in bump within a rotated grid pattern. Each IN is connected to grid cells in a center-surround (CS) connection distribution. The CS distributions support the firing of bumps in their centers and inhibit firing in their surround regions. Bump firing leads to grid field firing in firing vs. animal location rate map (physical space) plot. Controling bump firing locations through selecting connectivity therefore leads to controling the positions, spacing, and rotations of grid fields.
@@ -62,3 +66,13 @@ Some key parameters control important aspects of the connectivity design script.
 The connectivity of the CS synapse distribution created by the script can be found using methods described in the "finding interneuron connectivity" section of the "plotting and analyzing results" documentation. This can be used to ensure that connectivity created is within levels that fit with connectivity reported in animal studies. Trying to use the created csv file with the simulation in a test movement function (e.g., move_straight) can test how the generated CS distribution performs.
 
 If particularly large CS rings are wanted, for instance, in large grid scale simulation settings, then a relatively larger IN layer size may be needed than compared to smaller grid scales. For example, in the article, typically a IN layer size of 60x60 neurons was used for large grid scale settings and 50x50 neurons for other grid scale settings. A reason for the larger grid scale being needed is that the way the IN rings tile around the edges of the grid cell layer can be incomplete without a large enough IN layer.
+
+References:
+
+Kopsick, J. D., Tecuatl, C., Moradi, K., Attili, S. M., Kashyap, H. J., Xing, J., Chen, K., Krichmar, J. L., & Ascoli, G. A. (2023). Robust Resting-State Dynamics in a Large-Scale Spiking Neural Network Model of Area CA3 in the Mouse Hippocampus. Cognitive Computation. 15, 1190–1210. https://doi.org/10.1007/s12559-021-09954-2
+
+Moradi, K., & Ascoli, G. A. (2019). A comprehensive knowledge base of synaptic electrophysiology in the rodent hippocampal formation. Hippocampus, 30(4), 314–331. https://doi.org/10.1002/hipo.23148
+
+Moradi, K., Aldarraji, Z., Luthra, M., Madison, G. P., & Ascoli, G. A. (2022). Normalized unitary synaptic signaling of the hippocampus and entorhinal cortex predicted by deep learning of experimental recordings. Communications Biology, 5(1), 1–19. https://doi.org/10.1038/s42003-022-03329-5
+
+Senn, W., Markram, H., & Tsodyks, M. (2001). An Algorithm for Modifying Neurotransmitter Release Probability Based on Pre- and Postsynaptic Spike Timing. Neural Computation, 13(1), 35–67. https://doi.org/10.1162/089976601300014628
