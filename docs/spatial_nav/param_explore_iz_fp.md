@@ -69,6 +69,14 @@ An additional note is that the file auto_mod_fp_iz_vr.sh is a specialized script
 
 See the plotting documentation for instructions on plotting results.
 
+## Parameter ranges
+
+A factor considered in IM plots is the extent to which each parameter extends past ranges specified for exploration of IM parameters in the firing patterns matching work of (Venkadesh et al., 2019). In the article's Fig. 3A, that range for parameter a by Venkadesh et al. was 0 to 0.1. The EA software used in Venkadesh et al.'s work was able to explore values beyond that original range and be considered biologically realistic. The plot shows values beyond that range but ends at 0.583 to keep explorations past that range within useful values, albeit that additional animal studies may further clarify what true ranges are found in nature. The other IM parameters tested in the article's work were within ranges closer to those originally used in Venkadesh et al.’s work and those ranges can be found on the IM section of neuron pages on the Hippocampome.org site (Hippocampome.org/MECLIIStel).
+
 ## Optional parameters
 
 The parameters for a neuron type listed on Hippocampome.org are the top ranked parameters found to fit a firing pattern. There are also lower ranked parameter that can be explored if wanted as well. Those are listed in rank order in "ensemble" files in the downloads section of the Izhikevich Model section of neuron pages.
+
+## References
+
+Venkadesh, S., Komendantov, A. O., Wheeler, D. W., Hamilton, D. J., & Ascoli, G. A. (2019). Simple models of quantitative firing phenotypes in hippocampal neurons: Comprehensive coverage of intrinsic diversity. PLOS Computational Biology, 15(10), e1007462. https://doi.org/10.1371/journal.pcbi.1007462
