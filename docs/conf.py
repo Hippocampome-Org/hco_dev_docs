@@ -44,7 +44,7 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
-    'recommonmark',
+#    'recommonmark',
     "sphinx_rtd_theme",
 ]
 
