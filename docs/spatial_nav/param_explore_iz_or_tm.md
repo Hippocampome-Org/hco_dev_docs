@@ -101,3 +101,7 @@ An example script that could be used to run parameter exploration on a supercomp
 <br>Results were checked to see that it was working with:
 <br>$ tail /scratch/username/gc_sim/param_explore_tm_1_results.txt
 </details>
+
+## Details about parameter exploration in the article
+
+Parameter exploration work in the article used a movement path that covered much of an environment in a short time and real animal experiments last notably longer in time. An area of future work can be to find ways to computationally explore parameters efficiently with the use of full animal experiment recording times. Since such full times can be greater than two hours, the alternative trajectory that covers a large portion of the environment in 4.2 minutes of animal movement time is used, and that makes tests that sweep parameter ranges computationally practical. Computational processing time, including generating grid scores, caused pairwise testing of nine values per parameter to take approximately 16 hours of computing to create the plots in the article's Fig. 2A-D. Plots of full time and parameter exploration versions can be seen in the article's Fig. S2. Some results of parameters can be different if run for the full time but future advances in computing methods would be needed for such testing to occur in an efficient manner.
