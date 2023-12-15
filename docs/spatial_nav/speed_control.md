@@ -23,4 +23,4 @@ References:
 
 Lutus, P., Accessed online July 4, 2023. Polynomial regression data fit tool. Copyright 2023. https://arachnoid.com/polysolve/
 
-MyAssays Ltd., Accessed online July 4, 2023. Online mathematical curve-fitting tool. https://www.mycurvefit.com 
+MyAssays Ltd., Accessed online July 4, 2023. Online mathematical curve-fitting tool. https://www.mycurvefit.com
