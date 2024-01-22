@@ -39,6 +39,10 @@ Another factor to consider in setting grid cell to IN connections is if they suf
 
 Typically it can be useful to avoid the CS rings overlapping too much. This can be previewed in plot_weights.m. Overlapping can potentially cause a conflict in directing the movement of bumps over time. Rings that only have relatively small synapse weights overlapping compared to higher weights can potentially not cause issues because their total weights that combine in the overlap can be less than near by higher weights. It can in general be useful to have rings close enough to each other to avoid gaps between them and their neighboring rings in the direct path angle between centroids of the rings. The attractor network may automatically self organize to produce additional unwanted bumps in the gap space if it is large enough. Overall, it is typically useful for the rings to have a balance of being close to each other but not too close. Examples of possible configurations can be seen using the example settings data provided.
 
+## Comparison to other studies
+
+A study has reported possibly alternative grid cell to IN connectivity than what is used in this work. That study used a technique of spike-time cross-correlograms from simultaneously electrophysiologically recorded neurons to infer synaptic activity (Buetfering et al., 2014). 26 of 211 grid cell to IN pairs recorded were indicated to have synaptic connections. This amount of connections should be interpreted with the understanding that 22 connections out of 66 of the pairs were on the same tetrode. This makes those pairs potentially higher in likelihood to have connections than more distant neurons in 3D space. The simulation in this work included an average of ~16 grid cell to IN connections at most, which is lower than indicated by the study, but it includes both local and further distant connections in 3D space. Future work in animal experimentation and simulations can advance investigations into what amount of connectivity would be useful to include. The study also describes some possible issues with INs providing phase-dependent signaling to grid cells and methods related to those described in (Dunn et al., 2017) could be added as future work to the model as an update for that.
+
 ## Programming CS connections
 
 The script generate_weights.m can be used to build CS synaptic weights from INs to grid cells. Any connection with a weight above 0 will be included as a connection in the simulation, and 0 weight synapses will not be added as connections. One element of the simulation that these CS rings will affect is the size that each attractor network bump will be.
@@ -68,6 +72,10 @@ The connectivity of the CS synapse distribution created by the script can be fou
 If particularly large CS rings are wanted, for instance, in large grid scale simulation settings, then a relatively larger IN layer size may be needed than compared to smaller grid scales. For example, in the article, typically a IN layer size of 60x60 neurons was used for large grid scale settings and 50x50 neurons for other grid scale settings. A reason for the larger grid scale being needed is that the way the IN rings tile around the edges of the grid cell layer can be incomplete without a large enough IN layer.
 
 References:
+
+Buetfering, C., Allen, K., & Monyer, H. (2014). Parvalbumin interneurons provide grid cell–driven recurrent inhibition in the medial entorhinal cortex. Nature Neuroscience, 17(5), Article 5. https://doi.org/10.1038/nn.3696
+
+Dunn, B., Wennberg, D., Huang, Z., & Roudi, Y. (2017). Grid cells show field-to-field variability and this explains the aperiodic response of inhibitory interneurons (arXiv:1701.04893). arXiv. https://doi.org/10.48550/arXiv.1701.04893
 
 Kopsick, J. D., Tecuatl, C., Moradi, K., Attili, S. M., Kashyap, H. J., Xing, J., Chen, K., Krichmar, J. L., & Ascoli, G. A. (2023). Robust Resting-State Dynamics in a Large-Scale Spiking Neural Network Model of Area CA3 in the Mouse Hippocampus. Cognitive Computation. 15, 1190–1210. https://doi.org/10.1007/s12559-021-09954-2
 

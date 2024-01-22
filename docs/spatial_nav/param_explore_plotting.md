@@ -11,6 +11,10 @@ The plotting script will need to have the variables plot_rotation_factor_1, plot
 
 The downsample_amount setting allows for controlling the number of colors used to represent values in the plot. Setting the downsampling to 1 allows a wide range of colors. This can be used in an image editor such as [GIMP](https://www.gimp.org/) with the "select by color" tool to find the line on the plot that represents the score threshold of interest. That line can be then overlayed on a plot with downsampling of 10 that helps show different color sections with groups of values. This was done in plots in the article.
 
+## Methods
+
+Typically, a different neuron then used in full animal trajectory simulations was used in limited trajectory simulations. The difference between limited and full animal trajectories are described in the supplemental material of the article. A different trajectory being used caused the different neuron to produce a similar plotted grid pattern (in physical space) to be generated to that seen in the full trajectory. A justifying reason for the different neuron being used is that it helped acheive the objective of wanting the limited trajectory to produce similar results as the full trajectory (e.g., seen in the plot).
+
 ## Firing pattern fit results
 
 The results need to be formatted for use in the plotting software. The file reformat_ea.sh is designed to create this reformatting. A user needs to set param_column_a and param_column_b to the columns in the results file that are for the parameters of interest. The reformatting script replaces the extra low value -3.40E38 with -20.0 to aid with plotting. A user will need to manually replace other extra high/low scores, e.g., 1000.0, with lower scores, e.g., 20.0, to aid with plotting. Given that such scores are far beyond the levels tested for, and that the plot is much easier to read with the rescaled scores, rescaling them is useful. A file gridness_score_ea_iz.txt will be generated that can be used for plotting.
