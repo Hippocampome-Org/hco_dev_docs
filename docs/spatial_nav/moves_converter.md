@@ -3,7 +3,7 @@ Converting animal recordings data for simulation use
 
 ## Find data files containing grid cells
 
-Data files can be batch processed with scripting to identify which cell files contain grid cell firing. Grid cell plots can be previewed with [CMBHome's](https://github.com/hasselmonians/CMBHOME) Visualize Matlab script. If using data from ([Dannenburg et al., 2020](https://elifesciences.org/articles/62500)), then grid patterns of interest can be previewed in the supp. mat. plots ([link](https://cdn.elifesciences.org/articles/62500/elife-62500-fig6-data1-v2.pdf)).
+Data files can be batch processed with scripting to identify which cell files contain grid cell firing. Grid cell plots can be previewed with [CMBHome's](https://github.com/hasselmonians/CMBHOME) Visualize Matlab script. If using data from ([Dannenburg et al., 2020](https://elifesciences.org/articles/62500)), then grid patterns of interest can be previewed in the supp. mat. plots ([SD1](https://cdn.elifesciences.org/articles/62500/elife-62500-fig6-data1-v2.pdf)).
 <br><details>
 <summary>Filenames used in the article</summary>
 In the article's Fig 2., filenames used for experiments were: 
@@ -13,6 +13,10 @@ In the article's Fig 2., filenames used for experiments were:
 <br>
 <br>Any users wanting to use this specific data should please contact us for it.
 </details><br>
+
+## Animal data files used in the article
+
+In some cases, the animal recording data used for simulations was only from a portion of the total recording time used to generate plots in SD1. This was due to each cell having potentially multiple data files and records not available about to which cell each file belonged. The plots in SD1 were from data with files combined together that belong to the same cell. Each individual file used in simulations was deemed to have a sufficient amount of recording time, i.e., greater than 1 million milliseconds, to adequately approximate the full recording times. This evaluation was based on the limited recording time rate map plots looking visually very similar to the full recording time plots. Possibly because files with only portions of experiments were used the same grid cell may have been present in more than one file. This was indicated to be minimal in likelihood of occurrence, based on visual inspection of plots, and predicted to have little to no affect on statistical results reported in the article.
 
 ## Converting data files into a format for the simulation
 
@@ -60,3 +64,7 @@ Some starting positions found to work reasonably well are:
 <br>pos\[2\]={21,27} (40x40 grid cell layer)
 <br>pos\[2\]={23,29} (42x42 grid cell layer possibly)
 </details>
+
+## References
+
+Dannenberg, H., Lazaro, H., Nambiar, P., Hoyland, A., & Hasselmo, M. E. (2020). Effects of visual inputs on neural dynamics for coding of location and running speed in medial entorhinal cortex. ELife, 9, e62500. https://doi.org/10.7554/eLife.62500
