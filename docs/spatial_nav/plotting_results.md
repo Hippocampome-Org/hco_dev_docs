@@ -58,7 +58,7 @@ and then finds all disconnected pixels and sets them = 0.
 <br>`binside`: smoothing factor. This parameter involved in smoothing filter calculations. Original file describes this as "The length in cm of the side of a bin when calculating the rate map".
 <br>`std_smooth_kernel`: smoothing factor. This parameter involved in smoothing filter calculations. Original file described this as "STD (cm) of the gaussian kernel to smooth the rate map".
 
-The simulation results in the grid cell simulation article used the settings of `binside = 3` and `std_smooth_kernel = 3.333`. The results in (Dannenberg, 2020) perhaps used somewhat different settings, e.g., `binside = 3` and `std_smooth_kernel = 3;`. The differences in settings and code are predicted to have minimal to no effect on comparisons between simulated and real cells.
+The simulation results in the grid cell simulation article used the settings of `binside = 3` and `std_smooth_kernel = 3.333`. The descriptions of these smoothing filter parameters found in the original code described them being related to cm measurements. These parameters were not changed based on environment size (in cm) of the source neural data, or any other reason, in the simulation article plots and data obtained from the plots. The results in (Dannenberg, 2020) perhaps used somewhat different settings, e.g., `binside = 3` and `std_smooth_kernel = 3;`. The differences in the settings and code are predicted to have minimal to no effect on any analyses performed in the simulation article such as comparisons between simulated and real cells.
 
 Additional general variables that can be non-specific to (Dannenberg, 2020)'s plots include:
 <br>`fs_video`: sampling rate from video (samples/sec)
