@@ -50,11 +50,15 @@ This script will create the trajectory plot. This script will need to have the v
 
 ## activity_image_phys_spc_smooth.m
 
-This script will create the physical space rate map plot. Some methods included in ([Dannenberg, 2020](https://elifesciences.org/articles/62500)) were included in the physical space rate map plotting to help with comparing simulated results to those obtained in that article's work. Some variables that enable use of those methods are:
+This script will create the physical space rate map plot. Some methods included in ([Dannenberg, 2020](https://elifesciences.org/articles/62500)) were included in the physical space rate map plotting to help with comparing simulated results to those obtained in that article's work. It should be noted that code used to produce plots including filters in that article were adapted for this work. Efforts were made to try to preserve the same functionality in the adapted code but there are possibly differences in results generated with the adapted code. A reason for adapting the code was to made it able to run with simulation result data. Another reason was to add additional data processing options to the code including processing simulated and real cells. Some variables that enable use of the adapted methods are:
 <br>`occupancy_norm`: perform occupancy normalization. this adjusts rates by number of visits to locations.
 <br>`omit_islands`: Takes matrix of occupancy values, calculates center of mass of pixels>0,
 and then finds all disconnected pixels and sets them = 0.
 <br>`omit_noocc`: set no occupancy to zero
+<br>`binside`: smoothing factor. This parameter involved in smoothing filter calculations. Original file describes this as "The length in cm of the side of a bin when calculating the rate map".
+<br>`std_smooth_kernel`: smoothing factor. This parameter involved in smoothing filter calculations. Original file described this as "STD (cm) of the gaussian kernel to smooth the rate map".
+
+The simulation results in the grid cell simulation article used the settings of `binside = 3` and `std_smooth_kernel = 3.333`. The results in (Dannenberg, 2020) perhaps used somewhat different settings, e.g., `binside = 3` and `std_smooth_kernel = 3;`. The differences in settings and code are predicted to have minimal to no effect on comparisons between simulated and real cells.
 
 Additional general variables that can be non-specific to (Dannenberg, 2020)'s plots include:
 <br>`fs_video`: sampling rate from video (samples/sec)
