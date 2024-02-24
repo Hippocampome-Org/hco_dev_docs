@@ -90,6 +90,7 @@ Welcome to Hippocampome.org's Developer Documentation!
     :caption: Grid Cell Metrics
 
     gridcell_metrics/overview.md
+    gridcell_metrics/usage_instruct.md
 
 .. toctree::
     :hidden:
