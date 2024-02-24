@@ -25,5 +25,7 @@ plot_fields_detected: plot fields the software detected.
 <br>plot_orig_firing: plot original ratemap or autocorrelogram used as the source of data for the software.
 <br>plot_legend: include legend in plot.
 
-## General Notes
+## General Info.
 This software does not generate rate maps from animal data, although some are saved in example files with the software. Additional software is needed to create rate maps. This software uses as input the data from those plots.
+
+A method used in (R. G., 2023) was also included in the grid cell simulation article's analyses with this software. That method is that the size of a detected field did not affect its inclusion in metric measurements. Evaluating if a field was detected as large or small as a basis for exclusion was considered subjective and not included as a method for the benefit of reproducible methods.
