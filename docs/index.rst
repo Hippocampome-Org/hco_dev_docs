@@ -87,6 +87,12 @@ Welcome to Hippocampome.org's Developer Documentation!
 
 .. toctree::
     :hidden:
+    :caption: Grid Cell Metrics
+
+    gridcell_metrics/overview.md
+
+.. toctree::
+    :hidden:
     :caption: Editing Dev Docs
 
     editing/general_editing
