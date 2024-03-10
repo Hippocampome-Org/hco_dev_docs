@@ -186,6 +186,43 @@ A record was made of which cells were used in statistical analyses in the articl
 | med_scl_hgh_fr | 711, 1449 |
 | sml_scl_hgh_fr | 483, 203 |</b>
 
+.. code-block:: HTML
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax">project_name</th>
+    <th class="tg-0lax">cell_ids</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">lrg_scl_med_fr</td>
+    <td class="tg-0lax">1187, 702, 610, 1304, 1449, 203, 1461</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">lrg_scl_hgh_fr</td>
+    <td class="tg-0lax">606, 1056</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">sml_scl_low_fr</td>
+    <td class="tg-0lax">1185, 713, 1034, 1135, 1207, 875, 1304, 1449, 1461, 156, 1553</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">med_scl_med_fr</td>
+    <td class="tg-0lax">506, 1531, 1536, 1532, 1544</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">med_scl_hgh_fr</td>
+    <td class="tg-0lax">711, 1449</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">sml_scl_hgh_fr</td>
+    <td class="tg-0lax">483, 203</td>
+  </tr>
+</tbody>
+</table>
+
 ## References:
 
 Dannenberg, H., Lazaro, H., Nambiar, P., Hoyland, A., & Hasselmo, M. E. (2020). Effects of visual inputs on neural dynamics for coding of location and running speed in medial entorhinal cortex. ELife, 9, e62500. https://doi.org/10.7554/eLife.62500
