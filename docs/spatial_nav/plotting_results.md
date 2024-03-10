@@ -176,6 +176,7 @@ These different methods of calculating statistics can be compared to each other 
 A record was made of which cells were used in statistical analyses in the article. They are described below:
 
 <style type="text/css">
+	/* reference: https://www.tablesgenerator.com/html_tables */
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   overflow:hidden;padding:10px 5px;word-break:normal;}
@@ -217,6 +218,7 @@ A record was made of which cells were used in statistical analyses in the articl
   </tr>
 </tbody>
 </table>
+<br>
 
 ## References:
 
