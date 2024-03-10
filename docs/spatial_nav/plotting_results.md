@@ -171,6 +171,19 @@ The third method is to retreive synapse counts from CARLsim's reporting. A calcu
 
 These different methods of calculating statistics can be compared to each other to corroborate their reporting of connectivity. Depending on the statistic of interest, any of these methods can be used as methods to aquire the results.
 
+## Cells Used in Statistical Analyses
+
+A record was made of which cells were used in statistical analyses in the article. They are described below:
+
+| project_name   | cell_ids |
+| -------------- | -------- |
+| lrg_scl_med_fr | 1187, 702, 610, 1304, 1449, 203, 1461 |
+| lrg_scl_hgh_fr | 606, 1056 |
+| sml_scl_low_fr | 1185, 713, 1034, 1135, 1207, 875, 1304, 1449, 1461, 156, 1553 |
+| med_scl_med_fr | 506, 1531, 1536, 1532, 1544 |
+| med_scl_hgh_fr | 711, 1449 |
+| sml_scl_hgh_fr | 483, 203 |
+
 ## References:
 
 Dannenberg, H., Lazaro, H., Nambiar, P., Hoyland, A., & Hasselmo, M. E. (2020). Effects of visual inputs on neural dynamics for coding of location and running speed in medial entorhinal cortex. ELife, 9, e62500. https://doi.org/10.7554/eLife.62500
