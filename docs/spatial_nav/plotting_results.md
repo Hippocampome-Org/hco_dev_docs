@@ -175,14 +175,16 @@ These different methods of calculating statistics can be compared to each other 
 
 A record was made of which cells were used in statistical analyses in the article. They are described below:
 
-| project_name   | cell_ids |
+.. code-block:: HTML
+
+<b>| project_name   | cell_ids |
 | -------------- | -------- |
 | lrg_scl_med_fr | 1187, 702, 610, 1304, 1449, 203, 1461 |
 | lrg_scl_hgh_fr | 606, 1056 |
 | sml_scl_low_fr | 1185, 713, 1034, 1135, 1207, 875, 1304, 1449, 1461, 156, 1553 |
 | med_scl_med_fr | 506, 1531, 1536, 1532, 1544 |
 | med_scl_hgh_fr | 711, 1449 |
-| sml_scl_hgh_fr | 483, 203 |
+| sml_scl_hgh_fr | 483, 203 |</b>
 
 ## References:
 
