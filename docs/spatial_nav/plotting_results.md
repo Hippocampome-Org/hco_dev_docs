@@ -220,6 +220,10 @@ A record was made of which cells were used in statistical analyses in the articl
 </table>
 <br>
 
+Sim large grid scale group: lrg_scl_med_fr
+<br>Sim small grid scale group (low fr): sml_scl_low_fr
+<br>Sim small grid scale group (high fr): med_scl_med_fr, med_scl_hgh_fr, sml_scl_hgh_fr, sml_scl_hgh_fr_2
+
 ## References:
 
 Dannenberg, H., Lazaro, H., Nambiar, P., Hoyland, A., & Hasselmo, M. E. (2020). Effects of visual inputs on neural dynamics for coding of location and running speed in medial entorhinal cortex. ELife, 9, e62500. https://doi.org/10.7554/eLife.62500
