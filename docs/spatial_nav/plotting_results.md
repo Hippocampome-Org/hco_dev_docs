@@ -225,6 +225,10 @@ The simulation projects were used for cells fitting certain grid scales and firi
 <br>Sim small grid scale group (low fr): sml_scl_low_fr
 <br>Sim small grid scale groups (high fr): med_scl_med_fr, med_scl_hgh_fr, sml_scl_hgh_fr, sml_scl_hgh_fr_2
 
+<br>Real cell groups had: 7 cells with large scale, 14 cells with small scale & low fr, and 8 cells with small scale & high fr.
+<br>Sim cell groups had: 7 cells with large scale, 11 cells with small scale & low fr, and 11 cells with small scale & high fr.
+<br>In general, both the real and sim groups were considered to have similar numbers of cells in each group (e.g., small scale & high fr) for creating statistical analyses that compared their properties.
+
 ## References:
 
 Dannenberg, H., Lazaro, H., Nambiar, P., Hoyland, A., & Hasselmo, M. E. (2020). Effects of visual inputs on neural dynamics for coding of location and running speed in medial entorhinal cortex. ELife, 9, e62500. https://doi.org/10.7554/eLife.62500
