@@ -197,10 +197,6 @@ A record was made of which cells were used in statistical analyses in the articl
     <td class="tg-0lax">1187, 702, 610, 1304, 1449, 203, 1461</td>
   </tr>
   <tr>
-    <td class="tg-0lax">lrg_scl_hgh_fr</td>
-    <td class="tg-0lax">606, 1056</td>
-  </tr>
-  <tr>
     <td class="tg-0lax">sml_scl_low_fr</td>
     <td class="tg-0lax">1185, 713, 1034, 1135, 1207, 875, 1304, 1449, 1461, 156, 1553</td>
   </tr>
@@ -215,6 +211,10 @@ A record was made of which cells were used in statistical analyses in the articl
   <tr>
     <td class="tg-0lax">sml_scl_hgh_fr</td>
     <td class="tg-0lax">483, 203</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">sml_scl_hgh_fr_2</td>
+    <td class="tg-0lax">606, 1056</td>
   </tr>
 </tbody>
 </table>
