@@ -220,9 +220,10 @@ A record was made of which cells were used in statistical analyses in the articl
 </table>
 <br>
 
-Sim large grid scale group: lrg_scl_med_fr
+The simulation projects were used for cells fitting certain grid scales and firing rate levels:
+<br>Sim large grid scale group: lrg_scl_med_fr
 <br>Sim small grid scale group (low fr): sml_scl_low_fr
-<br>Sim small grid scale group (high fr): med_scl_med_fr, med_scl_hgh_fr, sml_scl_hgh_fr, sml_scl_hgh_fr_2
+<br>Sim small grid scale groups (high fr): med_scl_med_fr, med_scl_hgh_fr, sml_scl_hgh_fr, sml_scl_hgh_fr_2
 
 ## References:
 
