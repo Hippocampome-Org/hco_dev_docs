@@ -21,6 +21,10 @@ Speeds can be evaluated by, per se, every second how many pixels does the center
 
 Both the neural layer and area the real animal environment was recorded from was square. Because of this, the neural layer can be conceptually overlayed over the environment. The north compass direction (0 degrees) was assigned the same position in the neural layer and the real environment. Perhaps such direction assignment cognitively could be different between a neural layer and real animal’s environment but for simplicity this approach was used in this work.
 
+## Place cell input
+
+Place cell input to the grid cell layer helps prevent grid field firing from drifting to unintended positions. Further details are in the article's supplementary materials section V. The place cell firing was theta modulated with phase precession. The reasoning for this is that place cells have often been reported to have those properties in animal experimentation articles.
+
 References:
 
 Lutus, P., Accessed online July 4, 2023. Polynomial regression data fit tool. Copyright 2023. https://arachnoid.com/polysolve/
