@@ -4,7 +4,7 @@ Overview of the Spatial Navigation Software
 Documentation is provided here for the spatial navigation simulation using Hippocampome resources [Github link](https://github.com/Hippocampome-Org/spatial_nav).
 
 ## Version
-This is version 1.0 of the spatial navigation software documentation.
+This is version 1.01 of the spatial navigation software documentation.
 
 ## Initial run
 
