@@ -77,6 +77,7 @@ Welcome to Hippocampome.org's Developer Documentation!
     spatial_nav/field_wrapping.md
     spatial_nav/pattern_rotations.md
     spatial_nav/plotting_results.md
+    spatial_nav/speed_convert.md
     spatial_nav/firing_rate_control.md
     spatial_nav/change_network_size.md
     spatial_nav/moves_converter.md
