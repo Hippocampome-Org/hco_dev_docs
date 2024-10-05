@@ -9,7 +9,8 @@ Some relevant publications related to this connectivity are (Buetfering et al., 
 
 The connectivity used in (Sutton et al., 2024)'s simulation could be considered an abstraction of more complicated connectivity if such complex connectivity is found to exist. Possibly, once more animal recording is done, it could be found that there are discrepancies in between the simulation's connectivity and recorded connectivity. In such a case additional elements could be added to the model could help resolve that. Additional elements could include recursive interneuron connections, additional interneuron groups, or additional forms of input being received by interneurons such as by other neuron groups. Additional animal connectivity evidence would be valuable to help narrow down the potential canidates for connectivity within the simulation if such findings are discovered.
 
-References:
+### References
+
 Christina Buetfering, Kevin Allen, and Hannah Monyer. Parvalbumin interneurons provide grid
 cell-driven recurrent inhibition in the medial entorhinal cortex. Nature neuroscience, 17(5):710–718,
 2014. https://www.nature.com/articles/nn.3696
