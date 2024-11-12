@@ -97,6 +97,12 @@ Welcome to Hippocampome.org's Developer Documentation!
 
 .. toctree::
     :hidden:
+    :caption: Pattern Completion and Separation
+
+    pattern_comp_sep/overview.md
+
+.. toctree::
+    :hidden:
     :caption: Editing Dev Docs
 
     editing/general_editing
