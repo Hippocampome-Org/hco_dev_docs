@@ -1,7 +1,7 @@
 Pattern Completion and Separation
 =================================
 
-This documentation will provide further information about use and development with simulation software on pattern completion and separation in brain subregion CA3.
+This documentation provides further information about use of and development with simulation software on pattern completion and separation in brain subregion CA3.
 
 ## Article
 
