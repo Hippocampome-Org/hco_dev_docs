@@ -100,6 +100,8 @@ Welcome to Hippocampome.org's Developer Documentation!
     :caption: Pattern Completion and Separation
 
     pattern_comp_sep/overview.md
+    pattern_comp_sep/results_recreation.md
+    pattern_comp_sep/simulation_run.md
 
 .. toctree::
     :hidden:
