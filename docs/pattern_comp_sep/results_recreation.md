@@ -14,14 +14,14 @@ One should download the code from [github.com/jkopsick/cell_assembly_formation_r
 # Plotting Software file structure
 
 Subfolders should be created to run the plotting software. The subfolders are:
-`figure_2_a_c_data
-figure_2_b_d_data
-figure_3_a_data
-figure_3_b_data
-figure_3_c_d_data
-figures_4_thru_7
-supplementary_figure_3_a_data
-supplementary_figure_3_b_data`
+`figure_2_a_c_data`
+<br>`figure_2_b_d_data`
+<br>`figure_3_a_data`
+<br>`figure_3_b_data`
+<br>`figure_3_c_d_data`
+<br>`figures_4_thru_7`
+<br>`supplementary_figure_3_a_data`
+<br>`supplementary_figure_3_b_data`
 
 The Matlab code, e.g., createFigure2Panels.m, should be put into each subfolder that matches the figure name described in the filename. However, filenames that start with "run" should be left in the base directory.
 
