@@ -5,7 +5,7 @@ This documentation will cover how to recreate plots observed in (Kopsick et al.,
 
 ## Obtaining Results Data
 
-One should download cell_assembly_formation_retrieval_paper_data.zip from [doi.org/10.5281/zenodo.10870586](doi.org/10.5281/zenodo.10870586) if one wants to obtain previously generated simulation results that can be plotted.
+One should download cell_assembly_formation_retrieval_paper_data.zip from [doi.org/10.5281/zenodo.10870586](https://www.doi.org/10.5281/zenodo.10870586) if one wants to obtain previously generated simulation results that can be plotted.
 
 ## Plotting Software
 

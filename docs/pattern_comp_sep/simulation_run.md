@@ -35,4 +35,4 @@ The line `if (randPyrCell < k + 138)` can have its number changed (k_plus_number
 
 ## Plotting and Analyzing Results
 
-Users can use the software listed in [results recreation](https://hco-dev-docs.readthedocs.io/en/latest/pattern_comp_sep/results_recreation.html) to plot results. Data files generated from new runs of the simulations supply files that can be used in place of the ones listed in prior created files on Zenodo [link](doi.org/10.5281/zenodo.10870586). Figures and descriptions in (Kopsick et al., 2024) can be used to guide what the meaning of each plot is.
+Users can use the software listed in [results recreation](https://hco-dev-docs.readthedocs.io/en/latest/pattern_comp_sep/results_recreation.html) to plot results. Data files generated from new runs of the simulations supply files that can be used in place of the ones listed in prior created files on Zenodo [link](https://www.doi.org/10.5281/zenodo.10870586). Figures and descriptions in (Kopsick et al., 2024) can be used to guide what the meaning of each plot is.
