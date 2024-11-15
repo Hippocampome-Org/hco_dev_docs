@@ -6,7 +6,7 @@ This documentation provides further information about use of and development wit
 ## Article
 
 Additional details about this software including analyses run with it can be found in this article:
-<br>\[1\] Kopsick, J.D., Kilgore, J.A., Adam, G.C. et al. Formation and retrieval of cell assemblies in a biologically realistic spiking neural network model of area CA3 in the mouse hippocampus. J Comput Neurosci 52, 303–321 (2024). [https://doi.org/10.1007/s10827-024-00881-3](https://doi.org/10.1007/s10827-024-00881-3)
+<br>\[1\] Kopsick, J.D., Kilgore, J.A., Adam, G.C., and Ascoli, G.A. Formation and retrieval of cell assemblies in a biologically realistic spiking neural network model of area CA3 in the mouse hippocampus. J Comput Neurosci 52, 303–321 (2024). [https://doi.org/10.1007/s10827-024-00881-3](https://doi.org/10.1007/s10827-024-00881-3)
 
 ## Article Figures Recreation
 
