@@ -1,7 +1,7 @@
 Simulation Running
 ==================
 
-This documentation covers methods to use when running the pattern formation and retrieval simulation. The source code for the projects is in the process of being stored on Github. Anyone who needs the code before it is uploaded should contact Jeffrey Kopsick [link](https://www.linkedin.com/in/jeffrey-kopsick-phd-315795b3/) or Nate Sutton [link](https://www.linkedin.com/in/nate-sutton-0a814a45/) to request the code.
+This documentation covers methods to use when running the pattern formation and retrieval simulation. The source code for the projects available [here](https://github.com/jkopsick/simulate_formation_and_retrieval). Anyone who has feedback on it should contact Dr. Jeffrey Kopsick [link](https://www.linkedin.com/in/jeffrey-kopsick-phd-315795b3/), Dr. Nate Sutton [link](https://www.linkedin.com/in/nate-sutton-0a814a45/), or coauthors on the (Kopsick et al., 2024) article. Github's Issues page can be use in the case that any possible issues arise.
 
 ## Projects
 
