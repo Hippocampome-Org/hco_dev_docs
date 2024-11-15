@@ -32,3 +32,7 @@ The data can be run in the pattern retrieval simulation after the data is normal
 ## Changing Neuron Degradation Amounts
 
 The line `if (randPyrCell < k + 138)` can have its number changed (k_plus_number) to change what number of neurons have degradation. This number is originally about 50% of a 275 cell assembly. The number of cells in the k_plus_number are the number degraded. For instance, setting it to 28 would cause about 10% degradation in an assembly of size 275.
+
+## Plotting and Analyzing Results
+
+Users can use the software listed in [results recreation](https://hco-dev-docs.readthedocs.io/en/latest/pattern_comp_sep/results_recreation.html) to plot results. Data files generated from new runs of the simulations supply files that can be used in place of the ones listed in prior created files on Zenodo [link](doi.org/10.5281/zenodo.10870586). Figures and descriptions in (Kopsick et al., 2024) can be used to guide what the meaning of each plot is.
