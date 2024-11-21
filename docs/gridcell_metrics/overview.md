@@ -10,6 +10,9 @@ Some additional details and analyses run with this software can be found in this
 ## Example Usage Instructions
 See [instructions](https://hco-dev-docs.readthedocs.io/en/latest/gridcell_metrics/usage_instruct.html) for example usage directions.
 
+## Orientation Angle Measurements
+See [orientation angles](https://hco-dev-docs.readthedocs.io/en/latest/gridcell_metrics/orientation_angles.html) for additional information.
+
 ## Parameters
 Some selected parameters are listed below but more parameters are listed in the software including its comments.
 

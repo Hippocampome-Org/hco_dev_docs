@@ -94,6 +94,7 @@ Welcome to Hippocampome.org's Developer Documentation!
 
     gridcell_metrics/overview.md
     gridcell_metrics/usage_instruct.md
+    gridcell_metrics/orientation_angles.md
 
 .. toctree::
     :hidden:
