@@ -13,6 +13,9 @@ See [instructions](https://hco-dev-docs.readthedocs.io/en/latest/gridcell_metric
 ## Orientation Angle Measurements
 See [orientation angles](https://hco-dev-docs.readthedocs.io/en/latest/gridcell_metrics/orientation_angles.html) for additional information.
 
+## Configuration Options
+See [config options](https://hco-dev-docs.readthedocs.io/en/latest/gridcell_metrics/config_options.html) for information about configuration options for running GridMet.
+
 ## Parameters
 Some selected parameters are listed below but more parameters are listed in the software including its comments.
 
