@@ -7,11 +7,11 @@ This document describes information about configuration options for GridMet
 
 `px2cm`
 
-Conversion of each pixel to a centimeter lenth in an environment
+Conversion of each pixel to a centimeter lenth in an environment.
 
 `nonfld_filt_perc`
 
-Non-field filter percentage threshold
+Non-field filter percentage threshold.
 
 `load_plot_from_file`
 
@@ -23,13 +23,19 @@ File path to plot to load from a file when load_plot_from_file is enabled.
 
 `use_binary_input`
 
-select to use (1) or not (0) binary input files as opposed to text input files
+Select to use (1) or not (0) binary input files as opposed to text input files.
 
-heat_map_selection
+`heat_map_selection`
 
-use_ac
+Index number of plot file on heat_maps_list or heat_maps_ac_list to use with this software if load_plot_from_file is set to 0.
 
-convert_to_ac
+`use_ac`
+
+Choose to use autocorrelogram (ac) (1) or standard rate map (0).
+
+`convert_to_ac`
+
+Automatically convert rate map input into an autocorrelogram. If this option is not selected and use_ac is set to 1 then a user must supply a previously generated autocorrelogram data file as the plot to load.
 
 use_dist_thresh
 
@@ -100,8 +106,6 @@ cov_between_fields_reporting
 report_gridscore
 
 report_orientation2
-
-min_orientation2
 
 min_orientation2
 
