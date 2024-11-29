@@ -17,6 +17,8 @@ The number after the word "network" in the .dat filename specifies the number of
 
 createBetaPatternOverlap.m or createBetaPatternNoOverlap.m from the [analysis code](https://github.com/jkopsick/cell_assembly_formation_retrieval/tree/main/matlab_analysis_visualization_code) can create a csv file that is used for training the simulation. These generate the file `trainPat.csv` and the overlap version creates more csv files for use in the retrieval project.
 
+createBetaPatternNoOverlap.m is run with an argument of the target assembly size. For example, `createBetaPatternNoOverlap(275)` creates a trainPat.csv file for a 275 cell assembly size.
+
 createBetaPatternOverlap.m's run arguments are patSize and ovPct. patSize sets the assembly size. ovPct sets the overlap percentage. ovPct should be set with a value between 0 and 1, e.g., 3% overlap is set with 0.03. The lines with `ceil(patSize*ovPct)` in createBetaPatternOverlap.m can be set to `floor()` instead of `ceil()` depending on the number of neurons in the assembly. A goal is to have uqPat1, uqPat2, and uqPat3 have all the same assembly size for typical use of the simulation and this may require changing `ceil()` to `floor()` in some cases.
 
 ## Normalizing Data Structures
