@@ -9,7 +9,7 @@ The simulation code is separated into two projects. One is the pattern formation
 
 ## Generating Pattern Formation Data
 
-numPyramidalFire sets the target assembly size in the main C++ file, e.g., main_ca3_lognormalI_09_05_23_assem_275.cpp, of the pattern formation simulation. It needs to be updated in each line it exists in the main file if one wants to change the assembly size. The value it is set equal to is the intended assembly size.
+numPyramidalFire sets the target assembly size, e.g., 275, in the main C++ file, e.g., main_ca3_lognormalI_09_05_23_assem_275.cpp, of the pattern formation simulation. It needs to be updated in each line it exists in the main file if one wants to change the assembly size. The value it is set equal to is the intended assembly size. The lines with `k += ` should also use the assembly size value.
 
 The number after the word "network" in the .dat filename specifies the number of times a pattern is presented to cell assemblies. For example, network95p.dat describes the file containing the simulation state after 95 pattern presentations.
 
