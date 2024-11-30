@@ -83,3 +83,7 @@ The same results data created for Figure 2 B and D should be copied into the `re
 ### runFigure3Creation.m
 
 The file runFigure3Creation.m should then be run. The plots 1 - 4 match the Figure 3 panels A - D.
+
+### Standard results
+
+Figures 2 and 3 show standard results from the non-overlapping assemblies version of the simulation. Figures 4 - 8 show parameter exploration of the simulation. This exploration requires many more experiments. The creation of these figures is not specifically documented here but is expected to be able to be recreated with the instructions here and in [simulation_run](https://hco-dev-docs.readthedocs.io/en/latest/pattern_comp_sep/simulation_run.html). A user can be considered to successfully be able to run the simulation with the standard settings if that user is able to recreate Figure 2 and 3.
