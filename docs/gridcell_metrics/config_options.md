@@ -1,7 +1,7 @@
 Configuration Options
 =====================
 
-This document describes information about configuration options for GridMet. Please see the other documentation pages for GridMet to have its recommended use explained. For example, [overview](https://hco-dev-docs.readthedocs.io/en/latest/gridcell_metrics/overview.html) describes pages that are a part of the documentation.
+This document describes information about configuration options for GridMet. Please see the other documentation pages for GridMet to have its recommended use explained. For example, the [overview](https://hco-dev-docs.readthedocs.io/en/latest/gridcell_metrics/overview.html) describes pages that are a part of the documentation.
 
 ## Config.txt options
 
