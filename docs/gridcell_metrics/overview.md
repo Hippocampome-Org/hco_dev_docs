@@ -38,5 +38,7 @@ Some selected parameters are listed below but more parameters are listed in the 
 ## General Info.
 A method used in (R. G., 2024) was also included in the grid cell simulation article's analyses with this software. That method is that the size of a detected field did not affect its inclusion in metric measurements. Evaluating if a field was detected as large or small as a basis for exclusion was considered subjective and not included as a method for the benefit of reproducible methods.
 
+A general note is that this software was tested with square environments and plots. It is expected to work with rectangle (non-square) environments but that has not been fully tested. It is unknown how it will work with non-rectangle environments. This software does not yet claim to work correctly with non-square environments unless further testing establishes that it can successfully handle those environments.
+
 ## Metric Conversions
 The value in `px2cm` is applied to measurements in pixels found in size and spacing values to report their values in centimeters. Mean size and spacing values are multiplied by the `px2cm` value to report them in centimeter instead of pixel length units.

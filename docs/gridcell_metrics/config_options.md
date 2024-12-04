@@ -1,7 +1,7 @@
 Configuration Options
 =====================
 
-This document describes information about configuration options for GridMet
+This document describes information about configuration options for GridMet. Please see the other documentation pages for GridMet to have its recommended use explained. For example, [overview](https://hco-dev-docs.readthedocs.io/en/latest/gridcell_metrics/overview.html) describes pages that are a part of the documentation.
 
 ## Config.txt options
 
@@ -37,88 +37,175 @@ Choose to use autocorrelogram (ac) (1) or standard rate map (0).
 
 Automatically convert rate map input into an autocorrelogram. If this option is not selected and use_ac is set to 1 then a user must supply a previously generated autocorrelogram data file as the plot to load.
 
-use_dist_thresh
+`use_dist_thresh`
 
-dist_thresh
+This is an experimental feature that may not yet work correctly. This is designed to filter out fields that are too distant from other fields
 
-use_fld_sz_thresh
+`dist_thresh`
 
-fld_sz_thresh
+Distance threshold parameter in pixels for use_dist_thresh
 
-manual_field_exclud
+`use_fld_sz_thresh`
 
-load_px2cm_conv
+This is an experimental feature that may not yet work correctly. This is designed to automatically filter out fields at plot borders without enough pixel points in their area. This can try to automatically detect fields the are cut off too much at the border of plots. This could aid in automatically excluding fields in addition to a user being able to manually exclude fields.
 
-dbscan_epsilon
+`fld_sz_thresh`
 
-dbscan_min_pts
+This is a threshold for use_fld_sz_thresh of the minimum number of pixels in a feild's area to allow not filtering the field out.
 
-load_custom_rm
+`manual_field_exclud`
 
-load_custom_ac
+Choose to enable (1) or disable (0) manually excluding fields from statistical analyses.
 
-only_center_seven
+`load_px2cm_conv`
 
-only_center_seven_inout_excl
+Load saved px2cm settings based on file number. saved_px2cm_conv.m is the file the settings are saved in.
 
-use_tophat_filter
+`dbscan_epsilon`
 
-use_centsurr_filter
+DBSCAN's epsilon parameter value. See https://www.mathworks.com/help/stats/dbscan.html for more info.
 
-minimal_plotting_mode
+`dbscan_min_pts`
 
-auto_export_plots
+DBSCAN's minpts (minimum number of neighbors required for core point) parameter value. See https://www.mathworks.com/help/stats/dbscan.html for more info.
 
-plot_fields_detected
+`load_custom_rm`
 
-plot_orig_firing
+Load rate map data from the heat_maps_real_custom_list.mat file. This is an alternative to using load_plot_from_file to load data.
 
-plot_legend
+`load_custom_ac`
 
-print_angles
+Load autocorrelogram data from the heat_maps_ac_custom_list.mat file. This is an alternative to using load_plot_from_file to load data.
 
-control_window_size
+`only_center_seven`
 
-custom
+Filter out fields except for the seven closest to the center of the plot.
 
-custom2
+`only_center_seven_inout_excl` 
 
-custom3
+Filter out fields detected beyond the center seven in the calculation of the in_out_fields_ratio. Note: this does not use advanced field detection to detect the fields outside the central seven. This option can only be used if only_center_seven is enabled.
 
-custom4
+`use_tophat_filter`
 
-sml_ang_cnt_fld
+This is an experimental feature that may not yet work correctly. This feature is designed to filter neural firing through a tophat filter. 
 
-sml_ang_cent_num
+`use_centsurr_filter`
 
-advanced_detection
+This is an experimental feature that may not yet work correctly. This feature is designed to filter neural firing through a center-surround filter. 
 
-advanced_detection_maxdist
+`minimal_plotting_mode`
 
-advanced_detection_ang_inc
+Preset plotting window size configuration
 
-com_centroids
+`auto_export_plots`
 
-in_out_fields_ratio
+Automatically save generated plots
 
-cov_between_fields_reporting
+`plot_fields_detected`
 
-report_gridscore
+Enables the plotting of detected fields.
 
-report_orientation2
+`plot_orig_firing`
 
-min_orientation2
+Enables the plotting of the original cell firing data.
 
-report_centroid_positions
+`plot_legend`
 
-report_centroid_positions_python
+Include a legend in the plot.
 
-outlier_removal
+`print_angles`
 
-outlier_allowance
+This is an experimental feature that may not yet work correctly. This is designed to print the frequency of angles that are found between field centroids.
 
-spac_exclud
+`control_window_size`
 
-size_exclud
+Preset plotting window size configuration.
 
-ang_exclud
+`custom`
+
+A group of custom configuration settings.
+
+`custom2`
+
+A group of custom configuration settings.
+
+`custom3`
+
+A group of custom configuration settings.
+
+`custom4`
+
+A group of custom configuration settings.
+
+`sml_ang_cnt_fld`
+
+Smallest angle from the center field. Default value for this is 361, which is beyond 360, and that is intended to be beyond the highest angle possible.
+
+`sml_ang_cent_num`
+
+Centriod number of sml_ang_cnt_fld match.
+
+`advanced_detection`
+
+Enable (1) or disable (0) advanced field detection.
+
+`advanced_detection_maxdist`
+
+Maximum advanced detection distance to test. This is the distance from the centroid to a point beyond that, e.g., 50 pixels. This is used in the scanning of each angle from the centroid to find where field boundaries are detected.
+
+`advanced_detection_ang_inc`
+
+Angle to increment radar scan in advanced grid field detection.
+
+`com_centroids`
+
+Use center of mass to find centroids.
+
+`in_out_fields_ratio`
+
+Report the ratio of firing intensity within fields compared to outside of them.
+
+`cov_between_fields_reporting`
+
+Report the mean of the coefficient of variation of the firing rate (or correlation values in the case of autocorrelograms) across fields.
+
+`report_gridscore`
+
+Report grid score metrics. "HD grid score" is a score previously introduced to quantify experimental
+data in Dannenberg, H.; Lazaro, H.; Nambiar, P.; Hoyland, A.; Hasselmo, M.E. Effects of Visual Inputs on Neural Dynamics for Coding of Location and Running Speed in Medial Entorhinal Cortex. eLife 2020. https://doi.org/10.7554/eLife.62500. The Gridness3Score is based on a grid score metric found in the software CMBHome at https://github.com/hasselmonians/CMBHOME. 
+
+`report_orientation2`
+
+Report Opexebo methods based orientation measurement.
+
+`min_orientation2`
+
+Value of the minimum angle used in the orientation2 measurement.
+
+`report_centroid_positions`
+
+Report on the coordinates of centroid positions.
+
+`report_centroid_positions_python`
+
+Report on the coordinates of centroid positions in a Python syntax format. This can be used to test comparing results with Opexebo, which is in Python.
+
+`outlier_removal`
+
+Enable automatic removal of outlier points in fields. This can only be used if advanced_detection is enabled.
+
+`outlier_allowance`
+
+This is a parameter value for use with outlier_removal. This is an amount, as a percentage, of outlier distance from each median field radius to field boundary points to allow. Value is relative to 1.0 being 100%, e.g., 0.25 is 25% and 2 is 200%. Boundary points found beyond this value are converted into the closest maximum value this parameter allows. For instance, a boundary coordinate being 200% beyond the median with a limit of 25% will be converted into being a point 25% beyond the median.
+
+`spac_exclud`
+
+Grid feilds to exclude from field spacing statistics. Format should be "1|2|3" that is delimited by "|". No exclusion should be described as "\[\]". 
+
+`size_exclud`
+
+Grid feilds to exclude from field sizes statistics. Format should be "1|2|3" that is delimited by "|". No exclusion should be described as "\[\]". 
+
+`ang_exclud`
+
+Grid feilds to exclude from field angles statistics. Format should be "1|2|3" that is delimited by "|". No exclusion should be described as "\[\]". 
