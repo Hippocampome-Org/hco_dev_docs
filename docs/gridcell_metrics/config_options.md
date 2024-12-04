@@ -15,7 +15,7 @@ Non-field filter percentage threshold.
 
 `load_plot_from_file`
 
-Load a neural data plot from individual file (1 plot_filepath) or instead pick a file from a numbered list (0 heat_maps_list or heat_maps_ac_list). A note is that one must run the source code, not runtime version of GridMet, to edit these lists.
+Load a neural data plot from individual file (1; plot_filepath) or instead pick a file from a numbered list (0; heat_maps_list or heat_maps_ac_list). A note is that one must run the source code, not runtime version of GridMet, to edit these lists.
 
 `plot_filepath`
 

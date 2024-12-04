@@ -40,5 +40,7 @@ A method used in (R. G., 2024) was also included in the grid cell simulation art
 
 A general note is that this software was tested with square environments and plots. It is expected to work with rectangle (non-square) environments but that has not been fully tested. It is unknown how it will work with non-rectangle environments. This software does not yet claim to work correctly with non-square environments unless further testing establishes that it can successfully handle those environments.
 
+The runtime version of this software has been tested and observed working with MATLAB runtime software version 2022a. Other versions of the runtime software may work with it but this software does not make any claim to it working with other versions due to that being not yet tested.
+
 ## Metric Conversions
 The value in `px2cm` is applied to measurements in pixels found in size and spacing values to report their values in centimeters. Mean size and spacing values are multiplied by the `px2cm` value to report them in centimeter instead of pixel length units.
