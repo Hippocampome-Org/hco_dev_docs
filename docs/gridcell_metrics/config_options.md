@@ -81,7 +81,7 @@ Load autocorrelogram data from the heat_maps_ac_custom_list.mat file. This is an
 
 Filter out fields except for the seven closest to the center of the plot.
 
-`only_center_seven_inout_excl` 
+`inout_excl` 
 
 Filter out fields detected beyond the center seven in the calculation of the in_out_fields_ratio. Note: this does not use advanced field detection to detect the fields outside the central seven. This option can only be used if only_center_seven is enabled.
 
