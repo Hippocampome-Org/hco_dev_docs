@@ -42,3 +42,44 @@ Users can use the software listed in [results recreation](https://hco-dev-docs.r
 ## Changing Network Size or Other Properties
 
 One can change network properties like network size in the file generateCONFIGStateSTP.h. An important note is that any formation project network property changes must be copied to the retrieval project for the retrieval project to run correctly and without errors. The reason for this is that the simulation state is saved during the formation project and imported in the retrieval project. The save state file can be network65p_ov_five_pct_assem75_divnorm.dat or a different file. The norm part of this example filename indicates that the network's saved state has been normalized with the python normalization code before being imported in the retrieval project. An example way to copy settings between the projects is to copy any changed files, e.g., generateCONFIGStateSTP.h, from one project to the other before the retrieval project is run. If the retrieval project tries to import a saved simulation state but does not have the correct network configuration from a file such as generateCONFIGStateSTP.h, then errors can occur with the importing of the data.
+
+## Changing the Number of Assemblies
+
+The trainPat.csv file will need to be updated to include the number of assemblies that are wanted. This can be done, for example, by updating createBetaPatternNoOverlap.m for this. There needs to be the number of assemblies + 1 with matrices created with the lines `randperm(size)`. In the formation project, `numPatterns` should be set to the number of intended assemblies. In the retrieval project, the code section that present the testing pattern neural activations, e.g., with lines such as `sim.setExternalCurrent(CA3_Pyramidal, pc_current);`, needs to run long enough to present all intended pattens. For instance, adding the code:
+```
+int numPatterns = 9;
+int pat_start_time = 200;
+int pat_max_time = pat_start_time + ((numPatterns*2)-1);
+if (i >= pat_start_time && i < pat_max_time)
+{ ... }
+```
+can ensure the patterns are presented long enough. In plotting, the file `createFigure3PanelD.m` needs to be updated to plot a suffient number of neurons and time to show the intended assemblies. This can be done, for instance, with adding the code:
+```
+if number_of_patterns == 6
+    assemB4 = assemB1+3*nonAssemB1;
+    assemB5 = assemB1+4*nonAssemB1;
+    assemB6 = assemB1+5*nonAssemB1;
+    nonAssemB4 = nonAssemB1*4;
+    nonAssemB5 = nonAssemB1*5;
+    nonAssemB6 = nonAssemB1*6;
+    stimAssemIdx = find((SRPyrRaster(2,:) >= 0 & SRPyrRaster(2,:) < assemB1) | ...
+    (SRPyrRaster(2,:) >= nonAssemB1 & SRPyrRaster(2,:) < assemB2) | ...
+    (SRPyrRaster(2,:) >= nonAssemB2 & SRPyrRaster(2,:) < assemB3) | ...
+    (SRPyrRaster(2,:) >= nonAssemB3 & SRPyrRaster(2,:) < assemB4) | ...
+    (SRPyrRaster(2,:) >= nonAssemB4 & SRPyrRaster(2,:) < assemB5) | ...
+    (SRPyrRaster(2,:) >= nonAssemB5 & SRPyrRaster(2,:) < assemB6));
+    nonStimAssemIdx = find((SRPyrRaster(2,:) >= assemB1 & SRPyrRaster(2,:) < nonAssemB1) | ...
+    (SRPyrRaster(2,:) >= assemB2 & SRPyrRaster(2,:) < nonAssemB2) | ...
+    (SRPyrRaster(2,:) >= assemB3 & SRPyrRaster(2,:) < nonAssemB3) | ...
+    (SRPyrRaster(2,:) >= assemB4 & SRPyrRaster(2,:) < nonAssemB4) | ...
+    (SRPyrRaster(2,:) >= assemB5 & SRPyrRaster(2,:) < nonAssemB5) | ...
+    (SRPyrRaster(2,:) >= assemB6 & SRPyrRaster(2,:) < nonAssemB6));
+    fh = figure; clf; plot(SRPyrRaster(1,stimAssemIdx), SRPyrRaster(2,stimAssemIdx), '.r','MarkerSize', mSize);
+    hold on;
+    plot(SRPyrRaster(1,nonStimAssemIdx), SRPyrRaster(2,nonStimAssemIdx), '.b','MarkerSize', mSize);
+    plot(SRBCRandRaster(1,:), SRBCRandRaster(2,:), '.', 'Color', [46 49 146]./255,'MarkerSize', mSize);
+
+    fh.WindowState = 'maximized';
+    xlim([0 1500])
+end
+```
