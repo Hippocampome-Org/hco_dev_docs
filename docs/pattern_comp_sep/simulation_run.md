@@ -47,11 +47,13 @@ One can change network properties like network size in the file generateCONFIGSt
 
 The trainPat.csv file will need to be updated to include the number of assemblies that are wanted. This can be done, for example, by updating createBetaPatternNoOverlap.m for this. There needs to be the number of assemblies + 1 with matrices created with the lines `randperm(size)`. In the formation project, `numPatterns` should be set to the number of intended assemblies. In the retrieval project, the code section that present the testing pattern neural activations, e.g., with lines such as `sim.setExternalCurrent(CA3_Pyramidal, pc_current);`, needs to run long enough to present all intended pattens. For instance, adding the code:
 ```
-int numPatterns = 9;
-int pat_start_time = 200;
-int pat_max_time = pat_start_time + ((numPatterns*2)-1);
-if (i >= pat_start_time && i < pat_max_time)
-{ ... }
+int numPatterns = 6;
+int pat_start_i = 200;
+int pat_max_i = pat_start_i + ((numPatterns*2)-1);
+if (i >= pat_start_i && i < pat_max_i)
+{ ... } // present patterns
+if (i >= pat_max_i && i < (pat_max_i+1))
+{ ... } // non-pattern-presentation activity
 ```
 can ensure the patterns are presented long enough. In plotting, the file `createFigure3PanelD.m` needs to be updated to plot a suffient number of neurons and time to show the intended assemblies. This can be done, for instance, with adding the code:
 ```
