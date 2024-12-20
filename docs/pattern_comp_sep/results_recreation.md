@@ -9,7 +9,7 @@ One should download cell_assembly_formation_retrieval_paper_data.zip from [doi.o
 
 ## Plotting Software
 
-One should download the code from [github.com/jkopsick/cell_assembly_formation_retrieval](github.com/jkopsick/cell_assembly_formation_retrieval) to obtain the software needed for plotting.
+One should download the code from [github.com/jkopsick/cell_assembly_formation_retrieval](https://www.github.com/jkopsick/cell_assembly_formation_retrieval) to obtain the software needed for plotting. A note is that this code requires the Mapping Toolbox in Matlab to work.
 
 ## Plotting Software file structure
 
