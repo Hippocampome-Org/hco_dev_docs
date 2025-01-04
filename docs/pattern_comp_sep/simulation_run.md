@@ -45,7 +45,7 @@ One can change network properties like network size in the file generateCONFIGSt
 
 ## Changing the Number of Assemblies
 
-The trainPat.csv file will need to be updated to include the number of assemblies that are wanted. This can be done, for example, by updating createBetaPatternNoOverlap.m for this. There needs to be the number of assemblies + 1 with matrices created with the lines `randperm(size)`. In the formation project, `numPatterns` should be set to the number of intended assemblies. In the retrieval project, the code section that present the testing pattern neural activations, e.g., with lines such as `sim.setExternalCurrent(CA3_Pyramidal, pc_current);`, needs to run long enough to present all intended pattens. For instance, adding the code:
+In the formation project, `numPatterns` should be set to the number of intended assemblies. In the retrieval project, the code section that present the testing pattern neural activations, e.g., with lines such as `sim.setExternalCurrent(CA3_Pyramidal, pc_current);`, needs to run long enough to present all intended pattens. For instance, adding the code:
 ```
 int numPatterns = 6;
 int pat_start_i = 200;
@@ -85,3 +85,4 @@ if number_of_patterns == 6
     xlim([0 1500])
 end
 ```
+It was previously thought that the trainPat.csv file (created by createBetaPatternNoOverlap.m) will need to be updated to include the number of assemblies that are wanted. However, it is currently thought that this is not needed. trainPat.csv appears to have each `randperm(size)` entry representing the number of spikes per neuron per gamma cycle that are wanted in the simulation. The number of `randperm(size)` does not appear related to the number of assemblies intended to be presented. If an issue comes up with adding assemblies, creating trainPat.csv with the number of `randperm(size)` lines equal to assemblies + 1 might help, but this is probably not necessary. 
