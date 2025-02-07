@@ -1,6 +1,4 @@
 GridMet Performance Tests
 =========================
 
-.. image:: media/performance_tests/n1.jpg
-  :width: 400
-  :alt: Alternative text
+<img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n1.jpg?raw=true"  width="300" height="300">
