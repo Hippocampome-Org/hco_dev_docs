@@ -24,9 +24,14 @@ Cell N6 Was Omitted from Testing Due to Having a Grid Score Below 0.2.
 <br>Cell N9 Was Omitted from Testing Due to Having a Grid Score Below 0.2.
 <br>Cell N10; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n10.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n10.jpg?raw=true"  width="700"></a>
-<br>Cell N11; Field Detection Incorrect
+<br>Cell N11; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n11.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n11.jpg?raw=true"  width="700"></a>
-Note: Cell N4 was observed to have incorrect detection because it has two instances of merged fields. These instances will only have small effects on its metrics.
+Note: Cell N11's field detection was not penalized for any merged fields because how to separate two pairs of fields in the original recording plot was considered to be unclear to the human evalulator. The automated field detection was not expected to go beyond the human evaluator's performance abilities.
 <br>Cell N12; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n12.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n12.jpg?raw=true"  width="700"></a>
+<br>Cell N13; Field Detection Correct
+<a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n13.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n13.jpg?raw=true"  width="700"></a>
+<br>Cell N35; Field Detection Incorrect
+<a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n35.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n35.jpg?raw=true"  width="700"></a>
+Note: Cell N35 was observed to have incorrect detection because it has two instances of merged fields. These instances will only have small effects on its metrics.
 </center>
