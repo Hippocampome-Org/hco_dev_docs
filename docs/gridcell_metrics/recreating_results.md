@@ -30,4 +30,4 @@ This is done with:
 use_ac, 0
 convert_to_ac, 0
 ```
-The threshold of a 0.2 HDgridScore as a minimum score to be identified as a grid cell was used. Cells with scores below that were discarded from analysis.
+The threshold of a 0.2 HDgridScore was used as a minimum score to identify a cell as a grid cell. Cells with scores below that were discarded from analysis.
