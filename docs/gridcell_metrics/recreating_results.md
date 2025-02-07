@@ -14,7 +14,7 @@ size_exclud, "[]"
 ang_exclud, "[]"
 ```
 
-One can then test each cell, starting at 1 with the 31% threshold:
+One can then test each cell, starting at cell 1 and ending at cell 29 with the 31% threshold:
 ```
 plot_filepath, "heat_maps_real/n1.mat" (update n1.mat for each cell tested)
 use_binary_input, 1
