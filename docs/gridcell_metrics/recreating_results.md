@@ -31,3 +31,5 @@ use_ac, 0
 convert_to_ac, 0
 ```
 The threshold of a 0.19 HDgridScore was used as a minimum score to identify a cell as a grid cell. Cells with scores below that were discarded from analysis. Specifically, of cells n1-n29, cells n7 and n9 were excluded for having scores of 0.17.
+
+All cells, at threshold 31%, n1-n29 (excluding n7 and n9) were indentified through visual detection to have field detection without errors as described in the article. This is with the exception of n3 and n29, which were found to have errors with their detection. One can view the field detection plots the software generates to recreate these results.
