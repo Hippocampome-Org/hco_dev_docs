@@ -1,13 +1,13 @@
 GridMet Performance Tests
 =========================
 
-This documentation describes the results of GridMet field detection performance tests.
+This documentation describes the results of GridMet field detection performance tests. Each plot includes a description of its field detection being correct or incorrect.
 
 ## Performance Testing Criteria
 The criteria used to identify the correct detection of fields included that field detection would be assess through visual inspection of original autocorrelogram plots compared to GridMet’s field detection plots. Only the central seven fields in the plots are used for field detection in these tests. The software was required to detect those seven fields and not incorrectly include a field from a further distance from the plot center instead of any of those fields. Size of the detected field relative to that in the recorded cell plot was not considered in evaluating correct detection because that was considered to be too subjective. GridMet was also required to not detect more than one field as a single field in a way that merges the fields. A caveat to this is that autocorrelograms can in a variety of cases merge fields at their borders, and if it appeared difficult in visual inspection to understand the separation of such fields then the automated detection was not penalized for its detection of those fields.
 
 ## Opexebo Comparisons
-Opexebo was used with its default configuration for testing. Opexebo was run with Python 3.9.7 and installed by the command `pip3 install opexebo`. Cell data of correlograms was formatted in a plain text comma spaced values format for use with Opexebo. The cell data used is in the folder heat_maps_real_ac_py. The python script `opexebo_stats.py` was run by the command:
+Opexebo was used with its default configuration for testing. Each plot has the mean grid field spacing measurements from both GridMet and Opexebo listed beneath it. A note is included commenting on the measurements when the measurements are observed to be noticably different. Opexebo was run with Python 3.9.7 and installed by the command `pip3 install opexebo`. Cell data of correlograms was formatted in a plain text comma spaced values format for use with Opexebo. The cell data used is in the folder heat_maps_real_ac_py. The python script `opexebo_stats.py` was run by the command:
 <br>`$ python3 ./opexebo_stats.py`
 <br>to generate statistics from Opexebo. The value for gri field spacing was read as the one displayed after `'grid_spacing': ` in command line output. Each individual grid field spacing measurement that contributed to the mean spacing measurement reported was found in the array values reported after `'grid_spacings'` in the command line output. The analyses were performed on Ubuntu 21.10.
 
