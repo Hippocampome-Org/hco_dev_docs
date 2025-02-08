@@ -11,8 +11,8 @@ Opexebo was used with its default configuration for testing. Each plot has the m
 <br>`$ python3 ./opexebo_stats.py`
 <br>to generate statistics from Opexebo. The value for gri field spacing was read as the one displayed after `'grid_spacing': ` in command line output. Each individual grid field spacing measurement that contributed to the mean spacing measurement reported was found in the array values reported after `'grid_spacings'` in the command line output. The analyses were performed on Ubuntu 21.10.
 
+## Plots Used to Assess Performance
 <center>
-<br><u>Plots Used to Assess Performance</u>
 <br>The performance of GridMet was observed to be 93.3% (28/30) correct cell field detections. The cells that had incorrect detections were n4 and n35. The plots can be clicked on to open each one as its full sized image.
 <br>Note: the plots below are in the units of pixels that have not been converted to centimeters. For instance, in some plots, 32 pixels can represent 100 cm on the y-axis and also the x-axis.
 <br><br>Cell N1; Field Detection Correct
