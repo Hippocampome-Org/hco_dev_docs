@@ -22,9 +22,9 @@ Cell spacing: GridMet: 36.16 cm; Opexebo: 35.94 cm. (px2cm is 100/32 for n1-n29)
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n2.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n2.jpg?raw=true"  width="700"></a>
 Cell spacing: GridMet: 38.25 cm; Opexebo: 38.32 cm.
 <br><br>Cell N3 Was Omitted from Testing Due to Having a Grid Score Below 0.2.
-<br><br>Cell N4; Field Detection Incorrect
+<br><br>Cell N4; Field Detection Had Very Small Issues
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n4.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n4.jpg?raw=true"  width="700"></a>
-Notes: Cell N4 was observed to have incorrect detection because 2 of its 35 field area pixels are in the wrong field. This will have only very small effects on metric results but is still an error.
+Notes: Cell N4 was observed to have a very small detection issue in the way that 2 of its 35 field area pixels are in the wrong field. This will have only very small effects on metric results.
 <br>Cell spacing: GridMet: 39.70 cm; Opexebo: 39.13 cm.
 <br><br>Cell N5; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n5.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n5.jpg?raw=true"  width="700"></a>
@@ -38,9 +38,9 @@ Cell spacing: GridMet: 57.61 cm; Opexebo: 56.95 cm.
 <br><br>Cell N10; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n10.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n10.jpg?raw=true"  width="700"></a>
 Cell spacing: GridMet: 75.63 cm; Opexebo: 70.17 cm.
-<br><br>Cell N11; Field Detection Correct
+<br><br>Cell N11; Field Detection Had Small Issues
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n11.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n11.jpg?raw=true"  width="700"></a>
-Note: Cell N11's field detection was not penalized for any merged fields because how to separate two pairs of fields in the original recording plot was considered to be unclear to the human evalulator. The automated field detection was not expected to go beyond the human evaluator's performance abilities.
+Note: Cell N11's field detection was found to have small detection issues with merged fields. These issues have only a small effect on statistical results. The human evaluator identified fields at the center top and bottom positions of the recordings plot that appear merged in the field detection. The automated field detection is expected to be able to meet the human evaluator's performance abilities.
 <br>Cell spacing: GridMet: 72.37 cm; Opexebo: 71.49 cm.
 <br><br>Cell N12; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n12.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n12.jpg?raw=true"  width="700"></a>
@@ -107,9 +107,9 @@ Note: Cell numbering skips N30, N31, and N32.
 <br><br>Cell N34; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n34.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n34.jpg?raw=true"  width="700"></a>
 <br>Cell spacing: GridMet: 32.00 cm; Opexebo: 25.35 cm.
-<br><br>Cell N35; Field Detection Incorrect
+<br><br>Cell N35; Field Detection Had Small Issues
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n35.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n35.jpg?raw=true"  width="700"></a>
-Note: Cell N35 was observed to have incorrect detection because it has two instances of merged fields. These instances will only have small effects on its metrics. The human evaluator could clearly distinguish the seperate field areas in each pair of fields that were merged in detection in this case. The evaluator being able to distinguish these areas caused an expectation for the automated detection to also create that if its detection is to be considered correct.
+Note: Cell N35 was observed to have small issues with detection in the way it has two instances of merged fields. These instances will only have small effects on its metrics. The human evaluator could clearly distinguish the seperate field areas in each pair of fields that were merged in detection in this case. The evaluator being able to distinguish these areas caused an expectation for the automated detection to also create that.
 <br>Cell spacing: GridMet: 31.58 cm; Opexebo: 29.74 cm.
 <br><br>Cell N36; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n36.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n36.jpg?raw=true"  width="700"></a>
