@@ -37,7 +37,8 @@ Cell spacing: GridMet: 57.61 cm; Opexebo: 56.95 cm.
 <br><br>Cell N9 Was Omitted from Testing Due to Having a Grid Score Below 0.2.
 <br><br>Cell N10; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n10.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n10.jpg?raw=true"  width="700"></a>
-Cell spacing: GridMet: 75.63 cm; Opexebo: 70.17 cm.
+Note: No penalty was given for field detection here because the human evaluator did not clearly see a field separation issue. Possibly fields at toward the borders of the plot had minor merging but the evidence was not clear enough to penalize the detection performance. The human evaluator being unsure of how to identify the fields means that the automated detection is not expected to go beyond that understanding.
+<br>Cell spacing: GridMet: 75.63 cm; Opexebo: 70.17 cm.
 <br><br>Cell N11; Field Detection Had Small Issues
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n11.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n11.jpg?raw=true"  width="700"></a>
 Note: Cell N11's field detection was found to have small detection issues with merged fields. These issues have only a small effect on statistical results. The human evaluator identified fields at the center top and bottom positions of the recordings plot that appear merged in the field detection. The automated field detection is expected to be able to meet the human evaluator's performance abilities.
