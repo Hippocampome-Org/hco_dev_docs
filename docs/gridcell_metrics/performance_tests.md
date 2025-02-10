@@ -41,7 +41,7 @@ Cell spacing: GridMet: 75.63 cm; Opexebo: 70.17 cm.
 <br><br>Cell N11; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n11.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n11.jpg?raw=true"  width="700"></a>
 Note: Cell N11's field detection was not penalized for any merged fields because how to separate two pairs of fields in the original recording plot was considered to be unclear to the human evalulator. The automated field detection was not expected to go beyond the human evaluator's performance abilities.
-<br>Cell spacing: GridMet: 72.38 cm; Opexebo: 71.49 cm.
+<br>Cell spacing: GridMet: 72.37 cm; Opexebo: 71.49 cm.
 <br><br>Cell N12; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n12.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n12.jpg?raw=true"  width="700"></a>
 <br>Cell spacing: GridMet: 44.47 cm; Opexebo: 73.27 cm.
