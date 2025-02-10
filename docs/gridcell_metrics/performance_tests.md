@@ -17,103 +17,103 @@ Opexebo was used with its default configuration for testing. Each plot has the m
 <br>Note: the plots below are in the units of pixels that have not been converted to centimeters. For instance, in some plots, 32 pixels can represent 100 cm on the y-axis and also the x-axis.
 <br><br>Cell N1; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n1.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n1.jpg?raw=true"  width="700"></a>
-Cell spacing: GridMet: 36.19 cm; Opexebo: 35.94 cm. (px2cm is 100/32 for n1-n29)
+Cell spacing: GridMet: 36.16 cm; Opexebo: 35.94 cm. (px2cm is 100/32 for n1-n29)
 <br><br>Cell N2; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n2.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n2.jpg?raw=true"  width="700"></a>
-Cell spacing: GridMet: 38.34 cm; Opexebo: 38.32 cm.
+Cell spacing: GridMet: 38.25 cm; Opexebo: 38.32 cm.
 <br><br>Cell N3 Was Omitted from Testing Due to Having a Grid Score Below 0.2.
 <br><br>Cell N4; Field Detection Incorrect
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n4.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n4.jpg?raw=true"  width="700"></a>
 Notes: Cell N4 was observed to have incorrect detection because 2 of its 35 field area pixels are in the wrong field. This will have only very small effects on metric results but is still an error.
-<br>Cell spacing: GridMet: 39.53 cm; Opexebo: 39.13 cm.
+<br>Cell spacing: GridMet: 39.70 cm; Opexebo: 39.13 cm.
 <br><br>Cell N5; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n5.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n5.jpg?raw=true"  width="700"></a>
-Cell spacing: GridMet: 45.53 cm; Opexebo: 46.28 cm.
+Cell spacing: GridMet: 45.61 cm; Opexebo: 46.28 cm.
 <br><br>Cell N6 Was Omitted from Testing Due to Having a Grid Score Below 0.2.
 <br>Cell N7 Was Omitted from Testing Due to Having a Grid Score Below 0.2.
 <br><br>Cell N8; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n8.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n8.jpg?raw=true"  width="700"></a>
-Cell spacing: GridMet: 57.56 cm; Opexebo: 56.95 cm.
+Cell spacing: GridMet: 57.61 cm; Opexebo: 56.95 cm.
 <br><br>Cell N9 Was Omitted from Testing Due to Having a Grid Score Below 0.2.
 <br><br>Cell N10; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n10.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n10.jpg?raw=true"  width="700"></a>
-Cell spacing: GridMet: 75.41 cm; Opexebo: 70.17 cm.
+Cell spacing: GridMet: 75.63 cm; Opexebo: 70.17 cm.
 <br><br>Cell N11; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n11.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n11.jpg?raw=true"  width="700"></a>
 Note: Cell N11's field detection was not penalized for any merged fields because how to separate two pairs of fields in the original recording plot was considered to be unclear to the human evalulator. The automated field detection was not expected to go beyond the human evaluator's performance abilities.
-<br>Cell spacing: GridMet: 72.34 cm; Opexebo: 71.49 cm.
+<br>Cell spacing: GridMet: 72.38 cm; Opexebo: 71.49 cm.
 <br><br>Cell N12; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n12.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n12.jpg?raw=true"  width="700"></a>
-<br>Cell spacing: GridMet: 44.75 cm; Opexebo: 73.27 cm.
+<br>Cell spacing: GridMet: 44.47 cm; Opexebo: 73.27 cm.
 <br>Note: Opexebo created a mean estimate of field spacings that appears less realistic then GridMet's estimate here.
 <br><br>Cell N13; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n13.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n13.jpg?raw=true"  width="700"></a>
-<br>Cell spacing: GridMet: 44.44 cm; Opexebo: 44.11 cm.
+<br>Cell spacing: GridMet: 44.43 cm; Opexebo: 44.11 cm.
 <br><br>Cell N14; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n14.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n14.jpg?raw=true"  width="700"></a>
-<br>Cell spacing: GridMet: 45.41 cm; Opexebo: 46.04 cm.
+<br>Cell spacing: GridMet: 45.40 cm; Opexebo: 46.04 cm.
 <br><br>Cell N15; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n15.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n15.jpg?raw=true"  width="700"></a>
-<br>Cell spacing: GridMet: 47.41 cm; Opexebo: 46.79 cm.
+<br>Cell spacing: GridMet: 15.12 cm; Opexebo: 46.79 cm.
 <br><br>Cell N16; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n16.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n16.jpg?raw=true"  width="700"></a>
-<br>Cell spacing: GridMet: 44.19 cm; Opexebo: 44.83 cm.
+<br>Cell spacing: GridMet: 44.23 cm; Opexebo: 44.83 cm.
 <br><br>Cell N17; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n17.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n17.jpg?raw=true"  width="700"></a>
-<br>Cell spacing: GridMet: 75.78 cm; Opexebo: 72.62 cm.
+<br>Cell spacing: GridMet: 75.69 cm; Opexebo: 72.62 cm.
 <br><br>Cell N18; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n18.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n18.jpg?raw=true"  width="700"></a>
-<br>Cell spacing: GridMet: 45.81 cm; Opexebo: 74.48 cm.
+<br>Cell spacing: GridMet: 45.75 cm; Opexebo: 74.48 cm.
 <br>Note: Opexebo created a mean estimate of field spacings that appears less realistic then GridMet's estimate here.
 <br><br>Cell N19; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n19.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n19.jpg?raw=true"  width="700"></a>
-<br>Cell spacing: GridMet: 44.22 cm; Opexebo: 44.30 cm.
+<br>Cell spacing: GridMet: 44.20 cm; Opexebo: 44.30 cm.
 <br><br>Cell N20; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n20.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n20.jpg?raw=true"  width="700"></a>
-<br>Cell spacing: GridMet: 44.88 cm; Opexebo: 75.13 cm.
+<br>Cell spacing: GridMet: 44.85 cm; Opexebo: 75.13 cm.
 <br>Note: Opexebo created a mean estimate of field spacings that appears less realistic then GridMet's estimate here.
 <br><br>Cell N21; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n21.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n21.jpg?raw=true"  width="700"></a>
-<br>Cell spacing: GridMet: 54.09 cm; Opexebo: 54.97 cm.
+<br>Cell spacing: GridMet: 54.21 cm; Opexebo: 54.97 cm.
 <br><br>Cell N22; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n22.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n22.jpg?raw=true"  width="700"></a>
-<br>Cell spacing: GridMet: 44.13 cm; Opexebo: 43.32 cm.
+<br>Cell spacing: GridMet: 44.21 cm; Opexebo: 43.32 cm.
 <br><br>Cell N23; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n23.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n23.jpg?raw=true"  width="700"></a>
 <br>Cell spacing: GridMet: 45.78 cm; Opexebo: 45.55 cm.
 <br><br>Cell N24; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n24.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n24.jpg?raw=true"  width="700"></a>
-<br>Cell spacing: GridMet: 44.72 cm; Opexebo: 74.48 cm.
+<br>Cell spacing: GridMet: 44.63 cm; Opexebo: 74.48 cm.
 <br>Note: Opexebo created a mean estimate of field spacings that appears less realistic then GridMet's estimate here.
 <br><br>Cell N25; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n25.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n25.jpg?raw=true"  width="700"></a>
-<br>Cell spacing: GridMet: 46.03 cm; Opexebo: 46.04 cm.
+<br>Cell spacing: GridMet: 46.09 cm; Opexebo: 46.04 cm.
 <br><br>Cell N26; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n26.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n26.jpg?raw=true"  width="700"></a>
-<br>Cell spacing: GridMet: 45.16 cm; Opexebo: 46.04 cm.
+<br>Cell spacing: GridMet: 45.07 cm; Opexebo: 46.04 cm.
 <br><br>Cell N27; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n27.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n27.jpg?raw=true"  width="700"></a>
-<br>Cell spacing: GridMet: 60.22 cm; Opexebo: 62.38 cm.
+<br>Cell spacing: GridMet: 60.29 cm; Opexebo: 62.38 cm.
 <br><br>Cell N28; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n28.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n28.jpg?raw=true"  width="700"></a>
-<br>Cell spacing: GridMet: 65.22 cm; Opexebo: 62.47 cm.
+<br>Cell spacing: GridMet: 65.09 cm; Opexebo: 62.47 cm.
 <br><br>Cell N29; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n29.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n29.jpg?raw=true"  width="700"></a>
-<br>Cell spacing: GridMet: 65.03 cm; Opexebo: 65.75 cm.
+<br>Cell spacing: GridMet: 65.44 cm; Opexebo: 65.75 cm.
 Note: Cell numbering skips N30, N31, and N32.
 <br><br>Cell N33; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n33.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n33.jpg?raw=true"  width="700"></a>
-<br>Cell spacing: GridMet: 36.07 cm; Opexebo: 32.27 cm. (px2cm is 45/32 for n33-n37)
+<br>Cell spacing: GridMet: 36.35 cm; Opexebo: 32.27 cm. (px2cm is 45/32 for n33-n37)
 <br><br>Cell N34; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n34.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n34.jpg?raw=true"  width="700"></a>
-<br>Cell spacing: GridMet: 32.02 cm; Opexebo: 25.35 cm.
+<br>Cell spacing: GridMet: 32.00 cm; Opexebo: 25.35 cm.
 <br><br>Cell N35; Field Detection Incorrect
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n35.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n35.jpg?raw=true"  width="700"></a>
 Note: Cell N35 was observed to have incorrect detection because it has two instances of merged fields. These instances will only have small effects on its metrics. The human evaluator could clearly distinguish the seperate field areas in each pair of fields that were merged in detection in this case. The evaluator being able to distinguish these areas caused an expectation for the automated detection to also create that if its detection is to be considered correct.
-<br>Cell spacing: GridMet: 32.01 cm; Opexebo: 29.74 cm.
+<br>Cell spacing: GridMet: 31.58 cm; Opexebo: 29.74 cm.
 <br><br>Cell N36; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n36.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n36.jpg?raw=true"  width="700"></a>
-<br>Cell spacing: GridMet: 24.47 cm; Opexebo: 24.24 cm.
+<br>Cell spacing: GridMet: 24.44 cm; Opexebo: 24.24 cm.
 <br><br>Cell N37; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n37.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n37.jpg?raw=true"  width="700"></a>
 <br>Cell spacing: GridMet: 29.26 cm; Opexebo: 29.50 cm.
