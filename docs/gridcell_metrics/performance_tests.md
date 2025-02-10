@@ -13,7 +13,7 @@ Opexebo was used with its default configuration for testing. Each plot has the m
 
 ## Plots Used to Assess Performance
 <center>
-<br>The performance of GridMet was observed to be 93.3% (28/30) correct cell field detections. The cells that had incorrect detections were n4 and n35. The plots can be clicked on to open each one as its full sized image.
+<br>The performance of GridMet was observed to be 90% correct cell field detections, and 3 cells had small issues. Those issues only create small to very small effects on results. The cells that had detection issues were n4, n11, and n35. The plots can be clicked on to open each one as its full sized image.
 <br>Note: the plots below are in the units of pixels that have not been converted to centimeters. For instance, in some plots, 32 pixels can represent 100 cm on the y-axis and also the x-axis.
 <br><br>Cell N1; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n1.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n1.jpg?raw=true"  width="700"></a>
@@ -37,7 +37,7 @@ Cell spacing: GridMet: 57.61 cm; Opexebo: 56.95 cm.
 <br><br>Cell N9 Was Omitted from Testing Due to Having a Grid Score Below 0.2.
 <br><br>Cell N10; Field Detection Correct
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n10.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n10.jpg?raw=true"  width="700"></a>
-Note: No penalty was given for field detection here because the human evaluator did not clearly see a field separation issue. Possibly fields at toward the borders of the plot had minor merging but the evidence was not clear enough to penalize the detection performance. The human evaluator being unsure of how to identify the fields means that the automated detection is not expected to go beyond that understanding.
+Note: No penalty was given for field detection here because the human evaluator did not clearly see a field separation issue. Possibly fields at toward the borders of the plot had minor merging but the evidence was not clear enough to penalize the detection performance. The human evaluator being unsure of how to identify the fields means that the automated detection is not expected to go beyond that understanding. Also, if field merging did occur, it was judged to be so small that it did not reach the level of needing to state it as an issue with this cell.
 <br>Cell spacing: GridMet: 75.63 cm; Opexebo: 70.17 cm.
 <br><br>Cell N11; Field Detection Had Small Issues
 <a href='https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n11.jpg?raw=true'><img src="https://github.com/Hippocampome-Org/hco_dev_docs/blob/master/media/performance_tests/n11.jpg?raw=true"  width="700"></a>
