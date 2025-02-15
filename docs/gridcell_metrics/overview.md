@@ -20,6 +20,14 @@ See [config options](https://hco-dev-docs.readthedocs.io/en/latest/gridcell_metr
 
 See [metric results file](https://hco-dev-docs.readthedocs.io/en/latest/gridcell_metrics/metric_results.html) for information on the data reported in metric_results.csv.
 
+## Recreating (R. G. et al., 2024) Results
+
+See [recreating results](https://hco-dev-docs.readthedocs.io/en/latest/gridcell_metrics/recreating_results.html) for information on recreating results from this publication.
+
+## GridMet Performance Tests
+
+See [GridMet performance tests](https://hco-dev-docs.readthedocs.io/en/latest/gridcell_metrics/performance_tests.html) for results of GridMet software performance tests.
+
 ## Parameters
 Some selected parameters are listed below but more parameters are listed in [config options](https://hco-dev-docs.readthedocs.io/en/latest/gridcell_metrics/config_options.html) and config.txt.
 
