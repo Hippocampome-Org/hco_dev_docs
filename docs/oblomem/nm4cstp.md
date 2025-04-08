@@ -5,7 +5,7 @@ This documentation provides development documentation about adding CARLsim6's sh
 
 ## Usage
 
-The standard methods of STP-based neuromodulation are implemented with some specific conditions. More details about the standard STP-based neuromodulation is available (here)[https://uci-carl.github.io/CARLsim6/ch20_neuromodulation.html#ch20s5_nm4stp].
+The standard methods of STP-based neuromodulation are implemented with some specific conditions. More details about the standard STP-based neuromodulation is available [here](https://uci-carl.github.io/CARLsim6/ch20_neuromodulation.html#ch20s5_nm4stp).
 
 The specific conditions present, and how STP modulation combines with CSTP are:
 <br>STP is set in a neuron type pair basis and STP modulation is currently set on a individual neuron type basis. The presynaptic neuron type (neuron group) is the one that supplies neuromodulation in STP between neuron type pairs (a presynaptic neuron group and post synaptic group). For instance, setting neuromodulation levels for MEC LII Stellate cells will effect all STP connections that MEC LII Stellate cells has a presynaptic neuron in. Connections where the Stellate cells are postsynaptic neurons will not be affected by the Stellate cells’ neuromodulation settings unless the Stellate cells are also the presynaptic neurons in the connections.
