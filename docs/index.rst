@@ -113,6 +113,7 @@ Welcome to Hippocampome.org's Developer Documentation!
     :caption: Object-Location Memory
 
     oblomem/overview.md
+    oblomem/updateNM4levels.md
 
 .. toctree::
     :hidden:
