@@ -116,6 +116,7 @@ Welcome to Hippocampome.org's Developer Documentation!
     oblomem/updateNM4levels.md
     oblomem/presyn_cent_stdp.md
     oblomem/nm4cstp.md
+    oblomem/lateral_inhibition.md
 
 .. toctree::
     :hidden:
