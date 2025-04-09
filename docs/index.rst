@@ -114,6 +114,7 @@ Welcome to Hippocampome.org's Developer Documentation!
 
     oblomem/overview.md
     oblomem/updateNM4levels.md
+    oblomem/presyn_cent_stdp.md
     oblomem/nm4cstp.md
 
 .. toctree::
