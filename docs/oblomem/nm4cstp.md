@@ -30,6 +30,22 @@ More details about the setNM4STP function is [here](https://uci-carl.github.io/C
 <br>More details about the setNeuromodulator function is [here](https://uci-carl.github.io/CARLsim6/classCARLsim.html#a88198ca833c0d254d5e7d75d2c8ee4fb)
 <br>More details about STP in general is [here](http://www.scholarpedia.org/article/Short-term_synaptic_plasticity).
 
+## Basic explanation
+A basic explanation of the setNM4STP function is, using u as an example:
+float u\[\] = { dopamine_multiplier, serotonin_multiplier, acetylcholine_multiplier, norepinephrine_multiplier, general_multiplier, baseline_level }
+
+Explanation:
+Each of dopamine_multiplier, serotonin_multiplier, acetylcholine_multiplier, and norepinephrine_multiplier have separate multiplier effects on the (1) general_multiplier and (2) baseline_level. The general multiplier works on the “u” value set in setSTP().
+
+For instance, lets say “u” = 5. If baseline_level is 1.0, general_multiplier is 2.0, and all neuromodulator multipliers are 0 except acetylcholine (ACh) is 1.2. The resulting “u” will be ((u_original\*ach_multiplier)\*general_multiplier)+baseline_level. This is ((5\*1.2)\*2)+1 = 13.
+
+Let’s say we set ACh to 1.2 and NE to 0.6. This would be (((u_original\*ach_multiplier)+(u_original\*ne_multiplier))\*general_multiplier)+baseline_level. This is (((5\*1.2)+(5\*0.6))\*2)+1 = 19.
+
+Example of values in the code:
+float u\[\] = { 1.0f, 0.0f, 0.0f, 0.0f, -0.30f / 0.45f, 1.0f }
+
+One can test values to see their effect on neural firing.
+
 ## Programming design
 
 Code was added to snn_gpu_module.cu and /carlsim/CMakeLists.txt to enable this function. The code in CMakeLists.txt had the flag CARLSIM_CSTP_NM added. In snn_gpu_module.cu, code is included where if the CARLSIM_CSTP_NM flag is true then nm4cstp is enabled.
