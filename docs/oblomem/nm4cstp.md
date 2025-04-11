@@ -31,15 +31,30 @@ More details about the setNM4STP function is [here](https://uci-carl.github.io/C
 <br>More details about STP in general is [here](http://www.scholarpedia.org/article/Short-term_synaptic_plasticity).
 
 ## Basic explanation
+
+setNeuromodulator will set multipler levels for each neuromodulator (NM)
+setNeuromodulator (grpId, baseDP, tauDP, base5HT, tau5HT, baseACh, tauACh, baseNE, tauNE) 	
+grpId is the neuron group name, e.g., MEC_LII_Stellate.
+base values for each NM are multiplers used in functions such as setNM4STP(). The CARLsim user guide describes them as the baseline concentration of a NM.
+tau values set the decay time for the neuromodulation effect. 
+release values have an unclear definition on the CARLsim user guide.
+
+Example values:
+sim.setNeuromodulator(CA3_Pyramidal, 
+    1.0f, 1.0f, 1.0f, false, // DA
+    1.0f, 1.0f, 1.0f, false, // 5HT
+    1.0f, 1000000.0f, 0.000001f, true, // ACh
+    1.0f, 1000000.0f, 0.000001f, true); // NE
+
 A basic explanation of the setNM4STP function is, using u as an example:
-float u\[\] = { dopamine_multiplier, serotonin_multiplier, acetylcholine_multiplier, norepinephrine_multiplier, general_multiplier, baseline_level }
+float u\[\] = { dopamine_stp_multiplier, serotonin_stp_multiplier, acetylcholine_stp_multiplier, norepinephrine_stp_multiplier, general_stp_multiplier, baseline_stp_level }
 
 Explanation:
-Each of dopamine_multiplier, serotonin_multiplier, acetylcholine_multiplier, and norepinephrine_multiplier have separate multiplier effects on the (1) general_multiplier and (2) baseline_level. The general multiplier works on the “u” value set in setSTP().
+Each of dopamine_stp_multiplier, serotonin_stp_multiplier, acetylcholine_stp_multiplier, and norepinephrine_stp_multiplier have separate multiplier effects on the (1) general_stp_multiplier and (2) baseline_stp_level. The general stp multiplier works on the “u” value set in setSTP().
 
-For instance, lets say “u” = 5. If baseline_level is 1.0, general_multiplier is 2.0, and all neuromodulator multipliers are 0 except acetylcholine (ACh) is 1.2. The resulting “u” will be ((u_original\*ach_multiplier)\*general_multiplier)+baseline_level. This is ((5\*1.2)\*2)+1 = 13.
+For instance, lets say “u” = 5, and we will call "u" u_orig. If baseline_stp_level is 1.0, general_stp_multiplier is 2.0, and all neuromodulator stp multipliers are 0 except acetylcholine (ACh) is 1.2. Also, only ACh is enabled. The resulting “u” will be u_orig*(((baseACh\*ach_stp_multiplier)\*general_stp_multiplier)+baseline_stp_level). This is 5*(((1\*1.2)\*2)+1) = 17.
 
-Let’s say we set ACh to 1.2 and NE to 0.6. This would be (((u_original\*ach_multiplier)+(u_original\*ne_multiplier))\*general_multiplier)+baseline_level. This is (((5\*1.2)+(5\*0.6))\*2)+1 = 19.
+Let’s say we set ACh to 1.2 and NE to 0.6, and ACh and NE are enabled. This would be u_orig*((((baseACh\*ach_stp_multiplier)+(baseNE\*ne_stp_multiplier))\*general_stp_multiplier)+baseline_stp_level). This is 5*((((1\*1.2)+(1\*0.6))\*2)+1) = 23.
 
 Example of values in the code:
 float u\[\] = { 1.0f, 0.0f, 0.0f, 0.0f, -0.30f / 0.45f, 1.0f }
