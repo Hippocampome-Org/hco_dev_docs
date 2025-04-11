@@ -33,7 +33,7 @@ More details about the setNM4STP function is [here](https://uci-carl.github.io/C
 ## Basic explanation
 
 setNeuromodulator will set multipler levels for each neuromodulator (NM)
-<br>setNeuromodulator (grpId, baseDP, tauDP, base5HT, tau5HT, baseACh, tauACh, baseNE, tauNE) 	
+<br>setNeuromodulator (grpId, baseDP, tauDP, releaseDP, activeDP, base5HT, tau5HT, release5HT, active5HT, baseACh, tauACh, releaseACh, activeACh, baseNE, tauNE, releaseNE, activeNE) 	
 <br>grpId is the neuron group name, e.g., MEC_LII_Stellate.
 <br>base values for each NM are multiplers used in functions such as setNM4STP(). The CARLsim user guide describes them as the baseline concentration of a NM.
 <br>tau values set the decay time for the neuromodulation effect. 
