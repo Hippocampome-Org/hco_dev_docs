@@ -26,6 +26,9 @@ float tau_x[] = { 0.0f, 0.0f, 0.0f, 0.0f, 700.0f / 50.0f, 1.0f };
 sim.setNM4STP(MEC_LII_Stellate, u, tau_u, tau_x);
 ```
 
+More details about the setNM4STP function is [here](https://uci-carl.github.io/CARLsim6/classCARLsim.html#aac61df1a82373e89549e608b78557b82)
+<br>More details about the setNeuromodulator function is [here](https://uci-carl.github.io/CARLsim6/classCARLsim.html#a88198ca833c0d254d5e7d75d2c8ee4fb)
+
 ## Programming design
 
 Code was added to snn_gpu_module.cu and /carlsim/CMakeLists.txt to enable this function. The code in CMakeLists.txt had the flag CARLSIM_CSTP_NM added. In snn_gpu_module.cu, code is included where if the CARLSIM_CSTP_NM flag is true then nm4cstp is enabled.
