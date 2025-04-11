@@ -28,6 +28,7 @@ sim.setNM4STP(MEC_LII_Stellate, u, tau_u, tau_x);
 
 More details about the setNM4STP function is [here](https://uci-carl.github.io/CARLsim6/classCARLsim.html#aac61df1a82373e89549e608b78557b82)
 <br>More details about the setNeuromodulator function is [here](https://uci-carl.github.io/CARLsim6/classCARLsim.html#a88198ca833c0d254d5e7d75d2c8ee4fb)
+<br>More details about STP in general is [here](http://www.scholarpedia.org/article/Short-term_synaptic_plasticity).
 
 ## Programming design
 
