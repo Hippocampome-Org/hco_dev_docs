@@ -39,29 +39,17 @@ setNeuromodulator will set multipler levels for each neuromodulator (NM)
 <br>tau values set the decay time for the neuromodulation effect. It is unclear if this effects setNM4STP().
 <br>release values have an unclear definition on the CARLsim user guide.
 
-Example values:
-```
-sim.setNeuromodulator(CA3_Pyramidal, 
-    1.0f, 1.0f, 1.0f, false, // DA
-    1.0f, 1.0f, 1.0f, false, // 5HT
-    1.0f, 1000000.0f, 0.000001f, true, // ACh
-    1.0f, 1000000.0f, 0.000001f, true); // NE
-```
-
 In set NM4STP, we will use equation 1 in [link](http://www.scholarpedia.org/article/Short-term_synaptic_plasticity) as a reference. In that equation, u is U, tau_u is tau_f, and tau_x is tau_d.
 
 A basic explanation of the setNM4STP function is, using u as an example:
 <br>float u\[\] = { dopamine_stp_multiplier, serotonin_stp_multiplier, acetylcholine_stp_multiplier, norepinephrine_stp_multiplier, general_stp_multiplier, baseline_stp_level }
 
 Explanation:
-<br>Each of dopamine_stp_multiplier, serotonin_stp_multiplier, acetylcholine_stp_multiplier, and norepinephrine_stp_multiplier have separate multiplier effects on the general_stp_multiplier. The general stp multiplier applies to the “u” value set in setSTP(). The baseline_stp_level is a starting point value for "u".
+<br>Each of dopamine_stp_multiplier, serotonin_stp_multiplier, acetylcholine_stp_multiplier, and norepinephrine_stp_multiplier have separate multiplier effects on the general_stp_multiplier. The general stp multiplier applies to the “u” value set in setSTP(). The baseline_stp_level is a starting point (minimal) value for "u".
 
 For instance, lets say “u” = 5, and we will call "u" u_orig. Also, baseline_stp_level is 1.0, general_stp_multiplier is 2.0, and all neuromodulator stp multipliers are 0 except acetylcholine (ACh) is 1.2. Also, only ACh is enabled. The resulting “u” will be u_orig*(((baseACh\*ach_stp_multiplier)\*general_stp_multiplier)+baseline_stp_level). This is 5*(((1\*1.2)\*2)+1) = 17.
 
 Let’s say we set ACh to 1.2 and NE to 0.6, and ACh and NE are enabled. This would be u_orig*((((baseACh\*ach_stp_multiplier)+(baseNE\*ne_stp_multiplier))\*general_stp_multiplier)+baseline_stp_level). This is 5*((((1\*1.2)+(1\*0.6))\*2)+1) = 23.
-
-Example of values in the code:
-<br>float u\[\] = { 1.0f, 0.0f, 0.0f, 0.0f, -0.30f / 0.45f, 1.0f }
 
 One can test values to see their effect on neural firing.
 
