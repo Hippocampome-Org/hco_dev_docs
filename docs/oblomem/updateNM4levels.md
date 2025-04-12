@@ -29,7 +29,7 @@ Parameters
 <tr><td>levelNE</td><td>set the new level of Noradrenaline neuromodulation</td></tr>
 </table>	
 
-This function updates the levels originally set by the setNeuromodulator() function. This function requires that values be set in setNeuromodulator() for any neuron group that updateNM4Levels() will update the values of.
+This function updates the levels originally set by the setNeuromodulator() function. Specifically, this updates the "base" values, e.g., baseACh. This function requires that values be set in setNeuromodulator() for any neuron group that updateNM4Levels() will update the values of.
 
 groupID appears to be based on the order in which neuron groups have their Start Id as reported in carlsim.log of a simulation. Notably, this is not the order specified by the standard neuron group ID that is stored in the neuron group name. For instance, this groupID may be different in number than that specified by a neuron group name such as MEC_LII_Stellate. Also, the order of IDs in groupID does not depend on which groups have neuromodulation. For example, there is only one neuron group (GroupA) with neuromodulation and that group's Start Id is higher than two other groups then GroupA's groupID is 2.
 
