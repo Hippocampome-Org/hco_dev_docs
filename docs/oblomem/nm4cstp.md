@@ -53,7 +53,9 @@ Let’s say we set ACh to 1.2 and NE to 0.6, and ACh and NE are enabled. This wo
 
 One can test values to see their effect on neural firing.
 
-## Programming design
+## Feature programming design
+
+Note: this "feature programming design" section describes how this nm4cstp feature was programmed. Reading this section is not required for use of this feature. This section is intended for programmers of CARLsim itself, not necessarily users of CARLsim that just want to run simulations.
 
 Code was added to snn_gpu_module.cu and /carlsim/CMakeLists.txt to enable this function. The code in CMakeLists.txt had the flag CARLSIM_CSTP_NM added. In snn_gpu_module.cu, code is included where if the CARLSIM_CSTP_NM flag is true then nm4cstp is enabled.
 
