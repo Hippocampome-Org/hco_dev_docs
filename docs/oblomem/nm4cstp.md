@@ -40,11 +40,15 @@ setNeuromodulator will set multipler levels for each neuromodulator (NM)
 <br>release values have an unclear definition on the CARLsim user guide.
 
 Example values:
-<br>sim.setNeuromodulator(CA3_Pyramidal, 
-<br>    1.0f, 1.0f, 1.0f, false, // DA
-<br>    1.0f, 1.0f, 1.0f, false, // 5HT
-<br>    1.0f, 1000000.0f, 0.000001f, true, // ACh
-<br>    1.0f, 1000000.0f, 0.000001f, true); // NE
+```
+sim.setNeuromodulator(CA3_Pyramidal, 
+    1.0f, 1.0f, 1.0f, false, // DA
+    1.0f, 1.0f, 1.0f, false, // 5HT
+    1.0f, 1000000.0f, 0.000001f, true, // ACh
+    1.0f, 1000000.0f, 0.000001f, true); // NE
+```
+
+In set NM4STP, we will use equation 1 in [link](http://www.scholarpedia.org/article/Short-term_synaptic_plasticity) as a reference. In that equation, u is U, tau_u is tau_f, and tau_x is tau_d.
 
 A basic explanation of the setNM4STP function is, using u as an example:
 <br>float u\[\] = { dopamine_stp_multiplier, serotonin_stp_multiplier, acetylcholine_stp_multiplier, norepinephrine_stp_multiplier, general_stp_multiplier, baseline_stp_level }
