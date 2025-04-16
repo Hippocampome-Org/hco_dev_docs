@@ -113,6 +113,7 @@ Welcome to Hippocampome.org's Developer Documentation!
     :caption: Object-Location Memory
 
     oblomem/overview.md
+    oblomem/introduction.md
     oblomem/updateNM4levels.md
     oblomem/presyn_cent_stdp.md
     oblomem/nm4cstp.md
