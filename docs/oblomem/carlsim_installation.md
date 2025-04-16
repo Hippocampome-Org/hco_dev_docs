@@ -32,7 +32,7 @@ cmake needs to be installed. Specifically, version 3.22.0 is recommended to be u
 
 ## Google Test Suite
 
-Download Google test, and version 1.10.0 is recommended. Download the zip file from [here](https://github.com/google/googletest/archive/refs/tags/release-1.10.0.zip). Upload the zip file to the "git" directory and extract it there. Navigate to the base directory for Google test's source code. Make the directory "build" in the googletest-release-1.10.0 base directory. Enter the "build" directory. Switch to the GPU node ([reference](https://wiki.orc.gmu.edu/mkdocs/Running_GPU_Jobs/)) with:
+Download Google test, and version 1.10.0 is recommended. Download the zip file from [here](https://github.com/google/googletest/archive/refs/tags/release-1.10.0.zip) [source](https://github.com/google/googletest/releases). Upload the zip file to the "git" directory and extract it there. Navigate to the base directory for Google test's source code. Make the directory "build" in the googletest-release-1.10.0 base directory. Enter the "build" directory. Switch to the GPU node ([reference](https://wiki.orc.gmu.edu/mkdocs/Running_GPU_Jobs/)) with:
 <br>`salloc -p gpuq -q gpu --nodes=1 --ntasks-per-node=1 --gres=gpu:1g.10gb:1 -t 0-01:00:00`
 <br>Note this GPU node session will have a 1 hour time limit.
 <br>Install with commands:
@@ -100,3 +100,7 @@ Some general commands are:
 <br>It should be noted that the software will need to be rebuilt with `make clean` and `make` anytime the project source code is updated. Therefore, it can be helpful to have a `rebuild.sh` script that automates this process anytime the compiled program is to be run.
 <br>It should be also noted that the first time a project is run may require one to manually run the `make` command. This `rebuild.sh` script will exit on `make clean` if it does not find an already compiled file.
 <br>The `rebuild.sh` script will also need to be made executable with `chmod +x ./rebuild.sh`
+
+## Example .bashrc File
+
+An example .bashrc file has been provided [here](https://hco-dev-docs.readthedocs.io/en/latest/oblomem/example_bashrc.html). One may not have a .bashrc file present by default. In that case, one should copy the contents of the example .bashrc file and place it in their .bashrc file. One should replace gmu_username with their GMU username. If one already has a .bashrc file, then one should copy all lines below `${CLUSTER} == "hopper"` to `else` in their .bashrc file when `hopper` is detected as the system in use. This will add to the modules loaded and environment variables included when using Hopper. Some of these are nessisary, e.g., CUDA, for working with Oblomem.
