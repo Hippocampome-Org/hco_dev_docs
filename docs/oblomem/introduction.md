@@ -86,7 +86,7 @@ Create a slurm_wrapper.sh file. An example of this is:
 #SBATCH --qos=gpu
 #SBATCH --gres=gpu:1g.10gb:1
 #SBATCH --job-name="olmform1"
-#SBATCH --time=0-01:00:00
+#SBATCH --time=0-03:00:00
 #SBATCH --output /scratch/gmu_username/ach_sim/oblomem_form_1_results.txt
 #SBATCH --mem=5G
 ./rebuild.sh
