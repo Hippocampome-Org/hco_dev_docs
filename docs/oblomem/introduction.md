@@ -52,6 +52,7 @@ A new CARLsim project should be created. This can be done by running the script 
 
 ### Copying Project Files
 
+#### Copy Project Folder Files
 One should copy some files/folders from the Oblomem downloaded code into the new Hopper project folder (using "oblomem_form_ctx_1" as an example).
 
 For the project folder copy:
@@ -69,6 +70,7 @@ Note: if the main_project_name.cpp file is a different name in the new project f
 A "softlink" should be made to the project's build directory from the project directory. For example:
 <br>`ln -s /home/gmu_username/git/CARLsim6-feat-ca3net-nm4cstp/.build/projects/oblomem_form_ctx_1/ build_dir`
 
+#### Copy Build Folder Files
 For the build folder copy:
 <br>trainPat.csv
 <br>trainPatPlaceCells.csv
