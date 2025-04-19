@@ -35,6 +35,7 @@ For the build folder copy:
 <br>trainPat.csv
 <br>trainPatPlaceCells.csv
 <br>Note: these are found in the build folder of the Oblomem project folder source code.
+<br>See [create_train_pat](https://hco-dev-docs.readthedocs.io/en/latest/oblomem/create_train_pat.html). for more info. about creating new versions of these csv files if that is wanted.
 
 Create a rebuild.sh file:
 <br>`echo "make clean && make && ./oblomem_form_ctx_1" > rebuild.sh`
