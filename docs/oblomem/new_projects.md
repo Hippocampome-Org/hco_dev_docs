@@ -87,3 +87,7 @@ One should go to the project's build directory. For example:
 <br>`/home/gmu_username/git/CARLsim6-feat-ca3net-nm4cstp/.build/projects/oblomem_form_ctx_1`
 <br>Then submit the job to the supercomputer to run:
 <br>`sbatch ./slurm_wrapper.sh`
+
+### Plotting Results
+
+One will need to download the results folder from the experiment when it has completed running. One can then plot the results according to the [plotting instructions](https://hco-dev-docs.readthedocs.io/en/latest/oblomem/plotting.html).
