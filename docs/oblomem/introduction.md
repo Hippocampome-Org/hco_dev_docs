@@ -45,7 +45,7 @@ These instructions will focus on installing the software on the GMU supercompute
 
 ## New Project Creation and Installation
 
-Instructions for creating and installing new projects for experiments with Oblomem are [here](https://hco-dev-docs.readthedocs.io/en/latest/oblomem/new_project.html).
+Instructions for creating and installing new projects for experiments with Oblomem are [here](https://hco-dev-docs.readthedocs.io/en/latest/oblomem/new_projects.html).
 
 ## References
 
