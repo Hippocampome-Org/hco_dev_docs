@@ -82,6 +82,9 @@ Make a folder in your home git directory named ach_sim_conns. E.g., `/home/gmu_u
 <br>The line with lat_inh_conns.csv in the main project file should be changed to this:
 <br>`ParseCSV("/home/gmu_username/git/ach_sim_conns/lat_inh_conns.csv", &lat_inh_conns);`
 
+### Update Save State Loading If Needed
+If the project being run needs to load a saved simulation state from another experiment then the location that saved state is located needs to be updated. Experiments that need this are typically phase 2 or later experiments that load results from phase 1. Phase 1 experiments may not contain code to load a saved state because they don't use a saved state. The location path is typically located in the project's main file in the line `file_path[]` in the if statement `p.load_saved_state == true`. This line should be updated to direct `file_path` to the folder with the `.dat` saved simulation state file. The variable `starting_pattern_pres`, in the file `general_params.cpp`, sets which numbered saved state to load in projects that load saved states. One should ensure the correct numbered saved state is set to be loaded.
+
 ### Running the Experiment
 One should go to the project's build directory. For example:
 <br>`/home/gmu_username/git/CARLsim6-feat-ca3net-nm4cstp/.build/projects/oblomem_form_ctx_1`
