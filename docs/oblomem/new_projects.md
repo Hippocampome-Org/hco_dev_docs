@@ -31,11 +31,12 @@ A "softlink" should be made to the project's build directory from the project di
 <br>`ln -s /home/gmu_username/git/CARLsim6-feat-ca3net-nm4cstp/.build/projects/oblomem_form_ctx_1/ build_dir`
 
 #### Copy Build Folder Files
-For the build folder copy:
+For formation (training) experiments, copy to the build folder:
 <br>trainPat.csv
 <br>trainPatPlaceCells.csv
 <br>Note: these are found in the build folder of the Oblomem project folder source code.
 <br>See [create_train_pat](https://hco-dev-docs.readthedocs.io/en/latest/oblomem/create_train_pat.html). for more info. about creating new versions of these csv files if that is wanted.
+<br>Retrieval (test) experiments do not need these files hard copied because their source code accesses them through including the filepaths for them in experiments being tested. See "Update Path to trainPat.csv If Needed" below for more details if wanted.
 
 Create a rebuild.sh file:
 <br>`echo "make clean && make && ./oblomem_form_ctx_1" > rebuild.sh`
