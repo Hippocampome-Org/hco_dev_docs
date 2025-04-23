@@ -45,6 +45,18 @@ These forms of tracking will report when CARLsim detects a post spike in pre-bef
 
 The script /general_analyses/stdp_analyses/spike_times_analyses.m in Oblomem source code ([link](https://github.com/Hippocampome-Org/oblomem)) can read in results from the print statements and report statistics from them.
 
+This script reads input csv files with the format:
+<table>
+	<tr><td>text</td><td>sim_time</td><td>pre_post_type</td><td>text</td><td>pre_id_number</td><td>text</td><td>post_id_number</td><td>spike_time_difference</td></tr>
+</table>
+The "text" columns are not used for analysis in this script. Text data such as pre_post_type can be useful to store in those columns for future reference.
+
+For example:
+<table>
+	<tr><td>text</td><td>sim_time</td><td>pre_post_type</td><td>text</td><td>pre_id_number</td><td>text</td><td>post_id_number</td><td>text</td><td>spike_time_difference</td></tr>
+	<tr><td>t</td><td>2809</td><td>pre_before_post</td><td>pre_id</td><td>320</td><td>post_id</td><td>896</td><td>stdp_tDiff</td><td>389</td></tr>
+</table>
+
 ## References
 
 Morrison, A., Markus D., and Gerstner, W. (2008). Phenomenological models of synaptic plasticity based on spike timing. Biological Cybernetics 98: 459-478.
