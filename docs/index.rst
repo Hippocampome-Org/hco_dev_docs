@@ -123,6 +123,7 @@ Welcome to Hippocampome.org's Developer Documentation!
     oblomem/presyn_cent_stdp.md
     oblomem/nm4cstp.md
     oblomem/lateral_inhibition.md
+    oblomem/stdp_analyses.md
 
 .. toctree::
     :hidden:
