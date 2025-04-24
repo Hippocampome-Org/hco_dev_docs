@@ -52,7 +52,7 @@ This script reads input csv files with the format:
 </table>
 </center>
 
-<br>The "text" columns are not used for analysis in this script. Text data such as pre_post_type can be useful to store in those columns for future reference.
+<br>The "text" columns are not used for analysis in this script. Text in the pre_post_type column is also not used in computing statistics, but it be useful to store info. in that column about that type for future reference.
 
 For example:
 <center>
