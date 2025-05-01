@@ -14,7 +14,7 @@ CARLsim uses symmetric nearest neighbor STDP (Morrison et al. 2008). See Fig. 7 
 
 ## Reporting delta_t for Analyses
 
-Online articles have described that saving data produced by CUDA code for debugging purposes can be done with print statements. The printed material can then be transfered to a text file by copy and pasting the contents from a command prompt to the text file. CUDA (as of April 2025) is limited in its abilities to directly write to output files within code that processes GPU commands and therefore the print statements are used instead of writing to an output file.
+Online articles have described that saving data produced by CUDA code for debugging purposes can be done with print statements. The printed material can then be transferred ("redirected") to a log file (at least in Linux) using command output redirection. CUDA (as of April 2025) is limited in its abilities to directly write to output files within code that processes GPU commands and therefore the print statements are used instead of directly writing to an output file. Redirecting output is described in a section below and can be used instead of directly writing output to a log file within CUDA code.
 
 Print statements in CUDA code can be used to report delta_t as CARLsim detects it in simulations. This can be used to analyze in detail the calculations that are used as a part of STDP. These statements being used in CUDA code assumes that the simulation will be run in GPU mode in order to run the CUDA code. The print statements can be put into the file snn_gpu_module.cu.
 
@@ -61,6 +61,18 @@ For example:
 	<tr><td>t</td><td>2809</td><td>pre_before_post</td><td>pre_id</td><td>320</td><td>post_id</td><td>896</td><td>stdp_tDiff</td><td>389</td></tr>
 </table>
 </center>
+
+## Redirecting Command Line Output
+
+In Linux, command line output (containing results of print statements) can be saved to a file with the operator ">" after running a program. For example `./rebuild.sh > command_line_output.txt`. Example instructions are [here](https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file). Multiple advantages exist in redirecting output. Command line windows can have line display limits that can be avoided by saving to a log file. In other words, one can save as many results as wanted instead of being limited by a window line limit. Redirection also automatically saves output to a file and avoid some work in copying and pasting from a command line window in order to do that. 
+
+Redirection can be run in an unattended mode. Without redirection, the line limits can may one want to halt the program if the line limit is exceed (attending to this condition). This is no longer an issue with redirection, and therefore one can just run the simulation and wait for it to complete. The results will automatically be saved.
+
+A note is that the author of this document has only tried this process on his local computer. He expects that this process can also be created on a supercomputer, e.g., with a slurm script, if the line in the script that runs the simulation has a `> command_line_output.txt` after it. The log file should then be stored in the build directory for the simulation once it is run.
+
+## Comment Out Other Print Statements
+
+When creating this reporting it can be useful to comment out other print statements, e.g., in the CARLsim main file that report statistics, that can interfere with having only the print statements of interest for these analyses.
 
 ## References
 
