@@ -119,6 +119,7 @@ Welcome to Hippocampome.org's Developer Documentation!
     oblomem/example_bashrc.md
     oblomem/create_train_pat.md
     oblomem/plotting.md
+    oblomem/full_scale.md
     oblomem/updateNM4levels.md
     oblomem/presyn_cent_stdp.md
     oblomem/nm4cstp.md

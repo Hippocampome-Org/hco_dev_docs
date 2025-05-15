@@ -70,6 +70,8 @@ Redirection can be run in an unattended mode. Without redirection, the line limi
 
 A note is that the author of this document has only tried this process on his local computer. He expects that this process can also be created on a supercomputer, e.g., with a slurm script, if the line in the script that runs the simulation has a `> command_line_output.txt` after it. The log file should then be stored in the build directory for the simulation once it is run.
 
+One can optionally alter the normal sim_timesteps to only be after the required time for reporting the data of interest. The simulation will then end and one will know the data is done collecting, instead of running the simulation longer than needed for the data to be reported.
+
 ## Comment Out Other Print Statements
 
 When creating this reporting it can be useful to comment out other print statements, e.g., in the CARLsim main file that report statistics, that can interfere with having only the print statements of interest for these analyses.

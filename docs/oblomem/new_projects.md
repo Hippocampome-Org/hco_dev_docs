@@ -1,5 +1,5 @@
-New Project Creation and Installation
-====================================
+Project Creation, Installation, and Running
+===========================================
 
 This documentation provides further information about creating and installing new project used for experiments in Oblomem.
 
