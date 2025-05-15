@@ -120,6 +120,8 @@ Welcome to Hippocampome.org's Developer Documentation!
     oblomem/create_train_pat.md
     oblomem/plotting.md
     oblomem/full_scale.md
+    oblomem/non-context-cell_exp.md
+    oblomem/general_notes.md
     oblomem/updateNM4levels.md
     oblomem/presyn_cent_stdp.md
     oblomem/nm4cstp.md
