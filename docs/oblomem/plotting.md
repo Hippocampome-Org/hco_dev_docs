@@ -27,6 +27,24 @@ By default, `createFigure3PanelB` is commented out. One can uncomment this to us
 
 If wanted, one can create other plots with this software. See (Kopsick et al., 2024) for details, and figure examples, of other plots that can optionally be created.
 
+## Testing Half Pattern Presentation
+
+Some versions of the retrieval (test) simulation have a `present_full_pattern` parameter that can be set to `false` to test the presentation of half patterns. In the function present_pattern(), code such as:
+```
+	for (int j = g; j < g + numIrrG; j++) {
+		...
+		else {
+			if (p->present_full_pattern == false && randPyrCell < k + floor(p->assembly_size/2)) {
+				pc_current->at(randPyrCell) = p->pattern_current_val;
+			}
+			else if (p->present_full_pattern == true) {
+				pc_current->at(randPyrCell) = p->pattern_current_val;
+			}
+		}
+	}
+```
+can be used to implement half pattern presentation.
+
 ## Reference
 
 Kopsick, J. D., Kilgore, J. A., Adam, G. C., & Ascoli, G. A. (2024). Formation and retrieval of cell assemblies in a biologically realistic spiking neural network model of area CA3 in the mouse hippocampus. Journal of Computational Neuroscience, 52(4), 303-321.
