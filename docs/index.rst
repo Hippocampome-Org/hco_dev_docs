@@ -121,6 +121,7 @@ Welcome to Hippocampome.org's Developer Documentation!
     oblomem/plotting.md
     oblomem/full_scale.md
     oblomem/non-context-cells_exp.md
+    oblomem/context-cells_exp.md
     oblomem/general_notes.md
     oblomem/updateNM4levels.md
     oblomem/presyn_cent_stdp.md
