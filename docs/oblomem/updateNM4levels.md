@@ -2,10 +2,7 @@ updateNM4Levels Development Documentation
 =========================================
 
 This documentation provides development documentation about the feature updateNM4Levels 
-that was created for the Oblomem neuromodulation research. This feature allows neuromodulation 
-levels to be altered at runtime during a CARLsim experiment. Originally, neuromodulation 
-variable could only be altered once per experiment and were set in the configuration state of 
-an experiment.
+that was created for the Hippocampome Oblomem neuromodulation research project. This feature allows neuromodulation levels to be altered at runtime during a CARLsim experiment. Originally, neuromodulation variable could only be altered once per experiment and were set in the configuration state of an experiment.
 
 ## Usage
 ### updateNM4Levels()
