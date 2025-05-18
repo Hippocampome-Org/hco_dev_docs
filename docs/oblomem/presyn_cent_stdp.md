@@ -3,6 +3,16 @@ Presynaptic Centered STDP Development Documentation
 
 This documentation provides development documentation about a feature providing presynaptic-centered STDP that was created for the Oblomem neuromodulation research.
 
+## Branches
+
+This feature exists as a feature branch for the Hippocampome branch of CARLsim6, and also a separate feature branch of the main CARLsim6 code base. A version was developed for the main CARLsim6 code base because it could be added as a general feature to CARLsim in the future.
+
+Hippocampome version is [here](https://github.com/nmsutton/CARLsim6/tree/feat/ca3net_more_stdp). CARLsim6 main branch version is [here](https://github.com/nmsutton/CARLsim6/tree/feat/presyn_cent_stdp).
+
+## Multiple CARLsim Branch Installations
+
+A note about the Oblomem Hippocampome research project is that multiple CARLsim6 branches can be installed on the same computer as long as the source code and installation directories are different directories. This allows for simulations within a branch such as this (ca3net_more_stdp) to be run, and a different CARLsim installation (branch) to be present with different features (e.g., nm4stdp) that can run different experiments. The experiments should be run from each CARLsim version's separate "projects" folder and the results will be created in those versions' separate "build" folders. One should be sure to include a different `DCMAKE_INSTALL_PREFIX` directory for the installation directory target with the cmake parameters for building in each CARLsim branch that is installed with cmake. This will cause the different branches to be installed in different directories on one's computer, and avoid any installation overwriting another installation's files.
+
 ## Concepts
 "It is important to note that CARLsim uses nearest neighbor STDP (Morrison et al. 2008)..." (Beyeler, 2023).
 
@@ -22,7 +32,7 @@ Once the flag `CARLSIM_PRESYN_CENT_STDP` is set to `ON`, and CARLsim has been re
 
 I will describe methods used to implement the CARLsim6 main branch version of this feature. This can help with reviewing this feature for inclusion as a new feature in a later general CARLsim release. The feature branch for this method is located [here](https://github.com/nmsutton/CARLsim6/tree/feat/presyn_cent_stdp). The version for the Hippocampome branch is [here](https://github.com/nmsutton/CARLsim6/tree/feat/ca3net_more_stdp). The code used to implement the feature is somewhat different in the branches but should implement the feature in the same way.
 
-An important note is that this feature currently is only designed to work with the EXP_CURVE form of STDP and excitatory STDP (ESTDP). Future work can intrgrate this into other forms of STDP. It perhaps would be a reasonably simple process to extend this work to those other STDP forms.
+An important note is that this feature currently is only designed to work with the EXP_CURVE form of STDP and excitatory STDP (ESTDP). Future work can integrate this into other forms of STDP. It perhaps would be a reasonably simple process to extend this work to those other STDP forms.
 
 Code was added to the following files to implement this feature:
 ```
@@ -36,7 +46,7 @@ The functions `setPostSpikesValue()` and `getPostSpikesPtr()` are designed to st
 
 The function `updateLTP()` typically includes computation of the wtChange due to presynaptic spike time before postsynaptic spike times (pre before post) in STDP. wtChange is a variable involved in computing synapse connection weight changes for neuron pairs due to STDP. This feature adds computation of post before pre spike times and its contribution to wtChange to `updateLTP()`. Specifically, this function computes the most recent post before pre spike time difference when an instance of pre before post spikes is detected in `updateLTP()`. The "presynaptic centered" approach then updates wtChange based on the post time that occured closest to the pre time in both the pre before post and post before pre timings.
 
-This feature disables the processing of wtChange with post before pre spikes in `generatePostSynapticSpike` for ESTDP EXP_CURVE spikes because that is now handled in `updateLTP()`. The default methods of CARLsim as designed for, it appears, symmetric nearest neighbor STDP. Specifically, processing post before pre spikes effecting wtChange in `generatePostSynapticSpike` accomidates that. This feature's alternative STDP method is made possible by handling that wtChange processing in `updateLTP()`.
+This feature disables the processing of wtChange with post before pre spikes in `generatePostSynapticSpike` for ESTDP EXP_CURVE spikes because that is now handled in `updateLTP()`. The default methods of CARLsim is designed for, it appears, symmetric nearest neighbor STDP. Specifically, processing post before pre spikes effecting wtChange in `generatePostSynapticSpike` accomidates that. This feature's alternative STDP method is made possible by handling that wtChange processing in `updateLTP()`.
 
 ## Unit Test
 
