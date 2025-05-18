@@ -3,15 +3,23 @@ Experiment Components in Context-cells Simulations
 
 This documentation provides further information about experiment components originally designed for context-cells experiments. These experiments were designed to test a neuromodulation theory by Dr. Hasselmo.
 
+## Overview
+
+Some methods are specific to implementing an adapted version of Dr. Hasselmo's Acetylcholine (ACh)-neuromodulation of an object association theory (Hasselmo, 2013). Some methods for this purpose are context cells, lateral inhibition, and neuromodulation-based inhibition described below. These methods may not need to be used in non-context cell versions of Oblomem experiments, but they can be included in those versions if wanted.
+
 ## Lateral Inhibition
 
 See [lateral inhibition documentation](https://hco-dev-docs.readthedocs.io/en/latest/oblomem/lateral_inhibition.html) on methods used in implementing lateral inhibition.
 
 ## Neuromodulation Affecting STP
 
-Dr. Hasselmo's theory in (Hasselmo, 2013) includes that there should be an acetylcholine (ACh)-based reduction in "the spread of activity across all synapses" (Figure 6.7). Also, that neurons should be able to "selectively respond to the new afferent input". Neuromodulating short-term plasticity (STP) in concept cell connections in a way that significantly depresses their synapses can help accommodate the "spread of activity" being inhibited condition.
+Dr. Hasselmo's theory in (Hasselmo, 2013) includes that there should be an ACh-based reduction in "the spread of activity across all synapses" (Figure 6.7). Also, that neurons should be able to "selectively respond to the new afferent input". Neuromodulating short-term plasticity (STP) in concept cell connections in a way that significantly depresses their synapses can help accommodate the "spread of activity" being inhibited condition.
 
 Notably, neuromodulating STP to depression, in contrast to inhibition through interneurons controlled by neuromodulation, can still allow for the "respond to the new afferent input" condition to occur. Interneurons would lower the exitability of concept cells in general, which can interfere with responses to afferent input. STP-based "functional inhibition" still allows the concept cells to remain excitable to the afferent input.
+
+See the "Usage" and "Basic explanation" sections of [nm4cstp documentation](https://hco-dev-docs.readthedocs.io/en/latest/oblomem/nm4cstp.html) to find information about how to use neuromodulation of STP in the Hippocampome branch. 
+
+The term "functional inhibition" refers to STP-based depression not perhaps being considered a classical form of inhibition in the way that effect from interneurons is created. Depressing synapses has a "functional" effect of inhibition because it reduces the signaling between neurons in the synapses. This distinction may be helpful when one describes the effect of STP in contrast with interneurons when creating inhibition. However, STP can also target interneurons, and these descriptions are not meant to exclude that activity, but instead to clarify the idea of "inhibition" from STP or interneurons themselves.
 
 ## Neuromodulation Acting as Inhibitory Neurons
 
