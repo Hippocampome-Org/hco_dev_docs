@@ -11,6 +11,10 @@ The connectivity in the script could be altered if wanted. Given 4 place cell en
 
 The variables max_lat_inh_pre_id and max_lat_inh_post_id in general_params.cpp specify the neuron id range maximum for the custom connection function in CARLsim to use to build connectivity. This is based on the maximum neuron id within the ensembles worked with in Oblomem currently being 1200 for both pre- and post-synaptic neurons. One should change these variable values if more lateral inhibition is wanted. Defining these maximums saves computational time in each simulation run by not needing to check N by N possible connections for defining active lateral inhibition connections when N can be per se 90,000 in the full scale version of the Oblomem simulation.
 
+## Generating lat_inh_conns.csv
+
+One should run oblomem_connections.m from within Matlab to generate lat_inh_conns.csv. This csv file will be read into the Oblomem simulation to create lateral inhibition connections. The way this is done is described further below. See "Check that lat_inh_conns.csv Can Be Found" in the new projects documentation ([link](https://hco-dev-docs.readthedocs.io/en/latest/oblomem/new_projects.html#check-that-lat-inh-conns-csv-can-be-found)) for advice about where to store the lat_inh_conns.csv file.
+
 ## Custom Connections
 
 Dr. Hasselmo's theory indicates the possible presence of lateral inhibition in his theory. This is in descriptions such as "...activity of the word holster inhibits activity of the word boot..." (Hasselmo, 2013; Figure 6.6). Also, arrows pointing from "holster" to "boot" in panel A of Figure 6.6. See descriptions of "lateral inhibition" in the work_report.docx document for more information.
