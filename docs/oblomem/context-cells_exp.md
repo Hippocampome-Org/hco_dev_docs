@@ -9,4 +9,11 @@ See [lateral inhibition documentation](https://hco-dev-docs.readthedocs.io/en/la
 
 ## Neuromodulation Affecting STP
 
-Neuromodulation affecting STP can be enabled by the parameter `enable_ach_inhib` set to `1`. Setting that to `0` disables the parameter.
+TODO: add description here.
+
+## Neuromodulation Acting as Inhibitory Neurons
+
+Neuromodulation acting as inhibitory neurons can be enabled by the parameter `enable_ach_inhib` set to `1`. Setting that to `0` disables the parameter. Current can then be supplied to the interneuron group representing neuromodulation by using the `setExternalCurrent()` function. For instance, `sim.setExternalCurrent(ACh_CA3_Basket, 1000.0f);`.
+
+
+
