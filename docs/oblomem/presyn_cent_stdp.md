@@ -5,7 +5,7 @@ This documentation provides development documentation about a feature providing 
 
 ## Branches
 
-This feature exists as a feature branch for the Hippocampome branch of CARLsim6, and also a separate feature branch of the main CARLsim6 code base. A version was developed for the main CARLsim6 code base because it could be added as a general feature to CARLsim in the future.
+This feature exists as a feature branch for the Hippocampome branch of CARLsim6, and also a separate feature branch of the main CARLsim6 code base. A version was developed for the main CARLsim6 code base because it could be added as a general feature to CARLsim in the future. Anyone working on the Hippocampome Oblomem project will want to use the Hippocampome branch version if they want to use this feature.
 
 Hippocampome version is [here](https://github.com/nmsutton/CARLsim6/tree/feat/ca3net_more_stdp). CARLsim6 main branch version is [here](https://github.com/nmsutton/CARLsim6/tree/feat/presyn_cent_stdp).
 

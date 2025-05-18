@@ -4,6 +4,12 @@ updateNM4Levels Development Documentation
 This documentation provides development documentation about the feature updateNM4Levels 
 that was created for the Hippocampome Oblomem neuromodulation research project. This feature allows neuromodulation levels to be altered at runtime during a CARLsim experiment. Originally, neuromodulation variable could only be altered once per experiment and were set in the configuration state of an experiment.
 
+## Branches
+
+This feature exists as a feature branch for the Hippocampome branch of CARLsim6, and also a separate feature branch of the main CARLsim6 code base. A version was developed for the main CARLsim6 code base because it could be added as a general feature to CARLsim in the future. Anyone working on the Hippocampome Oblomem project will want to use the Hippocampome branch version if they want to use this feature.
+
+Hippocampome version is [here](https://github.com/nmsutton/CARLsim6/tree/ca3net_nm4runtime). CARLsim6 main branch version is [here](https://github.com/nmsutton/CARLsim6/tree/feat/nm4update).
+
 ## Usage
 ### updateNM4Levels()
 updateNM4Levels(int netID, int groupID, bool updateDA, bool update5HT, bool updateACh, bool updateNE, float levelDA, float level5HT, float levelACh, float levelNE);
