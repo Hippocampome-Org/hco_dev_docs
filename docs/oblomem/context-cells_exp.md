@@ -7,6 +7,10 @@ This documentation provides further information about experiment components orig
 
 Some methods are specific to implementing an adapted version of Dr. Hasselmo's Acetylcholine (ACh)-neuromodulation of an object association theory (Hasselmo, 2013). Some methods for this purpose are context cells, lateral inhibition, and neuromodulation-based inhibition described below. These methods may not need to be used in non-context cell versions of Oblomem experiments, but they can be included in those versions if wanted.
 
+## Context Cells
+
+
+
 ## Lateral Inhibition
 
 See [lateral inhibition documentation](https://hco-dev-docs.readthedocs.io/en/latest/oblomem/lateral_inhibition.html) on methods used in implementing lateral inhibition.

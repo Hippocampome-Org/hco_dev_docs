@@ -12,12 +12,11 @@ The CARLsim user guide's description "...each presynaptic spike is paired with t
 
 Symmetric-nearest-neighbor STDP is not to be confused with symmetric and asymmetric STDP in general. Symmetric in this case specifically refers to the spikes relative to each other in the nearest-neighbor system. Symmetric and asymmetric STDP in general refers to pre before post and post before pre each having their own effects on plasticity.
 
-## Usage
-<br>TODO: I will work on creating more of this documentation soon.
+## Usage and Programming Design
 
-## Programming Design
+The flag `CARLSIM_PRESYN_CENT_STDP` in CMakeLists.txt in the base CARLsim source code directory should be set to `ON` to enable this presynaptic-centered STDP feature. CARLsim needs to be rebuilt and reinstalled to use this feature once that is set to `ON`. The Github branch for this feature currently has the setting `ON` by default. It is recommended to delete all files in the build directory if CARLsim is to be rebuilt. This will ensure that the reinstallation of CARLsim is done with the intended code included and active.
 
-The flag `CARLSIM_PRESYN_CENT_STDP` in CMakeLists.txt in the base CARLsim source code directory should be set to `ON` to enable this presynaptic-centered STDP feature. CARLsim needs to be rebuilt and reinstalled to use this feature once that is set to `ON`. The Github branch for this feature currently has the setting `ON` by default.
+Once the flag `CARLSIM_PRESYN_CENT_STDP` is set to `ON`, and CARLsim has been rebuilt and reinstalled, STDP that uses EXP_CURVE and ESTDP will use presynaptic centered STDP. The programming and reasons for this are described further below. Currently, other types of STDP are not designed to use presynaptic centered STDP. Further details about using ESTDP with EXP_CURVE are available [here](https://uci-carl.github.io/CARLsim6/ch20_neuromodulation.html#ch20s3_pka_plc_stdp).
 
 ## CARLsim6 main Branch Version vs Hippocampome Branch
 
