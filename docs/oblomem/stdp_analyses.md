@@ -62,6 +62,10 @@ For example:
 </table>
 </center>
 
+### Parameter Options
+
+Some parameter options are available in spike_times_analyses.m. For instance, alpha_plus and alpha_minus can be set to affect how STDP measurement statistics are reported by this Matlab script. Some other parameters are listed at the beginning of the script that can be customized to the settings from the experiment's data under analysis.
+
 ## Redirecting Command Line Output
 
 In Linux, command line output (containing results of print statements) can be saved to a file with the operator ">" after running a program. For example `./rebuild.sh > command_line_output.txt`. Example instructions are [here](https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file). Multiple advantages exist in redirecting output. Command line windows can have line display limits that can be avoided by saving to a log file. In other words, one can save as many results as wanted instead of being limited by a window line limit. Redirection also automatically saves output to a file and avoid some work in copying and pasting from a command line window in order to do that. 
