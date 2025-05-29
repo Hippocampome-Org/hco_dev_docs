@@ -49,7 +49,7 @@ Instructions for creating and installing new projects for experiments with Oblom
 
 ## Programming Design
 
-General programming design documentation is [here](https://hco-dev-docs.readthedocs.io/en/latest/oblomem/prog_design.html)
+General programming design documentation is [here](https://hco-dev-docs.readthedocs.io/en/latest/oblomem/prog_design.html).
 
 ## References
 
