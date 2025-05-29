@@ -5,7 +5,7 @@ This documentation describes how to view plots and statistics for the results of
 
 ## Plotting Software
 
-Some results of this software is compatible with the GridMet software for plotting and analysis. That software is presented in this article: Sutton, N. M., Gutiérrez-Guzmán, B. E., Dannenberg, H., & Ascoli, G. A. (2025). Automated Measurement of Grid Cell Firing Characteristics. Algorithms, 18(3), 139. https://doi.org/10.3390/a18030139
+Some results of this software is compatible with the GridMet software for plotting and analysis. That software is presented in this article: Sutton, N. M., Gutiérrez-Guzmán, B. E., Dannenberg, H., & Ascoli, G. A. (2025). Automated Measurement of Grid Cell Firing Characteristics. Algorithms, 18(3), 139. [https://doi.org/10.3390/a18030139](https://doi.org/10.3390/a18030139)
 
 ## initOAT
 
