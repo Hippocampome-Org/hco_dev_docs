@@ -3,6 +3,10 @@ Plotting and analyzing results
 
 This documentation describes how to view plots and statistics for the results of the simulation.
 
+## Plotting Software
+
+Some results of this software is compatible with the GridMet software for plotting and analysis. That software is presented in this article: Sutton, N. M., Gutiérrez-Guzmán, B. E., Dannenberg, H., & Ascoli, G. A. (2025). Automated Measurement of Grid Cell Firing Characteristics. Algorithms, 18(3), 139. https://doi.org/10.3390/a18030139
+
 ## initOAT
 
 The function initOAT should be called to access CARLsim's Offline Analysis Toolkit. This is software designed for plotting. In initOAT.m, addpath(...) must include the path to the OAT software.
