@@ -114,6 +114,7 @@ Welcome to Hippocampome.org's Developer Documentation!
 
     oblomem/overview.md
     oblomem/introduction.md
+    oblomem/prog_design.md
     oblomem/carlsim_installation.md
     oblomem/new_projects.md
     oblomem/example_bashrc.md

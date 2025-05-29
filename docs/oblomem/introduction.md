@@ -47,6 +47,10 @@ These instructions will focus on installing the software on the GMU supercompute
 
 Instructions for creating and installing new projects for experiments with Oblomem are [here](https://hco-dev-docs.readthedocs.io/en/latest/oblomem/new_projects.html).
 
+## Programming Design
+
+General programming design documentation is [here](https://hco-dev-docs.readthedocs.io/en/latest/oblomem/prog_design.html)
+
 ## References
 
 Moghadam, F. F., Guzman, B. E. G., Zheng, X., Parsa, M., Hozyen, L. M., & Dannenberg, H. (2025). Cholinergic dynamics in the septo-hippocampal system provide phasic multiplexed signals for spatial novelty and correlate with behavioral states. BioRxiv, 2025-01.
