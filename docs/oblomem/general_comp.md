@@ -34,3 +34,11 @@ The line
 This function can be used to set current back to baseline levels. This is in addition to being able to set the current for non pattern presentation periods. Boolean parameter help control its operations. It uses distributions of current levels to represent baseline levels. Baseline refers to a non-pattern presentation level. For instance, any patterns can be presented, and the experiment time is moved forward by 1 timestep (1ms), and the current is set back to non-presentation levels. The current will be at a non-presentation level unless pattern presentation code sets the current back to higher levels (pattern presentation levels) before the next timestep of the simulation occurs.
 
 The parameters pc_pres_active and obj_pres_active are used to track when to set the current back to baseline levels specifically for pyramidal cells. This is due to pattern presentation cells being pyramidal cells. The distribution of current as background levels is only updated when a pattern presentation is not occuring. I used Jeffrey's original design for this from (Kopsick et al., 2024). I am unsure why the interneuron current would not update at that time, and one can change it so it does if wanted. This was also noted in the work_report.docx document in the paragraph with the line "...control of current during pattern presentation...".
+
+## save_pattern_order
+
+The function save_pattern_order was included from (Kopsick et al., 2024)'s work. It does not seem to produce data that is used anymore. One could perhaps work with his plotting code, or some other code, to use that data if wanted. Alternatively, the data produced by this could probably be not used in the Oblomem project.
+
+## References
+
+Kopsick, J. D., Kilgore, J. A., Adam, G. C., & Ascoli, G. A. (2024). Formation and retrieval of cell assemblies in a biologically realistic spiking neural network model of area CA3 in the mouse hippocampus. Journal of Computational Neuroscience, 52(4), 303-321.
